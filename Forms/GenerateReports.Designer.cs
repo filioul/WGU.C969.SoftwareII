@@ -43,7 +43,6 @@
             backButton.TabIndex = 13;
             backButton.Text = "Back";
             backButton.UseVisualStyleBackColor = true;
-            backButton.Click += this.backButton_Click;
             // 
             // selectionLabel
             // 
@@ -85,7 +84,6 @@
             Controls.Add(backButton);
             Name = "GenerateReports";
             Text = "Report generator";
-            Load += this.GenerateReports_Load;
             ResumeLayout(false);
             PerformLayout();
         }

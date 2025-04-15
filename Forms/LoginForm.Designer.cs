@@ -104,6 +104,7 @@
             loginButton.TabIndex = 6;
             loginButton.Text = "Sign In";
             loginButton.UseVisualStyleBackColor = true;
+            loginButton.Click += loginButton_Click;
             // 
             // exitButton
             // 
