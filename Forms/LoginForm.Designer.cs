@@ -58,7 +58,7 @@
             // 
             usernameLabel.AutoSize = true;
             usernameLabel.Font = new Font("Segoe UI", 14F);
-            usernameLabel.Location = new Point(220, 205);
+            usernameLabel.Location = new Point(161, 205);
             usernameLabel.Name = "usernameLabel";
             usernameLabel.Size = new Size(97, 25);
             usernameLabel.TabIndex = 2;
@@ -68,7 +68,7 @@
             // 
             passwordLabel.AutoSize = true;
             passwordLabel.Font = new Font("Segoe UI", 14F);
-            passwordLabel.Location = new Point(226, 261);
+            passwordLabel.Location = new Point(161, 261);
             passwordLabel.Name = "passwordLabel";
             passwordLabel.Size = new Size(91, 25);
             passwordLabel.TabIndex = 3;
@@ -115,6 +115,7 @@
             exitButton.TabIndex = 7;
             exitButton.Text = "Exit";
             exitButton.UseVisualStyleBackColor = true;
+            exitButton.Click += exitButton_Click;
             // 
             // LoginForm
             // 
