@@ -16,15 +16,17 @@ namespace WGU.C969.SoftwareII.Tools
         {
             try
             {
-                int verify;
-                string query = "SELECT count(*) FROM user WHERE userName = " + username + " AND password = " + password;
-                MySqlCommand cmd = new MySqlCommand(query, DBConnection.conn);
-                verify = (int)cmd.ExecuteScalar();
-                if (verify > 0)
+                string sql = $"SELECT * FROM user WHERE userName = '{username}' AND password = '{password}'";
+                MySqlCommand cmd = new MySqlCommand(sql, DBConnection.conn);
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.HasRows)
                 {
+                    reader.Close();
                     return true;
                 } else
                 {
+                    reader.Close();
                     return false;
                 }
             }

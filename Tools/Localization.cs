@@ -31,5 +31,19 @@ namespace WGU.C969.SoftwareII.Tools
             return messageString;
         }
 
+        public static string NoInputMessage()
+        {
+            var regionName = DetermineCountry();
+            var messageString = "";
+            if (regionName == "Greece" || regionName == "Cyprus")
+            {
+                messageString = "Ελλιπείς στοιχεία. Παρακαλώ προσπαθήστε ξανά.";
+            }
+            else
+            {
+                messageString = "Missing input. Please try again.";
+            }
+            return messageString;
+        }
     }
 }

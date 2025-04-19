@@ -38,12 +38,15 @@ namespace WGU.C969.SoftwareII
                 var password = passwordTextBox.Text;
                 if (DataValidation.UsernameAndPasswordCheck(username, password))
                 {
-
+                    MessageBox.Show("nice");
                 } else
                 {
                     MessageBox.Show(Localization.WrongCredentialsMessage());
                 }
-            } 
+            } else
+            {
+                MessageBox.Show(Localization.NoInputMessage());
+            }
         }
 
         private void exitButton_Click(object sender, EventArgs e)
