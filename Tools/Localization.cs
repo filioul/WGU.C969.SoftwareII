@@ -14,8 +14,21 @@ namespace WGU.C969.SoftwareII.Tools
             //determines location
             var regionInfo = RegionInfo.CurrentRegion;
             var regionName = regionInfo.EnglishName;
-            MessageBox.Show(regionName);
             return regionName;
+        }
+
+        public static string WrongCredentialsMessage()
+        {
+            var regionName = DetermineCountry();
+            var messageString = "";
+            if (regionName == "Greece" || regionName == "Cyprus")
+            {
+                messageString = "Λανθασμένο όνομα χρήστη ή κωδικός. Παρακαλώ προσπαθήστε ξανά.";
+            }  else
+            {
+                messageString = "Incorrect username or password. Please try again.";
+            }
+            return messageString;
         }
 
     }

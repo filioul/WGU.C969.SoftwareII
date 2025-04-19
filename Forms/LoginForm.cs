@@ -32,27 +32,18 @@ namespace WGU.C969.SoftwareII
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-            //sets up connection to db
-            string constr = ConfigurationManager.ConnectionStrings["localdb"].ConnectionString;
-            MySqlConnection conn = null;
-            try
+            if (!string.IsNullOrEmpty(usernameTextBox.Text) && !string.IsNullOrEmpty(usernameTextBox.Text))
             {
-                conn = new MySqlConnection(constr);
-                conn.Open();
+                var username = usernameTextBox.Text;
+                var password = passwordTextBox.Text;
+                if (DataValidation.UsernameAndPasswordCheck(username, password))
+                {
 
-            }
-            catch (MySqlException ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-
-            //validates username and password
-            var username = usernameTextBox.Text;
-            var password = passwordTextBox.Text;
-            if (DataValidation.UsernameAndPasswordCheck(username, password))
-            {
-
-            }
+                } else
+                {
+                    MessageBox.Show(Localization.WrongCredentialsMessage());
+                }
+            } 
         }
 
         private void exitButton_Click(object sender, EventArgs e)
