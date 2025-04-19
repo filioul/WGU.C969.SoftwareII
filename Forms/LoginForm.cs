@@ -1,5 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using System.Configuration;
+using WGU.C969.SoftwareII.Forms;
 using WGU.C969.SoftwareII.Tools;
 
 
@@ -38,7 +39,12 @@ namespace WGU.C969.SoftwareII
                 var password = passwordTextBox.Text;
                 if (DataValidation.UsernameAndPasswordCheck(username, password))
                 {
-                    MessageBox.Show("nice");
+                    if (Alert.CheckIfAppointmentWithin15(username, password))
+                    {
+                        MessageBox.Show(Localization.AppointmentAlertMessage());
+                    }
+                    MenuForm menu = new MenuForm();
+                    menu.Show();
                 } else
                 {
                     MessageBox.Show(Localization.WrongCredentialsMessage());

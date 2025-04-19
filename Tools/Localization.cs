@@ -45,5 +45,20 @@ namespace WGU.C969.SoftwareII.Tools
             }
             return messageString;
         }
+
+        public static string AppointmentAlertMessage()
+        {
+            var regionName = DetermineCountry();
+            var messageString = "";
+            if (regionName == "Greece" || regionName == "Cyprus")
+            {
+                messageString = "ΠΡΟΣΟΧΗ: Έχετε ραντεβού μέσα στα επόμενα 15 λεπτά.";
+            }
+            else
+            {
+                messageString = "ALERT: You have an appointment within the next 15 minutes.";
+            }
+            return messageString;
+        }
     }
 }
