@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\LabUser\\Documents\\GitHub\\WGU.C969.SoftwareII\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|c:\\users\\labuser\\documents\\github\\wgu.c969.softwareii\\tools\\alert.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|solutionrelative:tools\\alert.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|c:\\users\\labuser\\documents\\github\\wgu.c969.softwareii\\tools\\datavalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|solutionrelative:tools\\datavalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|c:\\users\\labuser\\documents\\github\\wgu.c969.softwareii\\forms\\menuform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|solutionrelative:forms\\menuform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|c:\\users\\labuser\\documents\\github\\wgu.c969.softwareii\\forms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|solutionrelative:forms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|c:\\users\\labuser\\documents\\github\\wgu.c969.softwareii\\forms\\menuform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|solutionrelative:forms\\menuform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|c:\\users\\labuser\\documents\\github\\wgu.c969.softwareii\\tools\\datavalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|solutionrelative:tools\\datavalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,39 +31,50 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Alert.cs",
-              "DocumentMoniker": "C:\\Users\\LabUser\\Documents\\GitHub\\WGU.C969.SoftwareII\\Tools\\Alert.cs",
-              "RelativeDocumentMoniker": "Tools\\Alert.cs",
-              "ToolTip": "C:\\Users\\LabUser\\Documents\\GitHub\\WGU.C969.SoftwareII\\Tools\\Alert.cs",
-              "RelativeToolTip": "Tools\\Alert.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAA1wB0AAAAJAAAA",
+              "Title": "MenuForm.cs",
+              "DocumentMoniker": "C:\\Users\\LabUser\\Documents\\GitHub\\WGU.C969.SoftwareII\\Forms\\MenuForm.cs",
+              "RelativeDocumentMoniker": "Forms\\MenuForm.cs",
+              "ToolTip": "C:\\Users\\LabUser\\Documents\\GitHub\\WGU.C969.SoftwareII\\Forms\\MenuForm.cs",
+              "RelativeToolTip": "Forms\\MenuForm.cs",
+              "ViewState": "AQIAABkAAAAAAAAAAIAxwC0AAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-19T23:36:02.181Z",
-              "IsPinned": true,
+              "WhenOpened": "2025-04-19T23:55:42.648Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
+              "Title": "MenuForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\LabUser\\Documents\\GitHub\\WGU.C969.SoftwareII\\Forms\\MenuForm.cs",
+              "RelativeDocumentMoniker": "Forms\\MenuForm.cs",
+              "ToolTip": "C:\\Users\\LabUser\\Documents\\GitHub\\WGU.C969.SoftwareII\\Forms\\MenuForm.cs [Design]",
+              "RelativeToolTip": "Forms\\MenuForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-19T23:55:22.467Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "DataValidation.cs",
               "DocumentMoniker": "C:\\Users\\LabUser\\Documents\\GitHub\\WGU.C969.SoftwareII\\Tools\\DataValidation.cs",
               "RelativeDocumentMoniker": "Tools\\DataValidation.cs",
               "ToolTip": "C:\\Users\\LabUser\\Documents\\GitHub\\WGU.C969.SoftwareII\\Tools\\DataValidation.cs",
               "RelativeToolTip": "Tools\\DataValidation.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAAB4AAAARAAAA",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-19T23:43:12.665Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "LoginForm.cs",
               "DocumentMoniker": "C:\\Users\\LabUser\\Documents\\GitHub\\WGU.C969.SoftwareII\\Forms\\LoginForm.cs",
               "RelativeDocumentMoniker": "Forms\\LoginForm.cs",
               "ToolTip": "C:\\Users\\LabUser\\Documents\\GitHub\\WGU.C969.SoftwareII\\Forms\\LoginForm.cs",
               "RelativeToolTip": "Forms\\LoginForm.cs",
-              "ViewState": "AQIAAB4AAAAAAAAAAIAwwCkAAAAeAAAA",
+              "ViewState": "AQIAADMAAAAAAAAAAAAMwC0AAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-15T01:58:00.211Z",
               "EditorCaption": ""

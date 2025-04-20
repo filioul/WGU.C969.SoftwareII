@@ -16,5 +16,34 @@ namespace WGU.C969.SoftwareII.Forms
         {
             InitializeComponent();
         }
+
+        private void editCustomersButton_Click(object sender, EventArgs e)
+        {
+            EditCustomerRecords editCForm = new EditCustomerRecords();
+            editCForm.Show();
+        }
+
+        private void editAppointmentsButton_Click(object sender, EventArgs e)
+        {
+            EditAppointments editAForm = new EditAppointments();
+            editAForm.Show();
+        }
+
+        private void calendarViewButton_Click(object sender, EventArgs e)
+        {
+            CalendarView calendarViewForm = new CalendarView();
+            calendarViewForm.Show();
+        }
+
+        private void generateReportsButton_Click(object sender, EventArgs e)
+        {
+            GenerateReports generateReportsForm = new GenerateReports();
+            generateReportsForm.Show();
+        }
+
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

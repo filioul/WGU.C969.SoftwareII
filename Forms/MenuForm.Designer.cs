@@ -46,6 +46,7 @@
             editCustomersButton.TabIndex = 7;
             editCustomersButton.Text = "Edit customer records";
             editCustomersButton.UseVisualStyleBackColor = true;
+            editCustomersButton.Click += editCustomersButton_Click;
             // 
             // editAppointmentsButton
             // 
@@ -57,6 +58,7 @@
             editAppointmentsButton.TabIndex = 8;
             editAppointmentsButton.Text = "Edit appointments";
             editAppointmentsButton.UseVisualStyleBackColor = true;
+            editAppointmentsButton.Click += editAppointmentsButton_Click;
             // 
             // calendarViewButton
             // 
@@ -68,6 +70,7 @@
             calendarViewButton.TabIndex = 9;
             calendarViewButton.Text = "Calendar View";
             calendarViewButton.UseVisualStyleBackColor = true;
+            calendarViewButton.Click += calendarViewButton_Click;
             // 
             // generateReportsButton
             // 
@@ -79,6 +82,7 @@
             generateReportsButton.TabIndex = 10;
             generateReportsButton.Text = "Generate reports";
             generateReportsButton.UseVisualStyleBackColor = true;
+            generateReportsButton.Click += generateReportsButton_Click;
             // 
             // exitButton
             // 
@@ -89,6 +93,7 @@
             exitButton.TabIndex = 11;
             exitButton.Text = "Exit";
             exitButton.UseVisualStyleBackColor = true;
+            exitButton.Click += exitButton_Click;
             // 
             // greetingLabel
             // 
@@ -100,7 +105,7 @@
             greetingLabel.TabIndex = 12;
             greetingLabel.Text = "Select an option below.";
             // 
-            // FormMenu
+            // MenuForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -111,7 +116,7 @@
             Controls.Add(calendarViewButton);
             Controls.Add(editAppointmentsButton);
             Controls.Add(editCustomersButton);
-            Name = "FormMenu";
+            Name = "MenuForm";
             Text = "Menu";
             ResumeLayout(false);
             PerformLayout();
