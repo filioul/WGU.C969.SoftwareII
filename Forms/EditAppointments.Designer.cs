@@ -88,6 +88,7 @@
             backButton.TabIndex = 12;
             backButton.Text = "Back";
             backButton.UseVisualStyleBackColor = true;
+            backButton.Click += backButton_Click;
             // 
             // searchButton
             // 

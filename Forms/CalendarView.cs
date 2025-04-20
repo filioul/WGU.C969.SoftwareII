@@ -21,5 +21,10 @@ namespace WGU.C969.SoftwareII.Forms
         {
             datePicker.CustomFormat = "dd/MM/yyyy";
         }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

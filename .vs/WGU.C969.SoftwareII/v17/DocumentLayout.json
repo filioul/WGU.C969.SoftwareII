@@ -3,20 +3,44 @@
   "WorkspaceRootPath": "C:\\Users\\LabUser\\Documents\\GitHub\\WGU.C969.SoftwareII\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|c:\\users\\labuser\\documents\\github\\wgu.c969.softwareii\\forms\\menuform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|solutionrelative:forms\\menuform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|c:\\users\\labuser\\documents\\github\\wgu.c969.softwareii\\forms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|solutionrelative:forms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|c:\\users\\labuser\\documents\\github\\wgu.c969.softwareii\\forms\\menuform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|solutionrelative:forms\\menuform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|c:\\users\\labuser\\documents\\github\\wgu.c969.softwareii\\forms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|solutionrelative:forms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|c:\\users\\labuser\\documents\\github\\wgu.c969.softwareii\\tools\\datavalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|solutionrelative:tools\\datavalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|c:\\users\\labuser\\documents\\github\\wgu.c969.softwareii\\forms\\generatereports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|solutionrelative:forms\\generatereports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|C:\\Users\\LabUser\\Documents\\GitHub\\WGU.C969.SoftwareII\\forms\\generatereports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|solutionrelative:forms\\generatereports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|c:\\users\\labuser\\documents\\github\\wgu.c969.softwareii\\forms\\editcustomerrecords.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|solutionrelative:forms\\editcustomerrecords.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|c:\\users\\labuser\\documents\\github\\wgu.c969.softwareii\\forms\\editcustomerrecords.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|solutionrelative:forms\\editcustomerrecords.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|c:\\users\\labuser\\documents\\github\\wgu.c969.softwareii\\forms\\editappointments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|solutionrelative:forms\\editappointments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|c:\\users\\labuser\\documents\\github\\wgu.c969.softwareii\\forms\\editappointments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|solutionrelative:forms\\editappointments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|c:\\users\\labuser\\documents\\github\\wgu.c969.softwareii\\forms\\calendarview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|solutionrelative:forms\\calendarview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|c:\\users\\labuser\\documents\\github\\wgu.c969.softwareii\\forms\\calendarview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|solutionrelative:forms\\calendarview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,58 +50,132 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MenuForm.cs",
-              "DocumentMoniker": "C:\\Users\\LabUser\\Documents\\GitHub\\WGU.C969.SoftwareII\\Forms\\MenuForm.cs",
-              "RelativeDocumentMoniker": "Forms\\MenuForm.cs",
-              "ToolTip": "C:\\Users\\LabUser\\Documents\\GitHub\\WGU.C969.SoftwareII\\Forms\\MenuForm.cs",
-              "RelativeToolTip": "Forms\\MenuForm.cs",
-              "ViewState": "AQIAABkAAAAAAAAAAIAxwC0AAAAfAAAA",
+              "DocumentIndex": 2,
+              "Title": "GenerateReports.cs",
+              "DocumentMoniker": "C:\\Users\\LabUser\\Documents\\GitHub\\WGU.C969.SoftwareII\\Forms\\GenerateReports.cs",
+              "RelativeDocumentMoniker": "Forms\\GenerateReports.cs",
+              "ToolTip": "C:\\Users\\LabUser\\Documents\\GitHub\\WGU.C969.SoftwareII\\Forms\\GenerateReports.cs",
+              "RelativeToolTip": "Forms\\GenerateReports.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAIAwwBUAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-19T23:55:42.648Z",
+              "WhenOpened": "2025-04-20T00:11:16.686Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MenuForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\LabUser\\Documents\\GitHub\\WGU.C969.SoftwareII\\Forms\\MenuForm.cs",
-              "RelativeDocumentMoniker": "Forms\\MenuForm.cs",
-              "ToolTip": "C:\\Users\\LabUser\\Documents\\GitHub\\WGU.C969.SoftwareII\\Forms\\MenuForm.cs [Design]",
-              "RelativeToolTip": "Forms\\MenuForm.cs [Design]",
+              "DocumentIndex": 5,
+              "Title": "EditCustomerRecords.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\LabUser\\Documents\\GitHub\\WGU.C969.SoftwareII\\Forms\\EditCustomerRecords.cs",
+              "RelativeDocumentMoniker": "Forms\\EditCustomerRecords.cs",
+              "ToolTip": "C:\\Users\\LabUser\\Documents\\GitHub\\WGU.C969.SoftwareII\\Forms\\EditCustomerRecords.cs [Design]",
+              "RelativeToolTip": "Forms\\EditCustomerRecords.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-19T23:55:22.467Z",
+              "WhenOpened": "2025-04-20T00:11:09.538Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DataValidation.cs",
-              "DocumentMoniker": "C:\\Users\\LabUser\\Documents\\GitHub\\WGU.C969.SoftwareII\\Tools\\DataValidation.cs",
-              "RelativeDocumentMoniker": "Tools\\DataValidation.cs",
-              "ToolTip": "C:\\Users\\LabUser\\Documents\\GitHub\\WGU.C969.SoftwareII\\Tools\\DataValidation.cs",
-              "RelativeToolTip": "Tools\\DataValidation.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAABUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-19T23:43:12.665Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "LoginForm.cs",
               "DocumentMoniker": "C:\\Users\\LabUser\\Documents\\GitHub\\WGU.C969.SoftwareII\\Forms\\LoginForm.cs",
               "RelativeDocumentMoniker": "Forms\\LoginForm.cs",
               "ToolTip": "C:\\Users\\LabUser\\Documents\\GitHub\\WGU.C969.SoftwareII\\Forms\\LoginForm.cs",
               "RelativeToolTip": "Forms\\LoginForm.cs",
-              "ViewState": "AQIAADMAAAAAAAAAAAAMwC0AAAAUAAAA",
+              "ViewState": "AQIAACQAAAAAAAAAAIAwwC8AAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-15T01:58:00.211Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LoginForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\LabUser\\Documents\\GitHub\\WGU.C969.SoftwareII\\Forms\\LoginForm.cs",
+              "RelativeDocumentMoniker": "Forms\\LoginForm.cs",
+              "ToolTip": "C:\\Users\\LabUser\\Documents\\GitHub\\WGU.C969.SoftwareII\\Forms\\LoginForm.cs [Design]",
+              "RelativeToolTip": "Forms\\LoginForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T00:12:01.48Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EditCustomerRecords.cs",
+              "DocumentMoniker": "C:\\Users\\LabUser\\Documents\\GitHub\\WGU.C969.SoftwareII\\Forms\\EditCustomerRecords.cs",
+              "RelativeDocumentMoniker": "Forms\\EditCustomerRecords.cs",
+              "ToolTip": "C:\\Users\\LabUser\\Documents\\GitHub\\WGU.C969.SoftwareII\\Forms\\EditCustomerRecords.cs",
+              "RelativeToolTip": "Forms\\EditCustomerRecords.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAIAwwBUAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T00:11:11.33Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GenerateReports.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\LabUser\\Documents\\GitHub\\WGU.C969.SoftwareII\\Forms\\GenerateReports.cs",
+              "RelativeDocumentMoniker": "Forms\\GenerateReports.cs",
+              "ToolTip": "C:\\Users\\LabUser\\Documents\\GitHub\\WGU.C969.SoftwareII\\Forms\\GenerateReports.cs [Design]",
+              "RelativeToolTip": "Forms\\GenerateReports.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T01:40:00.377Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "EditAppointments.cs",
+              "DocumentMoniker": "C:\\Users\\LabUser\\Documents\\GitHub\\WGU.C969.SoftwareII\\Forms\\EditAppointments.cs",
+              "RelativeDocumentMoniker": "Forms\\EditAppointments.cs",
+              "ToolTip": "C:\\Users\\LabUser\\Documents\\GitHub\\WGU.C969.SoftwareII\\Forms\\EditAppointments.cs",
+              "RelativeToolTip": "Forms\\EditAppointments.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAIAwwBUAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T00:11:04.933Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "EditAppointments.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\LabUser\\Documents\\GitHub\\WGU.C969.SoftwareII\\Forms\\EditAppointments.cs",
+              "RelativeDocumentMoniker": "Forms\\EditAppointments.cs",
+              "ToolTip": "C:\\Users\\LabUser\\Documents\\GitHub\\WGU.C969.SoftwareII\\Forms\\EditAppointments.cs [Design]",
+              "RelativeToolTip": "Forms\\EditAppointments.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T00:11:02.126Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CalendarView.cs",
+              "DocumentMoniker": "C:\\Users\\LabUser\\Documents\\GitHub\\WGU.C969.SoftwareII\\Forms\\CalendarView.cs",
+              "RelativeDocumentMoniker": "Forms\\CalendarView.cs",
+              "ToolTip": "C:\\Users\\LabUser\\Documents\\GitHub\\WGU.C969.SoftwareII\\Forms\\CalendarView.cs",
+              "RelativeToolTip": "Forms\\CalendarView.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAIAwwBoAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T00:10:25.858Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CalendarView.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\LabUser\\Documents\\GitHub\\WGU.C969.SoftwareII\\Forms\\CalendarView.cs",
+              "RelativeDocumentMoniker": "Forms\\CalendarView.cs",
+              "ToolTip": "C:\\Users\\LabUser\\Documents\\GitHub\\WGU.C969.SoftwareII\\Forms\\CalendarView.cs [Design]",
+              "RelativeToolTip": "Forms\\CalendarView.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T00:10:23.395Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

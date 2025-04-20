@@ -61,6 +61,7 @@
             backButton.TabIndex = 8;
             backButton.Text = "Back";
             backButton.UseVisualStyleBackColor = true;
+            backButton.Click += backButton_Click;
             // 
             // saveButton
             // 

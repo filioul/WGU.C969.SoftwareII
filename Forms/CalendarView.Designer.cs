@@ -45,6 +45,7 @@
             backButton.TabIndex = 13;
             backButton.Text = "Back";
             backButton.UseVisualStyleBackColor = true;
+            backButton.Click += backButton_Click;
             // 
             // datePicker
             // 

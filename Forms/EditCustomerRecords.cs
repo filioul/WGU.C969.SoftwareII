@@ -16,5 +16,10 @@ namespace WGU.C969.SoftwareII.Forms
         {
             InitializeComponent();
         }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

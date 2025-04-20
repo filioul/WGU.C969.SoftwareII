@@ -45,6 +45,7 @@ namespace WGU.C969.SoftwareII
                     }
                     MenuForm menu = new MenuForm();
                     menu.Show();
+                    Hide();
                 } else
                 {
                     MessageBox.Show(Localization.WrongCredentialsMessage());
