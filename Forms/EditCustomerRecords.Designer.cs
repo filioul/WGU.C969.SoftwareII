@@ -83,6 +83,7 @@
             actionComboBox.Name = "actionComboBox";
             actionComboBox.Size = new Size(232, 25);
             actionComboBox.TabIndex = 10;
+            actionComboBox.SelectedIndexChanged += actionComboBox_SelectedIndexChanged;
             // 
             // selectionLabel
             // 

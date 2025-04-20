@@ -12,14 +12,16 @@ namespace WGU.C969.SoftwareII.Forms
 {
     public partial class MenuForm : Form
     {
-        public MenuForm()
+        private string user;
+        public MenuForm(string _user)
         {
+            user = _user;
             InitializeComponent();
         }
 
         private void editCustomersButton_Click(object sender, EventArgs e)
         {
-            EditCustomerRecords editCForm = new EditCustomerRecords();
+            EditCustomerRecords editCForm = new EditCustomerRecords(user);
             editCForm.Show();
         }
 

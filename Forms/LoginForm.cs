@@ -43,14 +43,16 @@ namespace WGU.C969.SoftwareII
                     {
                         MessageBox.Show(Localization.AppointmentAlertMessage());
                     }
-                    MenuForm menu = new MenuForm();
+                    MenuForm menu = new MenuForm(username);
                     menu.Show();
                     Hide();
-                } else
+                }
+                else
                 {
                     MessageBox.Show(Localization.WrongCredentialsMessage());
                 }
-            } else
+            }
+            else
             {
                 MessageBox.Show(Localization.NoInputMessage());
             }
@@ -59,6 +61,12 @@ namespace WGU.C969.SoftwareII
         private void exitButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void welcomeLabel_Click(object sender, EventArgs e)
+        {
+            Customer.addCountry("Greece", "test");
+
         }
     }
 }
