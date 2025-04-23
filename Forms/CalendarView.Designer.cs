@@ -30,10 +30,10 @@
         {
             backButton = new Button();
             datePicker = new DateTimePicker();
-            dataGridView1 = new DataGridView();
+            appDataGridView = new DataGridView();
             showDateButton = new Button();
             dateLabel = new Label();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)appDataGridView).BeginInit();
             SuspendLayout();
             // 
             // backButton
@@ -57,15 +57,14 @@
             datePicker.Size = new Size(115, 25);
             datePicker.TabIndex = 25;
             datePicker.Value = new DateTime(2025, 4, 10, 0, 0, 0, 0);
-            datePicker.ValueChanged += datePicker_ValueChanged;
             // 
-            // dataGridView1
+            // appDataGridView
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(68, 58);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(665, 306);
-            dataGridView1.TabIndex = 26;
+            appDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            appDataGridView.Location = new Point(68, 58);
+            appDataGridView.Name = "appDataGridView";
+            appDataGridView.Size = new Size(665, 306);
+            appDataGridView.TabIndex = 26;
             // 
             // showDateButton
             // 
@@ -75,6 +74,7 @@
             showDateButton.TabIndex = 27;
             showDateButton.Text = "Show appointments for date";
             showDateButton.UseVisualStyleBackColor = true;
+            showDateButton.Click += showDateButton_Click;
             // 
             // dateLabel
             // 
@@ -94,12 +94,12 @@
             ClientSize = new Size(800, 450);
             Controls.Add(dateLabel);
             Controls.Add(showDateButton);
-            Controls.Add(dataGridView1);
+            Controls.Add(appDataGridView);
             Controls.Add(datePicker);
             Controls.Add(backButton);
             Name = "CalendarView";
             Text = "Calendar view";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)appDataGridView).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -108,7 +108,7 @@
 
         private Button backButton;
         private DateTimePicker datePicker;
-        private DataGridView dataGridView1;
+        private DataGridView appDataGridView;
         private Button showDateButton;
         private Label dateLabel;
     }
