@@ -80,3 +80,4 @@ C:\Users\LabUser\Documents\GitHub\WGU.C969.SoftwareII\obj\Debug\net8.0-windows\r
 C:\Users\LabUser\Documents\GitHub\WGU.C969.SoftwareII\obj\Debug\net8.0-windows\WGU.C969.SoftwareII.pdb
 C:\Users\LabUser\Documents\GitHub\WGU.C969.SoftwareII\obj\Debug\net8.0-windows\WGU.C969.SoftwareII.genruntimeconfig.cache
 C:\Users\LabUser\Documents\GitHub\WGU.C969.SoftwareII\obj\Debug\net8.0-windows\ref\WGU.C969.SoftwareII.dll
+C:\Users\LabUser\Documents\GitHub\WGU.C969.SoftwareII\obj\Debug\net8.0-windows\WGU.C969.SoftwareII.g.resources

@@ -43,10 +43,15 @@ namespace WGU.C969.SoftwareII
                     {
                         MessageBox.Show(Localization.AppointmentAlertMessage());
                     }
+
+                    var loginTime = DateTime.UtcNow;
+                    Logging.RecordSignIn(username, loginTime);
+
                     MenuForm menu = new MenuForm(username);
                     menu.Show();
                     Hide();
                 }
+
                 else
                 {
                     MessageBox.Show(Localization.WrongCredentialsMessage());

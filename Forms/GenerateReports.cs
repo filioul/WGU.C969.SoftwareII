@@ -21,5 +21,13 @@ namespace WGU.C969.SoftwareII.Forms
         {
             Close();
         }
+
+        private void generateButton_Click(object sender, EventArgs e)
+        {
+            if (actionComboBox.SelectedIndex == 0)
+            {
+
+            }
+        }
     }
 }

@@ -73,6 +73,7 @@
             generateButton.TabIndex = 28;
             generateButton.Text = "Generate report";
             generateButton.UseVisualStyleBackColor = true;
+            generateButton.Click += generateButton_Click;
             // 
             // GenerateReports
             // 
