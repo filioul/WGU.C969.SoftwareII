@@ -14,13 +14,21 @@ namespace WGU.C969.SoftwareII.Tools
         {
             try
             {
-                var path = Path.Combine(Environment.CurrentDirectory, "Login_History.txt");
-                var entry = $"{user} {loginTime}\n";
-                using (StreamWriter sw = new StreamWriter(path))
+                string temp = @"C:969Temp";
+                string logFile = @"\Login_History.txt";
+                logFile = temp + logFile;
+
+                if (!Directory.Exists(temp))
                 {
-                    sw.WriteLine(entry);
+                    Directory.CreateDirectory(temp);
                 }
-                MessageBox.Show(File.ReadAllText(path));
+
+                using (StreamWriter sw = File.AppendText(logFile))
+                {
+                    string logEntry = $"Login attempt by {user} at {loginTime}";
+                    sw.WriteLine(logEntry);
+                    sw.Close();
+                }
             }
             catch (Exception ex)
             {
