@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WGU.C969.SoftwareII.Tools;
 
 namespace WGU.C969.SoftwareII.Forms
 {
@@ -24,9 +25,12 @@ namespace WGU.C969.SoftwareII.Forms
 
         private void generateButton_Click(object sender, EventArgs e)
         {
-            if (actionComboBox.SelectedIndex == 0)
+            if (actionComboBox.SelectedIndex == -1)
             {
-
+                MessageBox.Show("Please select a type of report to generate.");
+            } else if (actionComboBox.SelectedIndex == 0) {
+                string report = ReportGenerator.AppointmentTypesPerMonth();
+                MessageBox.Show(report);
             }
         }
     }

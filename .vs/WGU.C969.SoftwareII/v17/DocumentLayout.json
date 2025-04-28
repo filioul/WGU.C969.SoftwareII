@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\LabUser\\Documents\\GitHub\\WGU.C969.SoftwareII\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|c:\\users\\labuser\\documents\\github\\wgu.c969.softwareii\\forms\\generatereports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|solutionrelative:forms\\generatereports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|c:\\users\\labuser\\documents\\github\\wgu.c969.softwareii\\tools\\reportgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|solutionrelative:tools\\reportgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|c:\\users\\labuser\\documents\\github\\wgu.c969.softwareii\\tools\\logging.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|solutionrelative:tools\\logging.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|c:\\users\\labuser\\documents\\github\\wgu.c969.softwareii\\forms\\generatereports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|solutionrelative:forms\\generatereports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|c:\\users\\labuser\\documents\\github\\wgu.c969.softwareii\\forms\\generatereports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|solutionrelative:forms\\generatereports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|c:\\users\\labuser\\documents\\github\\wgu.c969.softwareii\\wgu.c969.softwareii.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -22,25 +26,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Logging.cs",
-              "DocumentMoniker": "C:\\Users\\LabUser\\Documents\\GitHub\\WGU.C969.SoftwareII\\Tools\\Logging.cs",
-              "RelativeDocumentMoniker": "Tools\\Logging.cs",
-              "ToolTip": "C:\\Users\\LabUser\\Documents\\GitHub\\WGU.C969.SoftwareII\\Tools\\Logging.cs",
-              "RelativeToolTip": "Tools\\Logging.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAwwBsAAABOAAAA",
+              "DocumentIndex": 0,
+              "Title": "ReportGenerator.cs",
+              "DocumentMoniker": "C:\\Users\\LabUser\\Documents\\GitHub\\WGU.C969.SoftwareII\\Tools\\ReportGenerator.cs",
+              "RelativeDocumentMoniker": "Tools\\ReportGenerator.cs",
+              "ToolTip": "C:\\Users\\LabUser\\Documents\\GitHub\\WGU.C969.SoftwareII\\Tools\\ReportGenerator.cs",
+              "RelativeToolTip": "Tools\\ReportGenerator.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAgwCAAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-25T01:17:22.035Z",
-              "IsPinned": true,
+              "WhenOpened": "2025-04-27T23:44:57.924Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "GenerateReports.cs",
+              "DocumentMoniker": "C:\\Users\\LabUser\\Documents\\GitHub\\WGU.C969.SoftwareII\\Forms\\GenerateReports.cs",
+              "RelativeDocumentMoniker": "Forms\\GenerateReports.cs",
+              "ToolTip": "C:\\Users\\LabUser\\Documents\\GitHub\\WGU.C969.SoftwareII\\Forms\\GenerateReports.cs",
+              "RelativeToolTip": "Forms\\GenerateReports.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAWwB0AAABPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T23:41:04.565Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "GenerateReports.cs [Design]",
               "DocumentMoniker": "C:\\Users\\LabUser\\Documents\\GitHub\\WGU.C969.SoftwareII\\Forms\\GenerateReports.cs",
               "RelativeDocumentMoniker": "Forms\\GenerateReports.cs",
@@ -52,7 +68,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "WGU.C969.SoftwareII",
               "DocumentMoniker": "C:\\Users\\LabUser\\Documents\\GitHub\\WGU.C969.SoftwareII\\WGU.C969.SoftwareII.csproj",
               "RelativeDocumentMoniker": "WGU.C969.SoftwareII.csproj",
