@@ -147,7 +147,6 @@ namespace WGU.C969.SoftwareII.Tools
                 {
                     addressID = Convert.ToInt32(cmd3.ExecuteScalar());
                 }
-                MessageBox.Show("New address ID: " + addressID);
             }
             catch (Exception ex)
             {
@@ -157,6 +156,24 @@ namespace WGU.C969.SoftwareII.Tools
             return addressID;
         }
 
-        
+        public static void AddCustomer(string customerName, string address1, string address2, string cityName, string countryName, string postalCode, string phone, string user, int active)
+        {
+            int addressID = Customer.AddAddress(address1, address2, cityName, countryName, postalCode, phone, user);
+            try
+            {
+                string sql2 = $"INSERT INTO customer VALUES (NULL, @customerName, @addressId, @active, NOW(), @createdBy, NOW(), @updatedBy)";
+                MySqlCommand cmd2 = new MySqlCommand(sql2, DBConnection.conn);
+                cmd2.Parameters.AddWithValue("@customerName", customerName);
+                cmd2.Parameters.AddWithValue("@addressId", addressID);
+                cmd2.Parameters.AddWithValue("@active", active);
+                cmd2.Parameters.AddWithValue("@createdBy", user);
+                cmd2.Parameters.AddWithValue("@updatedBy", user);
+                cmd2.ExecuteNonQuery();
+                MessageBox.Show("Customer created");
+            } catch (Exception ex)
+            {
+                MessageBox.Show("Exception thrown when creating customer: " + ex);
+            }
+        }
     }
 }

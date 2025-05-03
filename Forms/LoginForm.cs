@@ -70,7 +70,7 @@ namespace WGU.C969.SoftwareII
 
         private void welcomeLabel_Click(object sender, EventArgs e)
         {
-            int addressId = Customer.AddAddress("175 Buckingham Road", "Apt 5", "London", "UK", "SW5 9AA", "555-3983", "test");
+            Customer.AddCustomer("Jane Brown", "5 Haymarket Road", "", "Melbourne", "Australia", "3000", "549-9575", "test", 1);
         }
     }
 }
