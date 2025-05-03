@@ -68,10 +68,5 @@ namespace WGU.C969.SoftwareII
             Application.Exit();
         }
 
-        private void welcomeLabel_Click(object sender, EventArgs e)
-        {
-            Customer.addCountry("Greece", "test");
-
-        }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Google.Protobuf.WellKnownTypes;
+using Microsoft.VisualBasic.ApplicationServices;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -11,18 +12,10 @@ namespace WGU.C969.SoftwareII.Tools
 {
     public class Customer
     {
-        public int id { get; set; }
-        public string name { get; set; }
-        public int addressID { get; set; }
-        public DateTime createdTime { get; set; }
-        public  string createdBy { get; set; }
-        public Timestamp lastUpdate { get; set; }
-        public string lastUpdateBy { get; set; }
-
-        public static void addCountry(string countryName, string user)
+        public static void AddCountry(string countryName, string user)
         {
-            DateTime createdTime;
-            DateTime lastUpdated;
+            countryName = countryName.Trim();
+            user = user.Trim();
             try
             {
                 string sql = $"SELECT * FROM country WHERE country = '{countryName}'";
@@ -32,20 +25,44 @@ namespace WGU.C969.SoftwareII.Tools
                 if (reader.HasRows)
                 {
                     reader.Close();
-                }else
+                    MessageBox.Show("country already added");
+                    return;
+                }
+                else
                 {
-                    createdTime = DateTime.Now;
-                    lastUpdated = createdTime;
-                    string query = "SELECT countryID FROM country ORDER BY countryID DESC LIMIT 1";
-                    var command = new MySqlCommand(query, DBConnection.conn);
-                    int countryIndex = Convert.ToInt32(command.ExecuteScalar());
-                    MessageBox.Show($"countryIndex");
+                    reader.Close();
+                    string sql2 = $"INSERT INTO country VALUES (NULL, @countryName, NOW(), @createdBy, NOW(), @updatedBy)";
+                    MySqlCommand cmd2 = new MySqlCommand(sql2, DBConnection.conn);
+                    cmd2.Parameters.AddWithValue("@countryName", countryName);
+                    cmd2.Parameters.AddWithValue("@createdBy", user);
+                    cmd2.Parameters.AddWithValue("@updatedBy", user);
+                    cmd2.ExecuteNonQuery();
+                    MessageBox.Show("country added");
                 }
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Exception thrown: " + ex);
             }
+        }
+
+        public static int GetCountryID(string countryName)
+        {
+            int countryID = 0;
+            try
+            {
+                string sql = $"SELECT countryId FROM country WHERE country = '{countryName}'";
+                MySqlCommand cmd = new MySqlCommand(sql, DBConnection.conn);
+                using (cmd)
+                {
+                    countryID = Convert.ToInt32(cmd.ExecuteScalar());
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error getting countryId: " + ex);
+            }
+            return countryID;
         }
     }
 }

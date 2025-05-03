@@ -84,7 +84,6 @@
             welcomeLabel.Size = new Size(170, 46);
             welcomeLabel.TabIndex = 4;
             welcomeLabel.Text = "Welcome!";
-            welcomeLabel.Click += welcomeLabel_Click;
             // 
             // greetingLabel
             // 
