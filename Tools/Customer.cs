@@ -74,7 +74,6 @@ namespace WGU.C969.SoftwareII.Tools
                 if (reader.HasRows)
                 {
                     reader.Close();
-                    MessageBox.Show("City already added");
                     return;
                 }
                 else
@@ -114,7 +113,7 @@ namespace WGU.C969.SoftwareII.Tools
             return cityID;
         }
 
-        public static void AddAddress(string address1, string address2, string cityName, string countryName, string postalCode, string phone, string user)
+        public static int AddAddress(string address1, string address2, string cityName, string countryName, string postalCode, string phone, string user)
         {
             address1 = address1.Trim();
             address2 = address2.Trim();
@@ -126,6 +125,8 @@ namespace WGU.C969.SoftwareII.Tools
 
             Customer.AddCity(cityName, countryName, user);
             int cityID = GetCityID(cityName);
+
+            int addressID = 0;
 
             try
             {
@@ -139,11 +140,21 @@ namespace WGU.C969.SoftwareII.Tools
                 cmd2.Parameters.AddWithValue("@createdBy", user);
                 cmd2.Parameters.AddWithValue("@updatedBy", user);
                 cmd2.ExecuteNonQuery();
+
+                string sql3 = "SELECT MAX(addressId) FROM address";
+                MySqlCommand cmd3 = new MySqlCommand(sql3, DBConnection.conn);
+                using (cmd3)
+                {
+                    addressID = Convert.ToInt32(cmd3.ExecuteScalar());
+                }
+                MessageBox.Show("New address ID: " + addressID);
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Exception thrown: " + ex);
             }
+
+            return addressID;
         }
 
         
