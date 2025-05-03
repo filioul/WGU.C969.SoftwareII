@@ -25,7 +25,6 @@ namespace WGU.C969.SoftwareII.Tools
                 if (reader.HasRows)
                 {
                     reader.Close();
-                    MessageBox.Show("country already added");
                     return;
                 }
                 else
@@ -37,7 +36,6 @@ namespace WGU.C969.SoftwareII.Tools
                     cmd2.Parameters.AddWithValue("@createdBy", user);
                     cmd2.Parameters.AddWithValue("@updatedBy", user);
                     cmd2.ExecuteNonQuery();
-                    MessageBox.Show("country added");
                 }
             }
             catch (Exception ex)
@@ -63,6 +61,63 @@ namespace WGU.C969.SoftwareII.Tools
                 MessageBox.Show("Error getting countryId: " + ex);
             }
             return countryID;
+        }
+
+        public static void AddCity(string cityName, string countryName, string user)
+        {
+            user = user.Trim();
+            cityName = cityName.Trim();
+            countryName = countryName.Trim();
+            Customer.AddCountry(countryName, user);
+            int countryId = GetCountryID(countryName);
+            try
+            {
+                string sql = $"SELECT * FROM city WHERE city = '{cityName}'";
+                MySqlCommand cmd = new MySqlCommand(sql, DBConnection.conn);
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+                    reader.Close();
+                    MessageBox.Show("City already added");
+                    return;
+                }
+                else
+                {
+                    reader.Close();
+                    string sql2 = $"INSERT INTO city VALUES (NULL, @cityName, @countryId, NOW(), @createdBy, NOW(), @updatedBy)";
+                    MySqlCommand cmd2 = new MySqlCommand(sql2, DBConnection.conn);
+                    cmd2.Parameters.AddWithValue("@cityName", cityName);
+                    cmd2.Parameters.AddWithValue("@countryId", countryId);
+                    cmd2.Parameters.AddWithValue("@createdBy", user);
+                    cmd2.Parameters.AddWithValue("@updatedBy", user);
+                    cmd2.ExecuteNonQuery();
+                    MessageBox.Show("City added");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Exception thrown: " + ex);
+            }
+        }
+
+        public static int GetCityID(string cityName)
+        {
+            int cityID = 0;
+            try
+            {
+                string sql = $"SELECT cityId FROM city WHERE city = '{cityName}'";
+                MySqlCommand cmd = new MySqlCommand(sql, DBConnection.conn);
+                using (cmd)
+                {
+                    cityID = Convert.ToInt32(cmd.ExecuteScalar());
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error getting countryId: " + ex);
+            }
+            return cityID;
         }
     }
 }
