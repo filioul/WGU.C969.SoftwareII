@@ -24,10 +24,7 @@ namespace WGU.C969.SoftwareII.Tools
                 {
                     distinctTypes = Convert.ToInt32(cmd.ExecuteScalar());
                 }
-                if (distinctTypes == -1)
-                {
-                    distinctTypes = 0;
-                }
+                Func<int, int> checkValue = i => i == -1 ? 0 : i; //lambda expression checks if no distinct types where found, replaces the default -1 value with 0
                 report = report + $"{months[i]}: {distinctTypes}\n";
             }
             return report;

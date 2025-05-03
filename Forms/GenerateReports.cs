@@ -31,6 +31,9 @@ namespace WGU.C969.SoftwareII.Forms
             } else if (actionComboBox.SelectedIndex == 0) {
                 string report = ReportGenerator.AppointmentTypesPerMonth();
                 MessageBox.Show(report);
+            } else if (actionComboBox.SelectedIndex == 1)
+            {
+                
             }
         }
     }
