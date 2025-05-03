@@ -169,7 +169,6 @@ namespace WGU.C969.SoftwareII.Tools
                 cmd2.Parameters.AddWithValue("@createdBy", user);
                 cmd2.Parameters.AddWithValue("@updatedBy", user);
                 cmd2.ExecuteNonQuery();
-                MessageBox.Show("Customer created");
             } catch (Exception ex)
             {
                 MessageBox.Show("Exception thrown when creating customer: " + ex);

@@ -48,7 +48,7 @@
             cityLabel = new Label();
             codeLabel = new Label();
             countryLabel = new Label();
-            textBox2 = new TextBox();
+            numberTextBox = new TextBox();
             numberLabel = new Label();
             SuspendLayout();
             // 
@@ -256,14 +256,14 @@
             countryLabel.Text = "*Country:";
             countryLabel.Visible = false;
             // 
-            // textBox2
+            // numberTextBox
             // 
-            textBox2.Font = new Font("Segoe UI", 10F);
-            textBox2.Location = new Point(345, 358);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(176, 25);
-            textBox2.TabIndex = 28;
-            textBox2.Visible = false;
+            numberTextBox.Font = new Font("Segoe UI", 10F);
+            numberTextBox.Location = new Point(345, 358);
+            numberTextBox.Name = "numberTextBox";
+            numberTextBox.Size = new Size(176, 25);
+            numberTextBox.TabIndex = 28;
+            numberTextBox.Visible = false;
             // 
             // numberLabel
             // 
@@ -282,7 +282,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(numberLabel);
-            Controls.Add(textBox2);
+            Controls.Add(numberTextBox);
             Controls.Add(countryLabel);
             Controls.Add(codeLabel);
             Controls.Add(cityLabel);
@@ -331,7 +331,7 @@
         private Label cityLabel;
         private Label codeLabel;
         private Label countryLabel;
-        private TextBox textBox2;
+        private TextBox numberTextBox;
         private Label numberLabel;
     }
 }

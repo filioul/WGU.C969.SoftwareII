@@ -28,33 +28,49 @@ namespace WGU.C969.SoftwareII.Forms
         {
             if (actionComboBox.SelectedIndex == 0)
             {
-                addCustomer();
+                AddCustomer();
             }
             else if (actionComboBox.SelectedIndex == 1)
             {
-                updateCustomer();
+                UpdateCustomer();
             } 
             else if (actionComboBox.SelectedIndex == 2)
             {
-                deleteCustomer();
+                DeleteCustomer();
             }
         }
 
-        private void addCustomer()
+        private void AddCustomer()
         {
-            IDTextBox.Enabled = false;
-            IDTextBox.Visible = true;
-            customerIDLabel.Visible = true;
+            ShowPropertyFields();
         }
 
-        private void updateCustomer()
+        private void UpdateCustomer()
         {
             throw new NotImplementedException();
         }
 
-        private void deleteCustomer()
+        private void DeleteCustomer()
         {
             throw new NotImplementedException();
+        }
+
+        private void ShowPropertyFields()
+        {
+            nameLabel.Visible = true;
+            nameTextBox.Visible = true;
+            addressLabel1.Visible = true;
+            addressTextBox1.Visible = true;
+            addressLabel2.Visible = true;
+            addressTextBox2.Visible = true;
+            cityLabel.Visible = true;
+            cityTextBox.Visible = true;
+            countryLabel.Visible = true;
+            countryTextBox.Visible = true;
+            codeLabel.Visible = true;
+            codeTextBox.Visible = true;
+            numberLabel.Visible = true;
+            numberTextBox.Visible = true;
         }
     }
 }

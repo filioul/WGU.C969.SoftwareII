@@ -68,9 +68,5 @@ namespace WGU.C969.SoftwareII
             Application.Exit();
         }
 
-        private void welcomeLabel_Click(object sender, EventArgs e)
-        {
-            Customer.AddCustomer("Jane Brown", "5 Haymarket Road", "", "Melbourne", "Australia", "3000", "549-9575", "test", 1);
-        }
     }
 }
