@@ -13,63 +13,23 @@ namespace WGU.C969.SoftwareII.Tools
     {
         public static string AppointmentTypesPerMonth()
         {
-            string report = "Appointment types per month:\n";
-            string sql = $"SELECT type, start FROM appointment";
-            MySqlCommand cmd = new MySqlCommand(sql, DBConnection.conn);
-            MySqlDataReader reader = cmd.ExecuteReader();
-            DataTable dt = new DataTable();
-            dt.Load(reader);
-            dt.DefaultView.Sort = "start asc";
-            dt = dt.DefaultView.ToTable();
-
-            string[] types = new string[dt.Rows.Count];
-            string[] months = new string[dt.Rows.Count];
-            foreach (DataRow row in dt.Rows)
+            string report = "Unique appointment types per month:\n";
+            string[] months = { "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" };
+            int distinctTypes = 0;
+            for (int i = 0; i<12; i++) 
             {
-                var type = row["type"].ToString;
-                DateTime date = (DateTime)row["start"];
-                var month = date.ToString("MMMM");
-
-                types.Append(type);
-                months.Append(month);
-            }
-            
-            string[] allMonths = { "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" };
-            int[] uniqueTypesCount = new int[12];
-            List<string>[] uniqueTypesPerMonth = new List<string>[12] ;
-            for (int i = 0; i < 12; i++ )
-            {
-                uniqueTypesPerMonth[i] = new List<string>();
-            }
-
-            for (int i = 0; i < types.Length; i++)
-            {
-                string type = types[i];
-                string month = months[i];
-                MessageBox.Show(month);
-
-                int monthIndex = Array.IndexOf(allMonths, month);
-                if (monthIndex != -1)
+                string sql = $"SELECT COUNT(DISTINCT type) FROM appointment WHERE MONTH(start)={i+1}";
+                MySqlCommand cmd = new MySqlCommand(sql, DBConnection.conn);
+                using (cmd)
                 {
-                    if(!uniqueTypesPerMonth[monthIndex].Contains(type))
-                    {
-                        uniqueTypesPerMonth[monthIndex].Add(type);
-                        uniqueTypesCount[monthIndex]++;
-                    }
-
+                    distinctTypes = Convert.ToInt32(cmd.ExecuteScalar());
                 }
-            }
-
-
-            for (int i = 0; i < uniqueTypesCount.Length; i++)
-            {
-                if (uniqueTypesCount[i] > 0)
+                if (distinctTypes == -1)
                 {
-                    var reportLine = $"{allMonths[i]}: {uniqueTypesCount[i]} unique appointment types.\n";
-                    report = report + reportLine;
+                    distinctTypes = 0;
                 }
+                report = report + $"{months[i]}: {distinctTypes}\n";
             }
-
             return report;
         }
     }
