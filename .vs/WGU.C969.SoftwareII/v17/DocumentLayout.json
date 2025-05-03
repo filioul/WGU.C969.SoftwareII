@@ -7,20 +7,24 @@
       "RelativeMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|solutionrelative:tools\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|c:\\users\\labuser\\documents\\github\\wgu.c969.softwareii\\forms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|solutionrelative:forms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|c:\\users\\labuser\\documents\\github\\wgu.c969.softwareii\\forms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|solutionrelative:forms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|c:\\users\\labuser\\documents\\github\\wgu.c969.softwareii\\tools\\reportgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|solutionrelative:tools\\reportgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|c:\\users\\labuser\\documents\\github\\wgu.c969.softwareii\\tools\\datavalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|solutionrelative:tools\\datavalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|c:\\users\\labuser\\documents\\github\\wgu.c969.softwareii\\tools\\reportgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|solutionrelative:tools\\reportgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|c:\\users\\labuser\\documents\\github\\wgu.c969.softwareii\\forms\\editcustomerrecords.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|solutionrelative:forms\\editcustomerrecords.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|c:\\users\\labuser\\documents\\github\\wgu.c969.softwareii\\forms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|solutionrelative:forms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,11 +34,23 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
+              "Title": "EditCustomerRecords.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\LabUser\\Documents\\GitHub\\WGU.C969.SoftwareII\\Forms\\EditCustomerRecords.cs",
+              "RelativeDocumentMoniker": "Forms\\EditCustomerRecords.cs",
+              "ToolTip": "C:\\Users\\LabUser\\Documents\\GitHub\\WGU.C969.SoftwareII\\Forms\\EditCustomerRecords.cs [Design]",
+              "RelativeToolTip": "Forms\\EditCustomerRecords.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T20:13:21.371Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "LoginForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\LabUser\\Documents\\GitHub\\WGU.C969.SoftwareII\\Forms\\LoginForm.cs",
               "RelativeDocumentMoniker": "Forms\\LoginForm.cs",
@@ -46,13 +62,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "ReportGenerator.cs",
               "DocumentMoniker": "C:\\Users\\LabUser\\Documents\\GitHub\\WGU.C969.SoftwareII\\Tools\\ReportGenerator.cs",
               "RelativeDocumentMoniker": "Tools\\ReportGenerator.cs",
               "ToolTip": "C:\\Users\\LabUser\\Documents\\GitHub\\WGU.C969.SoftwareII\\Tools\\ReportGenerator.cs",
               "RelativeToolTip": "Tools\\ReportGenerator.cs",
-              "ViewState": "AQIAABwAAAAAAAAAAAAgwC0AAAARAAAA",
+              "ViewState": "AQIAAFMAAAAAAAAAAAAwwDMAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-03T19:55:00.8Z",
               "EditorCaption": ""
@@ -72,13 +88,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "LoginForm.cs",
               "DocumentMoniker": "C:\\Users\\LabUser\\Documents\\GitHub\\WGU.C969.SoftwareII\\Forms\\LoginForm.cs",
               "RelativeDocumentMoniker": "Forms\\LoginForm.cs",
               "ToolTip": "C:\\Users\\LabUser\\Documents\\GitHub\\WGU.C969.SoftwareII\\Forms\\LoginForm.cs",
               "RelativeToolTip": "Forms\\LoginForm.cs",
-              "ViewState": "AQIAADUAAAAAAAAAAAAiwEcAAAAJAAAA",
+              "ViewState": "AQIAADUAAAAAAAAAAAAiwEYAAAA4AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-03T18:23:05.48Z",
               "EditorCaption": ""
@@ -91,7 +107,7 @@
               "RelativeDocumentMoniker": "Tools\\Customer.cs",
               "ToolTip": "C:\\Users\\LabUser\\Documents\\GitHub\\WGU.C969.SoftwareII\\Tools\\Customer.cs",
               "RelativeToolTip": "Tools\\Customer.cs",
-              "ViewState": "AQIAAGAAAAAAAAAAAAAAAHQAAAANAAAA",
+              "ViewState": "AQIAAH4AAAAAAAAAAAAAAJQAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-03T18:20:27.856Z",
               "EditorCaption": ""

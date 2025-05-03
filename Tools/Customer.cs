@@ -14,8 +14,6 @@ namespace WGU.C969.SoftwareII.Tools
     {
         public static void AddCountry(string countryName, string user)
         {
-            countryName = countryName.Trim();
-            user = user.Trim();
             try
             {
                 string sql = $"SELECT * FROM country WHERE country = '{countryName}'";
@@ -65,9 +63,6 @@ namespace WGU.C969.SoftwareII.Tools
 
         public static void AddCity(string cityName, string countryName, string user)
         {
-            user = user.Trim();
-            cityName = cityName.Trim();
-            countryName = countryName.Trim();
             Customer.AddCountry(countryName, user);
             int countryId = GetCountryID(countryName);
             try
@@ -92,7 +87,6 @@ namespace WGU.C969.SoftwareII.Tools
                     cmd2.Parameters.AddWithValue("@createdBy", user);
                     cmd2.Parameters.AddWithValue("@updatedBy", user);
                     cmd2.ExecuteNonQuery();
-                    MessageBox.Show("City added");
                 }
             }
             catch (Exception ex)
@@ -119,5 +113,39 @@ namespace WGU.C969.SoftwareII.Tools
             }
             return cityID;
         }
+
+        public static void AddAddress(string address1, string address2, string cityName, string countryName, string postalCode, string phone, string user)
+        {
+            address1 = address1.Trim();
+            address2 = address2.Trim();
+            cityName = cityName.Trim();
+            countryName = countryName.Trim();
+            postalCode = postalCode.Trim();
+            phone = phone.Trim();
+            user = user.Trim();
+
+            Customer.AddCity(cityName, countryName, user);
+            int cityID = GetCityID(cityName);
+
+            try
+            {
+                string sql2 = $"INSERT INTO address VALUES (NULL, @address1, @address2, @cityId, @postalCode, @phone, NOW(), @createdBy, NOW(), @updatedBy)";
+                MySqlCommand cmd2 = new MySqlCommand(sql2, DBConnection.conn);
+                cmd2.Parameters.AddWithValue("@address1", address1);
+                cmd2.Parameters.AddWithValue("@address2", address2);
+                cmd2.Parameters.AddWithValue("@postalCode", postalCode);
+                cmd2.Parameters.AddWithValue("@phone", phone);
+                cmd2.Parameters.AddWithValue("@cityId", cityID);
+                cmd2.Parameters.AddWithValue("@createdBy", user);
+                cmd2.Parameters.AddWithValue("@updatedBy", user);
+                cmd2.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Exception thrown: " + ex);
+            }
+        }
+
+        
     }
 }
