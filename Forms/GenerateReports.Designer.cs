@@ -64,10 +64,10 @@
             // 
             actionComboBox.Font = new Font("Segoe UI", 10F);
             actionComboBox.FormattingEnabled = true;
-            actionComboBox.Items.AddRange(new object[] { "Number of appointment types by month", "Schedule for each user", "Additional report" });
+            actionComboBox.Items.AddRange(new object[] { "Number of appointment types by month", "Schedule for each user", "List of customers with appointments" });
             actionComboBox.Location = new Point(345, 41);
             actionComboBox.Name = "actionComboBox";
-            actionComboBox.Size = new Size(232, 25);
+            actionComboBox.Size = new Size(361, 25);
             actionComboBox.TabIndex = 15;
             // 
             // generateButton
@@ -117,6 +117,7 @@
             dataGVUserSchedule.Name = "dataGVUserSchedule";
             dataGVUserSchedule.Size = new Size(711, 288);
             dataGVUserSchedule.TabIndex = 32;
+            dataGVUserSchedule.Visible = false;
             // 
             // GenerateReports
             // 

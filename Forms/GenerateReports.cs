@@ -41,6 +41,12 @@ namespace WGU.C969.SoftwareII.Forms
                 labelUsername.Visible = true;
                 textBoxUsername.Visible = true;
                 buttonViewSchedule.Visible = true;
+                dataGVUserSchedule.Visible = true;
+            }
+            else if (actionComboBox.SelectedIndex == 2)
+            {
+                string report = ReportGenerator.CustomersWithAppointments();
+                MessageBox.Show(report);
             }
         }
 

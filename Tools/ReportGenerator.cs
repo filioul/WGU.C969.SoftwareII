@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using Microsoft.VisualBasic.ApplicationServices;
+using MySql.Data.MySqlClient;
 using Org.BouncyCastle.Asn1;
 using System;
 using System.Collections.Generic;
@@ -52,6 +53,52 @@ namespace WGU.C969.SoftwareII.Tools
                 MessageBox.Show("Exception thrown while filling table:" + ex);
             }
             return dset;
+        }
+
+        public static string CustomersWithAppointments()
+        {
+            string report = "";
+            List<int> customerIdList = new List<int>();
+            DateTime dateTimeNow = DateTime.Now;
+            string sql = $"SELECT customerId FROM appointment";
+            MySqlCommand cmd = new MySqlCommand(sql, DBConnection.conn);
+            MySqlDataReader reader = cmd.ExecuteReader();
+            using (cmd)
+            {
+                while (reader.Read())
+                {
+                    if (!reader.IsDBNull(0))
+                    {
+                        int value = reader.GetInt32(0);
+                        customerIdList.Add(value);
+                    }
+                }
+                reader.Close();
+            }
+            List<int> uniqueIdList = customerIdList.Distinct().ToList();
+
+            Func<List<int>, string> checkForEmptyList = list => list.Count == 0 ? "No customers with upcoming appointments." : "Customers with appointments:\n";
+            report = checkForEmptyList(customerIdList);
+
+            try
+            {
+                foreach (int customerId in uniqueIdList)
+                {
+                    string sql2 = $"SELECT customerName FROM customer WHERE customerId = '{customerId}'";
+                    MySqlCommand cmd2 = new MySqlCommand(sql2, DBConnection.conn);
+                    string name = "";
+                    using (cmd2)
+                    {
+                        name = Convert.ToString(cmd2.ExecuteScalar());
+                        report = report + $"\n{name}";
+                    }
+                }
+            } catch (Exception ex) {
+                MessageBox.Show("Error: " + ex);
+            }
+
+            
+            return report;
         }
     }
 }
