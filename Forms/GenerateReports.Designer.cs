@@ -32,6 +32,11 @@
             selectionLabel = new Label();
             actionComboBox = new ComboBox();
             generateButton = new Button();
+            labelUsername = new Label();
+            textBoxUsername = new TextBox();
+            buttonViewSchedule = new Button();
+            dataGVUserSchedule = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dataGVUserSchedule).BeginInit();
             SuspendLayout();
             // 
             // backButton
@@ -75,17 +80,60 @@
             generateButton.UseVisualStyleBackColor = true;
             generateButton.Click += generateButton_Click;
             // 
+            // labelUsername
+            // 
+            labelUsername.AutoSize = true;
+            labelUsername.Font = new Font("Segoe UI", 10F);
+            labelUsername.Location = new Point(265, 104);
+            labelUsername.Name = "labelUsername";
+            labelUsername.Size = new Size(74, 19);
+            labelUsername.TabIndex = 29;
+            labelUsername.Text = "Username:";
+            labelUsername.Visible = false;
+            // 
+            // textBoxUsername
+            // 
+            textBoxUsername.Location = new Point(345, 103);
+            textBoxUsername.Name = "textBoxUsername";
+            textBoxUsername.Size = new Size(145, 23);
+            textBoxUsername.TabIndex = 30;
+            textBoxUsername.Visible = false;
+            // 
+            // buttonViewSchedule
+            // 
+            buttonViewSchedule.Location = new Point(496, 103);
+            buttonViewSchedule.Name = "buttonViewSchedule";
+            buttonViewSchedule.Size = new Size(126, 23);
+            buttonViewSchedule.TabIndex = 31;
+            buttonViewSchedule.Text = "View user schedule";
+            buttonViewSchedule.UseVisualStyleBackColor = true;
+            buttonViewSchedule.Visible = false;
+            buttonViewSchedule.Click += buttonViewSchedule_Click;
+            // 
+            // dataGVUserSchedule
+            // 
+            dataGVUserSchedule.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGVUserSchedule.Location = new Point(41, 142);
+            dataGVUserSchedule.Name = "dataGVUserSchedule";
+            dataGVUserSchedule.Size = new Size(711, 288);
+            dataGVUserSchedule.TabIndex = 32;
+            // 
             // GenerateReports
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(dataGVUserSchedule);
+            Controls.Add(buttonViewSchedule);
+            Controls.Add(textBoxUsername);
+            Controls.Add(labelUsername);
             Controls.Add(generateButton);
             Controls.Add(selectionLabel);
             Controls.Add(actionComboBox);
             Controls.Add(backButton);
             Name = "GenerateReports";
             Text = "Report generator";
+            ((System.ComponentModel.ISupportInitialize)dataGVUserSchedule).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -96,5 +144,9 @@
         private Label selectionLabel;
         private ComboBox actionComboBox;
         private Button generateButton;
+        private Label labelUsername;
+        private TextBox textBoxUsername;
+        private Button buttonViewSchedule;
+        private DataGridView dataGVUserSchedule;
     }
 }

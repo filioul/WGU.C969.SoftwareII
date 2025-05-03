@@ -36,5 +36,31 @@ namespace WGU.C969.SoftwareII.Tools
                 return false;
             }
         }
+
+        public static bool UsernameCheck(string username)
+        {
+            try
+            {
+                string sql = $"SELECT * FROM user WHERE userName = '{username}'";
+                MySqlCommand cmd = new MySqlCommand(sql, DBConnection.conn);
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+                    reader.Close();
+                    return true;
+                }
+                else
+                {
+                    reader.Close();
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Exception thrown verifying username: " + ex);
+                return false;
+            }
+        }
     }
 }
