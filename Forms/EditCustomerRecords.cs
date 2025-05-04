@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WGU.C969.SoftwareII.Tools;
 
 namespace WGU.C969.SoftwareII.Forms
 {
@@ -33,7 +34,7 @@ namespace WGU.C969.SoftwareII.Forms
             else if (actionComboBox.SelectedIndex == 1)
             {
                 UpdateCustomer();
-            } 
+            }
             else if (actionComboBox.SelectedIndex == 2)
             {
                 DeleteCustomer();
@@ -42,17 +43,20 @@ namespace WGU.C969.SoftwareII.Forms
 
         private void AddCustomer()
         {
+            HideUserSearchFields();
             ShowPropertyFields();
         }
 
         private void UpdateCustomer()
         {
-            throw new NotImplementedException();
+            HidePropertyFields();
+            ShowUserSearchFields();
         }
 
         private void DeleteCustomer()
         {
-            throw new NotImplementedException();
+            HidePropertyFields();
+            ShowUserSearchFields();
         }
 
         private void ShowPropertyFields()
@@ -71,6 +75,118 @@ namespace WGU.C969.SoftwareII.Forms
             codeTextBox.Visible = true;
             numberLabel.Visible = true;
             numberTextBox.Visible = true;
+            saveButton.Enabled = true;
+        }
+
+        private void HidePropertyFields()
+        {
+            nameLabel.Visible = false;
+            nameTextBox.Visible = false;
+            addressLabel1.Visible = false;
+            addressTextBox1.Visible = false;
+            addressLabel2.Visible = false;
+            addressTextBox2.Visible = false;
+            cityLabel.Visible = false;
+            cityTextBox.Visible = false;
+            countryLabel.Visible = false;
+            countryTextBox.Visible = false;
+            codeLabel.Visible = false;
+            codeTextBox.Visible = false;
+            numberLabel.Visible = false;
+            numberTextBox.Visible = false;
+            saveButton.Enabled = false;
+        }
+
+        private void HideUserSearchFields()
+        {
+            customerIDLabel.Visible = false;
+            IDTextBox.Visible = false;
+            searchButton.Visible = false;
+        }
+
+        private void ShowUserSearchFields()
+        {
+            customerIDLabel.Visible = true;
+            IDTextBox.Visible = true;
+            searchButton.Visible = true;
+            IDTextBox.Enabled = true;
+            searchButton.Enabled = true;
+        }
+
+        private void ShowDeleteFields()
+        {
+            labelAreYouSure.Visible = true;
+            buttonCancel.Visible = true;
+            buttonImSure.Visible = true;
+        }
+
+        private void saveButton_Click(object sender, EventArgs e)
+        {
+            string customerName = nameTextBox.Text.Trim();
+            string address = addressTextBox1.Text.Trim();
+            string address2 = addressTextBox2.Text.Trim();
+            string cityName = cityTextBox.Text.Trim();
+            string countryName = countryTextBox.Text.Trim();
+            string postalCode = codeTextBox.Text.Trim();
+            string number = numberTextBox.Text.Trim();
+            if (!DataValidation.ValidateText(customerName))
+            {
+                MessageBox.Show("Please enter a valid customer name.");
+            }
+            else if (!DataValidation.ValidateText(address))
+            {
+                MessageBox.Show("Please enter a valid address.");
+            }
+            else if (!DataValidation.ValidateText(cityName))
+            {
+                MessageBox.Show("Please enter a valid address.");
+            }
+            else if (!DataValidation.ValidateText(countryName))
+            {
+                MessageBox.Show("Please enter a valid address.");
+            }
+            else if (!DataValidation.ValidateText(postalCode))
+            {
+                MessageBox.Show("Please enter a valid address.");
+            }
+            else if (!DataValidation.ValidatePhoneNumber(number))
+            {
+                MessageBox.Show("Please enter a valid phone number.");
+            }
+            else
+            {
+                if (actionComboBox.SelectedIndex == 0)
+                {
+                    Customer.AddCustomer(customerName, address, address2, cityName, countryName, postalCode, number, user, 1);
+                    MessageBox.Show("Customer added successfully.");
+                }
+                else if (actionComboBox.SelectedIndex == 1)
+                {
+
+                }
+                this.Close();
+            }
+        }
+
+        private void searchButton_Click(object sender, EventArgs e)
+        {
+            string customerID = IDTextBox.Text;
+            if (Customer.CheckIfCustomerExists(customerID))
+            {
+                ShowUserSearchFields();
+                IDTextBox.Enabled = false;
+                searchButton.Enabled = false;
+                if (actionComboBox.SelectedIndex == 2)
+                {
+                    ShowDeleteFields();
+                }
+            }
+        }
+
+        private void buttonImSure_Click(object sender, EventArgs e)
+        {
+            Customer.GetCit
         }
     }
 }
+

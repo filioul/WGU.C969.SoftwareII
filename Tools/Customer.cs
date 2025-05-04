@@ -169,10 +169,53 @@ namespace WGU.C969.SoftwareII.Tools
                 cmd2.Parameters.AddWithValue("@createdBy", user);
                 cmd2.Parameters.AddWithValue("@updatedBy", user);
                 cmd2.ExecuteNonQuery();
-            } catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show("Exception thrown when creating customer: " + ex);
             }
+        }
+
+        public static bool CheckIfCustomerExists(string customerID)
+        {
+            customerID = customerID.Trim();
+            if (!DataValidation.ValidateID(customerID))
+            {
+                MessageBox.Show("Invalid ID. Please try again.");
+                return false;
+            } else
+            {
+                try
+                {
+                    int numericalID = int.Parse(customerID);
+                    string sql = $"SELECT * FROM customer WHERE customerId = {numericalID}";
+                    MySqlCommand cmd = new MySqlCommand(sql, DBConnection.conn);
+                    MySqlDataReader reader = cmd.ExecuteReader();
+
+                    if (reader.HasRows)
+                    {
+                        reader.Close();
+                        return true;
+                    }
+                    else
+                    {
+                        reader.Close();
+                        MessageBox.Show("The ID does not match any existing users. Please try again.");
+                        return false;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error thrown searching for customer:" + ex);
+                    return false;
+                }
+            }
+        }
+
+        public static void DeleteCustomer(string customerID) 
+        {
+            int numericalID = int.Parse(customerID);
+
         }
     }
 }

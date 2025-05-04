@@ -50,6 +50,9 @@
             countryLabel = new Label();
             numberTextBox = new TextBox();
             numberLabel = new Label();
+            labelAreYouSure = new Label();
+            buttonImSure = new Button();
+            buttonCancel = new Button();
             SuspendLayout();
             // 
             // backButton
@@ -73,6 +76,7 @@
             saveButton.TabIndex = 9;
             saveButton.Text = "Save";
             saveButton.UseVisualStyleBackColor = true;
+            saveButton.Click += saveButton_Click;
             // 
             // actionComboBox
             // 
@@ -124,6 +128,7 @@
             searchButton.Text = "Search";
             searchButton.UseVisualStyleBackColor = true;
             searchButton.Visible = false;
+            searchButton.Click += searchButton_Click;
             // 
             // nameTextBox
             // 
@@ -276,11 +281,47 @@
             numberLabel.Text = "*Phone Number";
             numberLabel.Visible = false;
             // 
+            // labelAreYouSure
+            // 
+            labelAreYouSure.AutoSize = true;
+            labelAreYouSure.Font = new Font("Segoe UI", 10F);
+            labelAreYouSure.ForeColor = Color.Firebrick;
+            labelAreYouSure.Location = new Point(195, 113);
+            labelAreYouSure.Name = "labelAreYouSure";
+            labelAreYouSure.Size = new Size(447, 19);
+            labelAreYouSure.TabIndex = 30;
+            labelAreYouSure.Text = "Are you sure you want to delete this user? This change is not reversible.";
+            labelAreYouSure.Visible = false;
+            // 
+            // buttonImSure
+            // 
+            buttonImSure.Location = new Point(345, 135);
+            buttonImSure.Name = "buttonImSure";
+            buttonImSure.Size = new Size(75, 23);
+            buttonImSure.TabIndex = 31;
+            buttonImSure.Text = "Delete user";
+            buttonImSure.UseVisualStyleBackColor = true;
+            buttonImSure.Visible = false;
+            buttonImSure.Click += buttonImSure_Click;
+            // 
+            // buttonCancel
+            // 
+            buttonCancel.Location = new Point(426, 135);
+            buttonCancel.Name = "buttonCancel";
+            buttonCancel.Size = new Size(75, 23);
+            buttonCancel.TabIndex = 32;
+            buttonCancel.Text = "Cancel";
+            buttonCancel.UseVisualStyleBackColor = true;
+            buttonCancel.Visible = false;
+            // 
             // EditCustomerRecords
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(buttonCancel);
+            Controls.Add(buttonImSure);
+            Controls.Add(labelAreYouSure);
             Controls.Add(numberLabel);
             Controls.Add(numberTextBox);
             Controls.Add(countryLabel);
@@ -333,5 +374,8 @@
         private Label countryLabel;
         private TextBox numberTextBox;
         private Label numberLabel;
+        private Label labelAreYouSure;
+        private Button buttonImSure;
+        private Button buttonCancel;
     }
 }
