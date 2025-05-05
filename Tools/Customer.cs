@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace WGU.C969.SoftwareII.Tools
@@ -123,7 +124,7 @@ namespace WGU.C969.SoftwareII.Tools
             phone = phone.Trim();
             user = user.Trim();
 
-            Customer.AddCity(cityName, countryName, user);
+            AddCity(cityName, countryName, user);
             int cityID = GetCityID(cityName);
 
             int addressID = 0;
@@ -227,6 +228,122 @@ namespace WGU.C969.SoftwareII.Tools
             {
                 MessageBox.Show("Error thrown deleting customer:" + ex);
             }
+        }
+
+        public static void UpdateCustomer(string customerID, string customerName, string address1, string address2, string cityName, string countryName, string postalCode, string number, string user)
+        {
+            customerID = customerID.Trim();
+            try
+            {
+                int numericalID = int.Parse(customerID);
+                if (DataValidation.ValidateText(customerName))
+                {
+                    UpdateCustomerName(numericalID, customerName);
+                }
+                if (DataValidation.ValidateText(address1))
+                {
+                    UpdateCustomerAddress1(numericalID, address1);
+                }
+                if (DataValidation.ValidateText(address2))
+                {
+                    UpdateCustomerAddress2(numericalID, address2);
+                }
+                if (DataValidation.ValidateText(countryName))
+                {
+                    UpdateCustomerCountry(numericalID, countryName);
+                }
+                if (DataValidation.ValidateText(cityName))
+                {
+                    UpdateCustomerCity(numericalID, cityName);
+                }
+
+            } catch (Exception ex) 
+            {
+                MessageBox.Show("Error thrown updating customer:" + ex);
+            }
+        }
+
+        private static void UpdateCustomerName(int customerID, string customerName)
+        {
+            string sql = $"UPDATE customer SET customerName = '{customerName}' WHERE customerId = {customerID}";
+            MySqlCommand cmd = new MySqlCommand(sql, DBConnection.conn);
+            cmd.ExecuteNonQuery();
+        }
+        private static void UpdateCustomerAddress1(int customerID, string address1)
+        {
+
+            int addressID = GetAddressID(customerID);
+            try
+            {
+                string sql2 = $"UPDATE address SET address = '{address1}' WHERE addressId = {addressID}";
+                MySqlCommand cmd2 = new MySqlCommand(sql2, DBConnection.conn);
+                cmd2.ExecuteNonQuery();
+            } catch (Exception ex)
+            {
+                MessageBox.Show("Exception: " + ex);
+            }
+        }
+
+        private static void UpdateCustomerAddress2(int customerID, string address2)
+        {
+            int addressID = GetAddressID(customerID);
+            try
+            {
+                string sql2 = $"UPDATE address SET address2 = '{address2}' WHERE addressId = {addressID}";
+                MySqlCommand cmd2 = new MySqlCommand(sql2, DBConnection.conn);
+                cmd2.ExecuteNonQuery();
+            } catch (Exception ex)
+            {
+                MessageBox.Show("Exception: " + ex);
+            }
+        }
+
+        private static void UpdateCustomerCountry(int customerID, string countryName)
+        {
+            int addressID = GetAddressID(customerID);
+            int cityID = GetCityIDFromAddress(addressID);
+
+        }
+        private static void UpdateCustomerCity(int customerID, string cityName)
+        {
+            
+        }
+
+        private static int GetAddressID(int customerID)
+        {
+            int addressID = 0;
+            try
+            {
+                string sql = $"SELECT addressId FROM customer WHERE customerId = '{customerID}'";
+                MySqlCommand cmd = new MySqlCommand(sql, DBConnection.conn);
+                using (cmd)
+                {
+                    addressID = Convert.ToInt32(cmd.ExecuteScalar());
+                }
+                
+            } catch (Exception ex)
+            {
+                MessageBox.Show("Exception thrown getting address id: " + ex);
+            }
+            return addressID;
+        }
+
+        private static int GetCityIDFromAddress(int addressID)
+        {
+            int cityID = 0;
+            try
+            {
+                string sql = $"SELECT cityId FROM address WHERE addressId = '{addressID}'";
+                MySqlCommand cmd = new MySqlCommand(sql, DBConnection.conn);
+                using (cmd)
+                {
+                    cityID = Convert.ToInt32(cmd.ExecuteScalar());
+                }
+            } catch (Exception ex)
+            {
+                MessageBox.Show("Exception thrown getting city id: " + ex);
+            }
+            return cityID;
         }
     }
 }

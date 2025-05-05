@@ -138,42 +138,40 @@ namespace WGU.C969.SoftwareII.Forms
             string countryName = countryTextBox.Text.Trim();
             string postalCode = codeTextBox.Text.Trim();
             string number = numberTextBox.Text.Trim();
-            if (!DataValidation.ValidateText(customerName))
+            if (actionComboBox.SelectedIndex == 0)
             {
-                MessageBox.Show("Please enter a valid customer name.");
-            }
-            else if (!DataValidation.ValidateText(address))
-            {
-                MessageBox.Show("Please enter a valid address.");
-            }
-            else if (!DataValidation.ValidateText(cityName))
-            {
-                MessageBox.Show("Please enter a valid address.");
-            }
-            else if (!DataValidation.ValidateText(countryName))
-            {
-                MessageBox.Show("Please enter a valid address.");
-            }
-            else if (!DataValidation.ValidateText(postalCode))
-            {
-                MessageBox.Show("Please enter a valid address.");
-            }
-            else if (!DataValidation.ValidatePhoneNumber(number))
-            {
-                MessageBox.Show("Please enter a valid phone number.");
-            }
-            else
-            {
-                if (actionComboBox.SelectedIndex == 0)
+                if (!DataValidation.ValidateText(customerName))
                 {
+                    MessageBox.Show("Please enter a valid customer name.");
+                }
+                else if (!DataValidation.ValidateText(address))
+                {
+                    MessageBox.Show("Please enter a valid address.");
+                }
+                else if (!DataValidation.ValidateText(cityName))
+                {
+                    MessageBox.Show("Please enter a valid address.");
+                }
+                else if (!DataValidation.ValidateText(countryName))
+                {
+                    MessageBox.Show("Please enter a valid address.");
+                }
+                else if (!DataValidation.ValidateText(postalCode))
+                {
+                    MessageBox.Show("Please enter a valid address.");
+                }
+                else if (!(DataValidation.ValidatePhoneNumberNull(number) && DataValidation.ValidatePhoneNumberFormat(number)))
+                {
+                    MessageBox.Show("Please enter a valid phone number.");
+                } else {
                     Customer.AddCustomer(customerName, address, address2, cityName, countryName, postalCode, number, user, 1);
                     MessageBox.Show("Customer added successfully.");
-                }
-                else if (actionComboBox.SelectedIndex == 1)
-                {
-
-                }
-                this.Close();
+                    this.Close();
+                } 
+            } else if (actionComboBox.SelectedIndex == 1) 
+            {
+                string customerID = IDTextBox.Text;
+                Customer.UpdateCustomer(customerID, customerName, address, address2, cityName, countryName, postalCode, number, user);
             }
         }
 
@@ -188,6 +186,9 @@ namespace WGU.C969.SoftwareII.Forms
                 if (actionComboBox.SelectedIndex == 2)
                 {
                     ShowDeleteFields();
+                } else if (actionComboBox.SelectedIndex == 1)
+                {
+                    ShowPropertyFields();
                 }
             }
         }

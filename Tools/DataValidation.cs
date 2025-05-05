@@ -77,7 +77,8 @@ namespace WGU.C969.SoftwareII.Tools
             }
         }
 
-        public static bool ValidatePhoneNumber(string phoneNumber)
+
+        public static bool ValidatePhoneNumberNull(string phoneNumber)
         {
             if (string.IsNullOrEmpty(phoneNumber))
             {
@@ -85,8 +86,13 @@ namespace WGU.C969.SoftwareII.Tools
             }
             else
             {
-                return Regex.IsMatch(phoneNumber, @"^[\d\-]+$");
+                return true;
             }
+        }
+
+        public static bool ValidatePhoneNumberFormat(string phoneNumber)
+        {
+            return Regex.IsMatch(phoneNumber, @"^[\d\-]+$");
         }
 
         public static bool ValidateID(string id)
