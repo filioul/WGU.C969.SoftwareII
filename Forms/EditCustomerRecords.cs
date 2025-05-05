@@ -44,12 +44,14 @@ namespace WGU.C969.SoftwareII.Forms
         private void AddCustomer()
         {
             HideUserSearchFields();
+            HideDeleteFields();
             ShowPropertyFields();
         }
 
         private void UpdateCustomer()
         {
             HidePropertyFields();
+            HideDeleteFields();
             ShowUserSearchFields();
         }
 
@@ -119,6 +121,13 @@ namespace WGU.C969.SoftwareII.Forms
             buttonCancel.Visible = true;
             buttonImSure.Visible = true;
         }
+        private void HideDeleteFields()
+        {
+            labelAreYouSure.Visible = false;
+            buttonCancel.Visible = false;
+            buttonImSure.Visible = false;
+        }
+
 
         private void saveButton_Click(object sender, EventArgs e)
         {
@@ -185,7 +194,9 @@ namespace WGU.C969.SoftwareII.Forms
 
         private void buttonImSure_Click(object sender, EventArgs e)
         {
-            Customer.GetCit
+            string customerID = IDTextBox.Text;
+            Customer.DeleteCustomer(customerID);
+            this.Close();
         }
     }
 }

@@ -214,8 +214,19 @@ namespace WGU.C969.SoftwareII.Tools
 
         public static void DeleteCustomer(string customerID) 
         {
-            int numericalID = int.Parse(customerID);
-
+            customerID = customerID.Trim();
+            try
+            {
+                int numericalID = int.Parse(customerID);
+                string sql = $"DELETE FROM customer WHERE customerId = {numericalID}";
+                MySqlCommand cmd = new MySqlCommand(sql, DBConnection.conn);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("The customer has been deleted.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error thrown deleting customer:" + ex);
+            }
         }
     }
 }

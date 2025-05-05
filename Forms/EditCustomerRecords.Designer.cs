@@ -288,9 +288,9 @@
             labelAreYouSure.ForeColor = Color.Firebrick;
             labelAreYouSure.Location = new Point(195, 113);
             labelAreYouSure.Name = "labelAreYouSure";
-            labelAreYouSure.Size = new Size(447, 19);
+            labelAreYouSure.Size = new Size(478, 19);
             labelAreYouSure.TabIndex = 30;
-            labelAreYouSure.Text = "Are you sure you want to delete this user? This change is not reversible.";
+            labelAreYouSure.Text = "Are you sure you want to delete this customer? This change is not reversible.";
             labelAreYouSure.Visible = false;
             // 
             // buttonImSure
