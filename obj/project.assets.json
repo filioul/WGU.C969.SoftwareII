@@ -1615,11 +1615,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\LabUser\\Documents\\GitHub\\WGU.C969.SoftwareII\\WGU.C969.SoftwareII.csproj",
+      "projectUniqueName": "C:\\Users\\LabUser\\source\\repos\\WGU.C969.SoftwareII\\WGU.C969.SoftwareII.csproj",
       "projectName": "WGU.C969.SoftwareII",
-      "projectPath": "C:\\Users\\LabUser\\Documents\\GitHub\\WGU.C969.SoftwareII\\WGU.C969.SoftwareII.csproj",
+      "projectPath": "C:\\Users\\LabUser\\source\\repos\\WGU.C969.SoftwareII\\WGU.C969.SoftwareII.csproj",
       "packagesPath": "C:\\Users\\LabUser\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\LabUser\\Documents\\GitHub\\WGU.C969.SoftwareII\\obj\\",
+      "outputPath": "C:\\Users\\LabUser\\source\\repos\\WGU.C969.SoftwareII\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

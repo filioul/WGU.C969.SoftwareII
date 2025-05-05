@@ -14,6 +14,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = WGU.C969.SoftwareII
-build_property.ProjectDir = C:\Users\LabUser\Documents\GitHub\WGU.C969.SoftwareII\
+build_property.ProjectDir = C:\Users\LabUser\source\repos\WGU.C969.SoftwareII\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

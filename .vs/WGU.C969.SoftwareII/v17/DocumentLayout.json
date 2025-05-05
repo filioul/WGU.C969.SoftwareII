@@ -1,21 +1,21 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\LabUser\\Documents\\GitHub\\WGU.C969.SoftwareII\\",
+  "WorkspaceRootPath": "C:\\Users\\LabUser\\source\\repos\\WGU.C969.SoftwareII\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|c:\\users\\labuser\\documents\\github\\wgu.c969.softwareii\\tools\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|c:\\users\\labuser\\source\\repos\\wgu.c969.softwareii\\tools\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|solutionrelative:tools\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|c:\\users\\labuser\\documents\\github\\wgu.c969.softwareii\\forms\\editcustomerrecords.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|solutionrelative:forms\\editcustomerrecords.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|c:\\users\\labuser\\documents\\github\\wgu.c969.softwareii\\forms\\editcustomerrecords.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|c:\\users\\labuser\\source\\repos\\wgu.c969.softwareii\\forms\\editcustomerrecords.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|solutionrelative:forms\\editcustomerrecords.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|c:\\users\\labuser\\documents\\github\\wgu.c969.softwareii\\tools\\datavalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|C:\\Users\\LabUser\\source\\repos\\WGU.C969.SoftwareII\\forms\\editcustomerrecords.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|solutionrelative:forms\\editcustomerrecords.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|c:\\users\\labuser\\source\\repos\\wgu.c969.softwareii\\tools\\datavalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|solutionrelative:tools\\datavalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -30,11 +30,11 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "EditCustomerRecords.cs",
-              "DocumentMoniker": "C:\\Users\\LabUser\\Documents\\GitHub\\WGU.C969.SoftwareII\\Forms\\EditCustomerRecords.cs",
+              "DocumentMoniker": "C:\\Users\\LabUser\\source\\repos\\WGU.C969.SoftwareII\\Forms\\EditCustomerRecords.cs",
               "RelativeDocumentMoniker": "Forms\\EditCustomerRecords.cs",
-              "ToolTip": "C:\\Users\\LabUser\\Documents\\GitHub\\WGU.C969.SoftwareII\\Forms\\EditCustomerRecords.cs",
+              "ToolTip": "C:\\Users\\LabUser\\source\\repos\\WGU.C969.SoftwareII\\Forms\\EditCustomerRecords.cs",
               "RelativeToolTip": "Forms\\EditCustomerRecords.cs",
               "ViewState": "AQIAAJYAAAAAAAAAAAAswKgAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -43,25 +43,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "EditCustomerRecords.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\LabUser\\Documents\\GitHub\\WGU.C969.SoftwareII\\Forms\\EditCustomerRecords.cs",
+              "DocumentMoniker": "C:\\Users\\LabUser\\source\\repos\\WGU.C969.SoftwareII\\Forms\\EditCustomerRecords.cs",
               "RelativeDocumentMoniker": "Forms\\EditCustomerRecords.cs",
               "ToolTip": "C:\\Users\\LabUser\\Documents\\GitHub\\WGU.C969.SoftwareII\\Forms\\EditCustomerRecords.cs [Design]",
-              "RelativeToolTip": "Forms\\EditCustomerRecords.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\Documents\\GitHub\\WGU.C969.SoftwareII\\Forms\\EditCustomerRecords.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T21:08:27.623Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-05-03T21:08:27.623Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Customer.cs",
-              "DocumentMoniker": "C:\\Users\\LabUser\\Documents\\GitHub\\WGU.C969.SoftwareII\\Tools\\Customer.cs",
+              "DocumentMoniker": "C:\\Users\\LabUser\\source\\repos\\WGU.C969.SoftwareII\\Tools\\Customer.cs",
               "RelativeDocumentMoniker": "Tools\\Customer.cs",
-              "ToolTip": "C:\\Users\\LabUser\\Documents\\GitHub\\WGU.C969.SoftwareII\\Tools\\Customer.cs",
+              "ToolTip": "C:\\Users\\LabUser\\source\\repos\\WGU.C969.SoftwareII\\Tools\\Customer.cs",
               "RelativeToolTip": "Tools\\Customer.cs",
-              "ViewState": "AQIAAB4BAAAAAAAAAAA5wDABAAAAAAAA",
+              "ViewState": "AQIAACUBAAAAAAAAAAAiwCYBAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-03T18:20:27.856Z",
               "EditorCaption": ""
@@ -70,14 +69,13 @@
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "DataValidation.cs",
-              "DocumentMoniker": "C:\\Users\\LabUser\\Documents\\GitHub\\WGU.C969.SoftwareII\\Tools\\DataValidation.cs",
+              "DocumentMoniker": "C:\\Users\\LabUser\\source\\repos\\WGU.C969.SoftwareII\\Tools\\DataValidation.cs",
               "RelativeDocumentMoniker": "Tools\\DataValidation.cs",
-              "ToolTip": "C:\\Users\\LabUser\\Documents\\GitHub\\WGU.C969.SoftwareII\\Tools\\DataValidation.cs",
+              "ToolTip": "C:\\Users\\LabUser\\source\\repos\\WGU.C969.SoftwareII\\Tools\\DataValidation.cs",
               "RelativeToolTip": "Tools\\DataValidation.cs",
               "ViewState": "AQIAAEcAAAAAAAAAAAAowFAAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T18:27:50.825Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-03T18:27:50.825Z"
             }
           ]
         }
