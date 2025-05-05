@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
@@ -254,7 +255,11 @@ namespace WGU.C969.SoftwareII.Tools
                 }
                 if (DataValidation.ValidateText(cityName))
                 {
-                    UpdateCustomerCity(numericalID, cityName);
+                    if (!DataValidation.ValidateText(countryName)) 
+                    {
+                        countryName = GetCountryFromCustomerID(numericalID);
+                    }
+                    UpdateCustomerCity(numericalID, cityName, countryName, user);
                 }
 
             } catch (Exception ex) 
@@ -322,9 +327,21 @@ namespace WGU.C969.SoftwareII.Tools
                 MessageBox.Show("Exception thrown when updating customer country:" + ex);
             }
         }
-        private static void UpdateCustomerCity(int customerID, string cityName)
+        private static void UpdateCustomerCity(int customerID, string cityName, string countryName, string user)
         {
-            
+            int addressID = GetAddressID(customerID);
+            try
+            {
+                AddCity(cityName, countryName, user);
+                int cityID = GetCityID(cityName, countryName);
+                string sql2 = $"UPDATE address SET cityId = '{cityID}' WHERE addressId = {addressID}";
+                MySqlCommand cmd2 = new MySqlCommand(sql2, DBConnection.conn);
+                cmd2.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Exception when updating city: " + ex);
+            }
         }
 
         private static int GetAddressID(int customerID)
@@ -351,7 +368,7 @@ namespace WGU.C969.SoftwareII.Tools
             int cityID = 0;
             try
             {
-                string sql = $"SELECT cityId FROM address WHERE addressId = '{addressID}'";
+                string sql = $"SELECT cityId FROM address WHERE addressId = {addressID}";
                 MySqlCommand cmd = new MySqlCommand(sql, DBConnection.conn);
                 using (cmd)
                 {
@@ -362,6 +379,26 @@ namespace WGU.C969.SoftwareII.Tools
                 MessageBox.Show("Exception thrown getting city id: " + ex);
             }
             return cityID;
+        }
+
+        private static string GetCountryFromCustomerID(int customerID)
+        {
+            string countryName = "";
+            int addressID = GetAddressID(customerID);
+            try
+            {
+                string sql = $"SELECT country FROM country WHERE addressId = '{addressID}'";
+                MySqlCommand cmd = new MySqlCommand(sql, DBConnection.conn);
+                using (cmd)
+                {
+                    countryName = cmd.ExecuteScalar().ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Exception thrown getting city id: " + ex);
+            }
+            return countryName;
         }
     }
 }

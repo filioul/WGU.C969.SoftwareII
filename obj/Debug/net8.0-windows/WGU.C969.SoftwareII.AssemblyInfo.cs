@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WGU.C969.SoftwareII")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+061ea32b3f72fbe98b987778e2d4d427167ce12f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+15d80e8abffc487e05c8a46e3470a0c6cc6bff50")]
 [assembly: System.Reflection.AssemblyProductAttribute("WGU.C969.SoftwareII")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WGU.C969.SoftwareII")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
