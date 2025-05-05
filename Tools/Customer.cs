@@ -65,13 +65,12 @@ namespace WGU.C969.SoftwareII.Tools
         public static void AddCity(string cityName, string countryName, string user)
         {
             Customer.AddCountry(countryName, user);
-            int countryId = GetCountryID(countryName);
+            int countryID = GetCountryID(countryName);
             try
             {
-                string sql = $"SELECT * FROM city WHERE city = '{cityName}'";
+                string sql = $"SELECT * FROM city WHERE city = '{cityName}' AND countryId = {countryID}";
                 MySqlCommand cmd = new MySqlCommand(sql, DBConnection.conn);
                 MySqlDataReader reader = cmd.ExecuteReader();
-
                 if (reader.HasRows)
                 {
                     reader.Close();
@@ -80,10 +79,10 @@ namespace WGU.C969.SoftwareII.Tools
                 else
                 {
                     reader.Close();
-                    string sql2 = $"INSERT INTO city VALUES (NULL, @cityName, @countryId, NOW(), @createdBy, NOW(), @updatedBy)";
+                    string sql2 = $"INSERT INTO city VALUES (NULL, @cityName, @countryID, NOW(), @createdBy, NOW(), @updatedBy)";
                     MySqlCommand cmd2 = new MySqlCommand(sql2, DBConnection.conn);
                     cmd2.Parameters.AddWithValue("@cityName", cityName);
-                    cmd2.Parameters.AddWithValue("@countryId", countryId);
+                    cmd2.Parameters.AddWithValue("@countryId", countryID);
                     cmd2.Parameters.AddWithValue("@createdBy", user);
                     cmd2.Parameters.AddWithValue("@updatedBy", user);
                     cmd2.ExecuteNonQuery();
@@ -95,12 +94,13 @@ namespace WGU.C969.SoftwareII.Tools
             }
         }
 
-        public static int GetCityID(string cityName)
+        public static int GetCityID(string cityName, string countryName)
         {
             int cityID = 0;
+            int countryID = GetCountryID(countryName);
             try
             {
-                string sql = $"SELECT cityId FROM city WHERE city = '{cityName}'";
+                string sql = $"SELECT cityId FROM city WHERE city = '{cityName}' AND countryId = {countryID}";
                 MySqlCommand cmd = new MySqlCommand(sql, DBConnection.conn);
                 using (cmd)
                 {
@@ -109,7 +109,7 @@ namespace WGU.C969.SoftwareII.Tools
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error getting countryId: " + ex);
+                MessageBox.Show("Error getting cityID: " + ex);
             }
             return cityID;
         }
@@ -125,7 +125,7 @@ namespace WGU.C969.SoftwareII.Tools
             user = user.Trim();
 
             AddCity(cityName, countryName, user);
-            int cityID = GetCityID(cityName);
+            int cityID = GetCityID(cityName, countryName);
 
             int addressID = 0;
 
