@@ -250,7 +250,7 @@ namespace WGU.C969.SoftwareII.Tools
                 }
                 if (DataValidation.ValidateText(countryName))
                 {
-                    UpdateCustomerCountry(numericalID, countryName);
+                    UpdateCustomerCountry(numericalID, countryName, user);
                 }
                 if (DataValidation.ValidateText(cityName))
                 {
@@ -298,11 +298,29 @@ namespace WGU.C969.SoftwareII.Tools
             }
         }
 
-        private static void UpdateCustomerCountry(int customerID, string countryName)
+        private static void UpdateCustomerCountry(int customerID, string countryName, string user)
         {
             int addressID = GetAddressID(customerID);
             int cityID = GetCityIDFromAddress(addressID);
-
+            try
+            {
+                string cityName = "";
+                string sql = $"SELECT city FROM city WHERE cityId = '{cityID}'";
+                MySqlCommand cmd = new MySqlCommand(sql, DBConnection.conn);
+                using (cmd)
+                {
+                    cityName = cmd.ExecuteScalar().ToString();
+                }
+                AddCity(cityName, countryName, user);
+                cityID = GetCityID(cityName, countryName);
+                string sql2 = $"UPDATE address SET cityId = '{cityID}' WHERE addressId = {addressID}";
+                MySqlCommand cmd2 = new MySqlCommand(sql2, DBConnection.conn);
+                cmd2.ExecuteNonQuery();
+            }
+            catch (Exception ex) 
+            {
+                MessageBox.Show("Exception thrown when updating customer country:" + ex);
+            }
         }
         private static void UpdateCustomerCity(int customerID, string cityName)
         {

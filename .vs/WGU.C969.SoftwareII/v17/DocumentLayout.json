@@ -26,21 +26,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "EditCustomerRecords.cs",
-              "DocumentMoniker": "C:\\Users\\LabUser\\source\\repos\\WGU.C969.SoftwareII\\Forms\\EditCustomerRecords.cs",
-              "RelativeDocumentMoniker": "Forms\\EditCustomerRecords.cs",
-              "ToolTip": "C:\\Users\\LabUser\\source\\repos\\WGU.C969.SoftwareII\\Forms\\EditCustomerRecords.cs",
-              "RelativeToolTip": "Forms\\EditCustomerRecords.cs",
-              "ViewState": "AQIAAJYAAAAAAAAAAAAswKgAAAAhAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T21:09:14.089Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 2,
@@ -60,9 +47,22 @@
               "RelativeDocumentMoniker": "Tools\\Customer.cs",
               "ToolTip": "C:\\Users\\LabUser\\source\\repos\\WGU.C969.SoftwareII\\Tools\\Customer.cs",
               "RelativeToolTip": "Tools\\Customer.cs",
-              "ViewState": "AQIAAD4AAAAAAAAAAADwv0YAAAA7AAAA",
+              "ViewState": "AQIAAPgAAAAAAAAAAAAswDMBAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-03T18:20:27.856Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EditCustomerRecords.cs",
+              "DocumentMoniker": "C:\\Users\\LabUser\\source\\repos\\WGU.C969.SoftwareII\\Forms\\EditCustomerRecords.cs",
+              "RelativeDocumentMoniker": "Forms\\EditCustomerRecords.cs",
+              "ToolTip": "C:\\Users\\LabUser\\source\\repos\\WGU.C969.SoftwareII\\Forms\\EditCustomerRecords.cs",
+              "RelativeToolTip": "Forms\\EditCustomerRecords.cs",
+              "ViewState": "AQIAAJYAAAAAAAAAAAAswKgAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T21:09:14.089Z",
               "EditorCaption": ""
             },
             {
