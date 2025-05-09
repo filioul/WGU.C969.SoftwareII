@@ -171,7 +171,15 @@ namespace WGU.C969.SoftwareII.Forms
             } else if (actionComboBox.SelectedIndex == 1) 
             {
                 string customerID = IDTextBox.Text;
-                Customer.UpdateCustomer(customerID, customerName, address, address2, cityName, countryName, postalCode, number, user);
+                int changes = Customer.UpdateCustomer(customerID, customerName, address, address2, cityName, countryName, postalCode, number, user);
+                if (changes > 0)
+                {
+                    MessageBox.Show("Customer updated successfully.");
+                    this.Close();
+                } else if (changes == 0)
+                {
+                    MessageBox.Show("No updates made. Please enter your desired updates.");
+                }
             }
         }
 

@@ -231,32 +231,52 @@ namespace WGU.C969.SoftwareII.Tools
             }
         }
 
-        public static void UpdateCustomer(string customerID, string customerName, string address1, string address2, string cityName, string countryName, string postalCode, string number, string user)
+        public static int UpdateCustomer(string customerID, string customerName, string address1, string address2, string cityName, string countryName, string postalCode, string number, string user)
         {
             customerID = customerID.Trim();
+            int changes = 0;
             try
             {
                 int numericalID = int.Parse(customerID);
+                if (DataValidation.ValidatePhoneNumberNull(number))
+                {
+                    if (DataValidation.ValidatePhoneNumberFormat(number))
+                    {
+                        UpdateCustomerPhoneNumber(numericalID, number, user);
+                        UpdateAddressLastUpdated(numericalID, user);
+                        changes++;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid phone number, please try again.");
+                        changes = -1;
+                        return changes;
+                    }
+                }
                 if (DataValidation.ValidateText(customerName))
                 {
                     UpdateCustomerName(numericalID, customerName);
                     UpdateCustomerLastUpdated(numericalID, user);
+                    changes++;
                 }
                 if (DataValidation.ValidateText(address1))
                 {
                     UpdateCustomerAddress1(numericalID, address1);
                     UpdateAddressLastUpdated(numericalID, user);
+                    changes++;
                 }
                 if (DataValidation.ValidateText(address2))
                 {
                     UpdateCustomerAddress2(numericalID, address2);
                     UpdateAddressLastUpdated(numericalID, user);
+                    changes++;
                 }
                 if (DataValidation.ValidateText(countryName))
                 {
                     UpdateCustomerCountry(numericalID, countryName, user);
                     UpdateAddressLastUpdated(numericalID, user);
                     UpdateCountryLastUpdated(numericalID, user);
+                    changes++;
                 }
                 if (DataValidation.ValidateText(cityName))
                 {
@@ -266,28 +286,19 @@ namespace WGU.C969.SoftwareII.Tools
                     }
                     UpdateCustomerCity(numericalID, cityName, countryName, user);
                     UpdateAddressLastUpdated(numericalID, user);
+                    changes++;
                 }
                 if (DataValidation.ValidateText(postalCode))
                 {
                     UpdateCustomerPostalCode(numericalID, postalCode, user);
                     UpdateAddressLastUpdated(numericalID, user);
-                }
-                if (DataValidation.ValidatePhoneNumberNull(number))
-                {
-                    if (DataValidation.ValidatePhoneNumberFormat(number))
-                    {
-                        UpdateCustomerPhoneNumber(numericalID, number, user);
-                        UpdateAddressLastUpdated(numericalID, user);
-                    }
-                    else
-                    {
-                        MessageBox.Show("Invalid phone number, please try again.");
-                    }
+                    changes++;
                 }
             } catch (Exception ex)
             {
                 MessageBox.Show("Error thrown updating customer:" + ex);
             }
+            return changes;
         }
 
         private static void UpdateCustomerName(int customerID, string customerName)
