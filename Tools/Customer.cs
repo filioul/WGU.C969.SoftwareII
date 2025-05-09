@@ -214,7 +214,7 @@ namespace WGU.C969.SoftwareII.Tools
             }
         }
 
-        public static void DeleteCustomer(string customerID) 
+        public static void DeleteCustomer(string customerID)
         {
             customerID = customerID.Trim();
             try
@@ -240,6 +240,7 @@ namespace WGU.C969.SoftwareII.Tools
                 if (DataValidation.ValidateText(customerName))
                 {
                     UpdateCustomerName(numericalID, customerName);
+                    UpdateCustomerLastUpdated(numericalID, user);
                 }
                 if (DataValidation.ValidateText(address1))
                 {
@@ -258,7 +259,7 @@ namespace WGU.C969.SoftwareII.Tools
                 }
                 if (DataValidation.ValidateText(cityName))
                 {
-                    if (!DataValidation.ValidateText(countryName)) 
+                    if (!DataValidation.ValidateText(countryName))
                     {
                         countryName = GetCountryFromCustomerID(numericalID);
                     }
@@ -272,7 +273,7 @@ namespace WGU.C969.SoftwareII.Tools
                 }
                 if (DataValidation.ValidatePhoneNumberNull(number))
                 {
-                    if(DataValidation.ValidatePhoneNumberFormat(number))
+                    if (DataValidation.ValidatePhoneNumberFormat(number))
                     {
                         UpdateCustomerPhoneNumber(numericalID, number, user);
                         UpdateAddressLastUpdated(numericalID, user);
@@ -282,7 +283,7 @@ namespace WGU.C969.SoftwareII.Tools
                         MessageBox.Show("Invalid phone number, please try again.");
                     }
                 }
-            } catch (Exception ex) 
+            } catch (Exception ex)
             {
                 MessageBox.Show("Error thrown updating customer:" + ex);
             }
@@ -342,7 +343,7 @@ namespace WGU.C969.SoftwareII.Tools
                 MySqlCommand cmd2 = new MySqlCommand(sql2, DBConnection.conn);
                 cmd2.ExecuteNonQuery();
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
                 MessageBox.Show("Exception thrown when updating customer country:" + ex);
             }
@@ -367,7 +368,7 @@ namespace WGU.C969.SoftwareII.Tools
         private static void UpdateCustomerPostalCode(int customerID, string postalCode, string user)
         {
             int addressID = GetAddressID(customerID);
-            try 
+            try
             {
                 string sql2 = $"UPDATE address SET postalCode = '{postalCode}' WHERE addressId = {addressID}";
                 MySqlCommand cmd2 = new MySqlCommand(sql2, DBConnection.conn);
@@ -403,7 +404,21 @@ namespace WGU.C969.SoftwareII.Tools
                 cmd2.ExecuteNonQuery();
             } catch (Exception ex)
             {
-                MessageBox.Show("Exception when updating 'last updated' fields: " + ex);
+                MessageBox.Show("Exception when updating 'last updated' address fields: " + ex);
+            }
+        }
+
+        private static void UpdateCustomerLastUpdated(int customerID, string user) 
+        {
+            try
+            {
+                string sql2 = $"UPDATE customer SET lastUpdate = NOW(), lastUpdateBy = '{user}' WHERE customerId = {customerID}";
+                MySqlCommand cmd2 = new MySqlCommand(sql2, DBConnection.conn);
+                cmd2.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Exception when updating 'last updated' customer fields: " + ex);
             }
         }
 
