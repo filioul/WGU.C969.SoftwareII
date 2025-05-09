@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WGU.C969.SoftwareII.Tools;
 
 namespace WGU.C969.SoftwareII.Forms
 {
@@ -24,7 +25,34 @@ namespace WGU.C969.SoftwareII.Forms
 
         private void saveButton_Click(object sender, EventArgs e)
         {
+            DateTime start = datePicker.Value.Date + startTimePicker.Value.TimeOfDay;
+            DateTime end = datePicker.Value.Date + endTimePicker.Value.TimeOfDay;
+            string user = userTextBox.Text.Trim();
+            string customerName = customerTextBox.Text.Trim();
+            string location = locationTextBox.Text.Trim();
+            string contact = contactTextBox.Text.Trim();
+            string type = typeTextBox.Text.Trim();
+            string title = titleTextBox.Text.Trim();
+            string description = descriptionTextBox.Text.Trim();
 
+            if (actionComboBox.SelectedIndex == 0)
+            {
+                if (Customer.CheckIfCustomerExistsFromName(customerName))
+                {
+                    if (Appointment.CheckAvailability(start, end, user) && Appointment.CheckBusinessHours(start, end))
+                    {
+                        Appointment.AddAppointment(start, end, user, customerName, location, contact, type, title, description);
+                    }
+                    else 
+                    {
+                        MessageBox.Show("That time slot is not available, please try again.");
+                    }
+                }
+            }
+            else if (actionComboBox.SelectedIndex == 1)
+            {
+                
+            }
         }
 
         private void actionComboBox_SelectedIndexChanged(object sender, EventArgs e)

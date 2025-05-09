@@ -178,6 +178,38 @@ namespace WGU.C969.SoftwareII.Tools
             }
         }
 
+        public static bool CheckIfCustomerExistsFromName(string customerName)
+        {
+            if (!DataValidation.ValidateText(customerName))
+            {
+                MessageBox.Show("Please enter a valid customer name.");
+                return false;
+            }
+            try
+            {
+                string sql = $"SELECT * FROM customer WHERE customerName = '{customerName}'";
+                MySqlCommand cmd = new MySqlCommand(sql, DBConnection.conn);
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+                    reader.Close();
+                    return true;
+                }
+                else
+                {
+                    reader.Close();
+                    MessageBox.Show("The customer name does not match any existing customers. Please try again.");
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error thrown searching for customer:" + ex);
+                return false;
+            }
+        }
+
         public static bool CheckIfCustomerExists(string customerID)
         {
             customerID = customerID.Trim();
