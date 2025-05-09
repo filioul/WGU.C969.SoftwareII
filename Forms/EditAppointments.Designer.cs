@@ -36,7 +36,6 @@
             appointmentIDLabel = new Label();
             startLabel = new Label();
             endLabel = new Label();
-            checkAvailButton = new Button();
             datePicker = new DateTimePicker();
             dateLabel = new Label();
             startTimePicker = new DateTimePicker();
@@ -78,6 +77,7 @@
             actionComboBox.Name = "actionComboBox";
             actionComboBox.Size = new Size(232, 25);
             actionComboBox.TabIndex = 13;
+            actionComboBox.SelectedIndexChanged += actionComboBox_SelectedIndexChanged;
             // 
             // backButton
             // 
@@ -141,16 +141,6 @@
             endLabel.TabIndex = 19;
             endLabel.Text = "End time:";
             endLabel.Visible = false;
-            // 
-            // checkAvailButton
-            // 
-            checkAvailButton.Location = new Point(473, 162);
-            checkAvailButton.Name = "checkAvailButton";
-            checkAvailButton.Size = new Size(129, 23);
-            checkAvailButton.TabIndex = 22;
-            checkAvailButton.Text = "Check availability";
-            checkAvailButton.UseVisualStyleBackColor = true;
-            checkAvailButton.Visible = false;
             // 
             // datePicker
             // 
@@ -285,6 +275,7 @@
             saveButton.TabIndex = 34;
             saveButton.Text = "Save";
             saveButton.UseVisualStyleBackColor = true;
+            saveButton.Click += saveButton_Click;
             // 
             // userLabel
             // 
@@ -388,7 +379,6 @@
             Controls.Add(startTimePicker);
             Controls.Add(dateLabel);
             Controls.Add(datePicker);
-            Controls.Add(checkAvailButton);
             Controls.Add(endLabel);
             Controls.Add(startLabel);
             Controls.Add(searchButton);
@@ -413,7 +403,6 @@
         private Label appointmentIDLabel;
         private Label startLabel;
         private Label endLabel;
-        private Button checkAvailButton;
         private DateTimePicker datePicker;
         private Label dateLabel;
         private DateTimePicker startTimePicker;
