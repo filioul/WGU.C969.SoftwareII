@@ -265,6 +265,16 @@ namespace WGU.C969.SoftwareII.Tools
                 {
                     UpdateCustomerPostalCode(numericalID, postalCode, user);
                 }
+                if(DataValidation.ValidatePhoneNumberNull(number))
+                {
+                    if(DataValidation.ValidatePhoneNumberFormat(number))
+                    {
+                        UpdateCustomerPhoneNumber(numericalID, number, user);
+                    } else
+                    {
+                        MessageBox.Show("Invalid phone number, please try again.");
+                    }
+                }
             } catch (Exception ex) 
             {
                 MessageBox.Show("Error thrown updating customer:" + ex);
@@ -358,6 +368,21 @@ namespace WGU.C969.SoftwareII.Tools
             } catch (Exception ex)
             {
                 MessageBox.Show("Exception when updating postal code: " + ex);
+            }
+        }
+
+        private static void UpdateCustomerPhoneNumber(int customerID, string number, string user)
+        {
+            int addressID = GetAddressID(customerID);
+            try
+            {
+                string sql2 = $"UPDATE address SET phone = '{number}' WHERE addressId = {addressID}";
+                MySqlCommand cmd2 = new MySqlCommand(sql2, DBConnection.conn);
+                cmd2.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Exception when updating phone number: " + ex);
             }
         }
 
