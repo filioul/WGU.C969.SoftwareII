@@ -261,7 +261,10 @@ namespace WGU.C969.SoftwareII.Tools
                     }
                     UpdateCustomerCity(numericalID, cityName, countryName, user);
                 }
-
+                if (DataValidation.ValidateText(postalCode))
+                {
+                    UpdateCustomerPostalCode(numericalID, postalCode, user);
+                }
             } catch (Exception ex) 
             {
                 MessageBox.Show("Error thrown updating customer:" + ex);
@@ -341,6 +344,20 @@ namespace WGU.C969.SoftwareII.Tools
             catch (Exception ex)
             {
                 MessageBox.Show("Exception when updating city: " + ex);
+            }
+        }
+
+        private static void UpdateCustomerPostalCode(int customerID, string postalCode, string user)
+        {
+            int addressID = GetAddressID(customerID);
+            try 
+            {
+                string sql2 = $"UPDATE address SET postalCode = '{postalCode}' WHERE addressId = {addressID}";
+                MySqlCommand cmd2 = new MySqlCommand(sql2, DBConnection.conn);
+                cmd2.ExecuteNonQuery();
+            } catch (Exception ex)
+            {
+                MessageBox.Show("Exception when updating postal code: " + ex);
             }
         }
 
