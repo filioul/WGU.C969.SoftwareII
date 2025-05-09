@@ -256,6 +256,7 @@ namespace WGU.C969.SoftwareII.Tools
                 {
                     UpdateCustomerCountry(numericalID, countryName, user);
                     UpdateAddressLastUpdated(numericalID, user);
+                    UpdateCountryLastUpdated(numericalID, user);
                 }
                 if (DataValidation.ValidateText(cityName))
                 {
@@ -419,6 +420,22 @@ namespace WGU.C969.SoftwareII.Tools
             catch (Exception ex)
             {
                 MessageBox.Show("Exception when updating 'last updated' customer fields: " + ex);
+            }
+        }
+
+        private static void UpdateCountryLastUpdated(int customerID, string user)
+        {
+            string country = GetCountryFromCustomerID(customerID);
+            int countryID = GetCountryID(country);
+            try
+            {
+                string sql2 = $"UPDATE country SET lastUpdate = NOW(), lastUpdateBy = '{user}' WHERE countryId = {countryID}";
+                MySqlCommand cmd2 = new MySqlCommand(sql2, DBConnection.conn);
+                cmd2.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Exception when updating 'last updated' country fields: " + ex);
             }
         }
 
