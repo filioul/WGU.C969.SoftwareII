@@ -244,14 +244,17 @@ namespace WGU.C969.SoftwareII.Tools
                 if (DataValidation.ValidateText(address1))
                 {
                     UpdateCustomerAddress1(numericalID, address1);
+                    UpdateAddressLastUpdated(numericalID, user);
                 }
                 if (DataValidation.ValidateText(address2))
                 {
                     UpdateCustomerAddress2(numericalID, address2);
+                    UpdateAddressLastUpdated(numericalID, user);
                 }
                 if (DataValidation.ValidateText(countryName))
                 {
                     UpdateCustomerCountry(numericalID, countryName, user);
+                    UpdateAddressLastUpdated(numericalID, user);
                 }
                 if (DataValidation.ValidateText(cityName))
                 {
@@ -260,17 +263,21 @@ namespace WGU.C969.SoftwareII.Tools
                         countryName = GetCountryFromCustomerID(numericalID);
                     }
                     UpdateCustomerCity(numericalID, cityName, countryName, user);
+                    UpdateAddressLastUpdated(numericalID, user);
                 }
                 if (DataValidation.ValidateText(postalCode))
                 {
                     UpdateCustomerPostalCode(numericalID, postalCode, user);
+                    UpdateAddressLastUpdated(numericalID, user);
                 }
-                if(DataValidation.ValidatePhoneNumberNull(number))
+                if (DataValidation.ValidatePhoneNumberNull(number))
                 {
                     if(DataValidation.ValidatePhoneNumberFormat(number))
                     {
                         UpdateCustomerPhoneNumber(numericalID, number, user);
-                    } else
+                        UpdateAddressLastUpdated(numericalID, user);
+                    }
+                    else
                     {
                         MessageBox.Show("Invalid phone number, please try again.");
                     }
@@ -383,6 +390,20 @@ namespace WGU.C969.SoftwareII.Tools
             catch (Exception ex)
             {
                 MessageBox.Show("Exception when updating phone number: " + ex);
+            }
+        }
+
+        private static void UpdateAddressLastUpdated(int customerID, string user)
+        {
+            int addressID = GetAddressID(customerID);
+            try
+            {
+                string sql2 = $"UPDATE address SET lastUpdate = NOW(), lastUpdateBy = '{user}' WHERE addressId = {addressID}";
+                MySqlCommand cmd2 = new MySqlCommand(sql2, DBConnection.conn);
+                cmd2.ExecuteNonQuery();
+            } catch (Exception ex)
+            {
+                MessageBox.Show("Exception when updating 'last updated' fields: " + ex);
             }
         }
 
