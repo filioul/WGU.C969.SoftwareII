@@ -439,6 +439,22 @@ namespace WGU.C969.SoftwareII.Tools
             }
         }
 
+        private static void UpdateCityLastUpdated(int customerID, string user)
+        {
+            int addressID = GetAddressID(customerID);
+            int cityID = GetCityIDFromAddress(addressID);
+            try
+            {
+                string sql2 = $"UPDATE city SET lastUpdate = NOW(), lastUpdateBy = '{user}' WHERE cityId = {cityID}";
+                MySqlCommand cmd2 = new MySqlCommand(sql2, DBConnection.conn);
+                cmd2.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Exception when updating 'last updated' city fields: " + ex);
+            }
+        }
+
         private static int GetAddressID(int customerID)
         {
             int addressID = 0;
