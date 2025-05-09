@@ -53,16 +53,9 @@ namespace WGU.C969.SoftwareII.Forms
 
         private void showDateButton_Click(object sender, EventArgs e)
         {
-            try
-            {
-                DateTime desiredDate = datePicker.Value;
-                ((DataTable)appDataGridView.DataSource).DefaultView.RowFilter = $"start = '{desiredDate}' ";
-
-            } catch(Exception ex)
-            {
-                MessageBox.Show("Exception thrown while filling table:" + ex);
-
-            }
+            DateTime selectedDate = datePicker.Value;
+            DataSet dset = CalendarTable.ShowWeeksAppointments(selectedDate);
+            appDataGridView.DataSource = dset.Tables[0];
         }
     }
 }

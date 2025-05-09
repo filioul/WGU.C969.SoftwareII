@@ -72,7 +72,7 @@
             showDateButton.Name = "showDateButton";
             showDateButton.Size = new Size(190, 23);
             showDateButton.TabIndex = 27;
-            showDateButton.Text = "Show appointments for date";
+            showDateButton.Text = "Show appointments for week";
             showDateButton.UseVisualStyleBackColor = true;
             showDateButton.Click += showDateButton_Click;
             // 

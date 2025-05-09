@@ -286,6 +286,7 @@ namespace WGU.C969.SoftwareII.Tools
                     }
                     UpdateCustomerCity(numericalID, cityName, countryName, user);
                     UpdateAddressLastUpdated(numericalID, user);
+                    UpdateCityLastUpdated(numericalID, user);
                     changes++;
                 }
                 if (DataValidation.ValidateText(postalCode))
