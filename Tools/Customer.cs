@@ -539,19 +539,28 @@ namespace WGU.C969.SoftwareII.Tools
         private static string GetCountryFromCustomerID(int customerID)
         {
             string countryName = "";
+            int countryID;
             int addressID = GetAddressID(customerID);
+            int cityID = GetCityIDFromAddress(addressID);
             try
             {
-                string sql = $"SELECT country FROM country WHERE addressId = '{addressID}'";
+                string sql = $"SELECT countryId FROM city WHERE cityId = '{cityID}'";
                 MySqlCommand cmd = new MySqlCommand(sql, DBConnection.conn);
                 using (cmd)
+                {
+                    countryID = Convert.ToInt32(cmd.ExecuteScalar());
+                }
+
+                string sql2 = $"SELECT country FROM country WHERE countryId = '{countryID}'";
+                MySqlCommand cmd2 = new MySqlCommand(sql2, DBConnection.conn);
+                using (cmd2)
                 {
                     countryName = cmd.ExecuteScalar().ToString();
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Exception thrown getting city id: " + ex);
+                MessageBox.Show("Exception thrown getting country name: " + ex);
             }
             return countryName;
         }
