@@ -50,15 +50,16 @@ namespace WGU.C969.SoftwareII.Forms
 
         private void UpdateCustomer()
         {
-            HidePropertyFields();
-            HideDeleteFields();
-            ShowUserSearchFields();
+            SelectCustomer selectCForm = new SelectCustomer();
+            selectCForm.Show();
+            UpdateCustomer();
         }
 
         private void DeleteCustomer()
         {
-            HidePropertyFields();
-            ShowUserSearchFields();
+            SelectCustomer selectCForm = new SelectCustomer();
+            selectCForm.Show();
+            UpdateCustomer();
         }
 
         private void ShowPropertyFields()

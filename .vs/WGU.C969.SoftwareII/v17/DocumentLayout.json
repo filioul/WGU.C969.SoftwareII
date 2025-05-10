@@ -3,36 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\LabUser\\source\\repos\\WGU.C969.SoftwareII\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|c:\\users\\labuser\\source\\repos\\wgu.c969.softwareii\\tools\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|solutionrelative:tools\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|c:\\users\\labuser\\source\\repos\\wgu.c969.softwareii\\tools\\calendartable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|solutionrelative:tools\\calendartable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|c:\\users\\labuser\\source\\repos\\wgu.c969.softwareii\\tools\\datavalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|solutionrelative:tools\\datavalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|c:\\users\\labuser\\source\\repos\\wgu.c969.softwareii\\tools\\alert.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|solutionrelative:tools\\alert.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|c:\\users\\labuser\\source\\repos\\wgu.c969.softwareii\\tools\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|solutionrelative:tools\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|c:\\users\\labuser\\source\\repos\\wgu.c969.softwareii\\forms\\editappointments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|solutionrelative:forms\\editappointments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|c:\\users\\labuser\\source\\repos\\wgu.c969.softwareii\\forms\\editappointments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|solutionrelative:forms\\editappointments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|c:\\users\\labuser\\source\\repos\\wgu.c969.softwareii\\forms\\editcustomerrecords.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|solutionrelative:forms\\editcustomerrecords.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|c:\\users\\labuser\\source\\repos\\wgu.c969.softwareii\\forms\\calendarview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|solutionrelative:forms\\calendarview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|c:\\users\\labuser\\source\\repos\\wgu.c969.softwareii\\forms\\selectcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|solutionrelative:forms\\selectcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|c:\\users\\labuser\\source\\repos\\wgu.c969.softwareii\\forms\\selectcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|solutionrelative:forms\\selectcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,110 +26,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CalendarTable.cs",
-              "DocumentMoniker": "C:\\Users\\LabUser\\source\\repos\\WGU.C969.SoftwareII\\Tools\\CalendarTable.cs",
-              "RelativeDocumentMoniker": "Tools\\CalendarTable.cs",
-              "ToolTip": "C:\\Users\\LabUser\\source\\repos\\WGU.C969.SoftwareII\\Tools\\CalendarTable.cs",
-              "RelativeToolTip": "Tools\\CalendarTable.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAADwvxsAAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-10T00:08:42.903Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Alert.cs",
-              "DocumentMoniker": "C:\\Users\\LabUser\\source\\repos\\WGU.C969.SoftwareII\\Tools\\Alert.cs",
-              "RelativeDocumentMoniker": "Tools\\Alert.cs",
-              "ToolTip": "C:\\Users\\LabUser\\source\\repos\\WGU.C969.SoftwareII\\Tools\\Alert.cs",
-              "RelativeToolTip": "Tools\\Alert.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-10T00:02:10.284Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Appointment.cs",
-              "DocumentMoniker": "C:\\Users\\LabUser\\source\\repos\\WGU.C969.SoftwareII\\Tools\\Appointment.cs",
-              "RelativeDocumentMoniker": "Tools\\Appointment.cs",
-              "ToolTip": "C:\\Users\\LabUser\\source\\repos\\WGU.C969.SoftwareII\\Tools\\Appointment.cs",
-              "RelativeToolTip": "Tools\\Appointment.cs",
-              "ViewState": "AQIAAAQAAAAAAAAAAAAAAA8AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T21:20:51.193Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "EditAppointments.cs",
-              "DocumentMoniker": "C:\\Users\\LabUser\\source\\repos\\WGU.C969.SoftwareII\\Forms\\EditAppointments.cs",
-              "RelativeDocumentMoniker": "Forms\\EditAppointments.cs",
-              "ToolTip": "C:\\Users\\LabUser\\source\\repos\\WGU.C969.SoftwareII\\Forms\\EditAppointments.cs",
-              "RelativeToolTip": "Forms\\EditAppointments.cs",
-              "ViewState": "AQIAACAAAAAAAAAAAAAwwCkAAABiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T20:44:20.411Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "EditAppointments.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\LabUser\\source\\repos\\WGU.C969.SoftwareII\\Forms\\EditAppointments.cs",
-              "RelativeDocumentMoniker": "Forms\\EditAppointments.cs",
-              "ToolTip": "C:\\Users\\LabUser\\source\\repos\\WGU.C969.SoftwareII\\Forms\\EditAppointments.cs [Design]",
-              "RelativeToolTip": "Forms\\EditAppointments.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T20:43:45.974Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Customer.cs",
-              "DocumentMoniker": "C:\\Users\\LabUser\\source\\repos\\WGU.C969.SoftwareII\\Tools\\Customer.cs",
-              "RelativeDocumentMoniker": "Tools\\Customer.cs",
-              "ToolTip": "C:\\Users\\LabUser\\source\\repos\\WGU.C969.SoftwareII\\Tools\\Customer.cs",
-              "RelativeToolTip": "Tools\\Customer.cs",
-              "ViewState": "AQIAAB0CAAAAAAAAAAAUwCkCAABZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T21:31:44.084Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DataValidation.cs",
-              "DocumentMoniker": "C:\\Users\\LabUser\\source\\repos\\WGU.C969.SoftwareII\\Tools\\DataValidation.cs",
-              "RelativeDocumentMoniker": "Tools\\DataValidation.cs",
-              "ToolTip": "C:\\Users\\LabUser\\source\\repos\\WGU.C969.SoftwareII\\Tools\\DataValidation.cs",
-              "RelativeToolTip": "Tools\\DataValidation.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-10T00:02:15.284Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
               "Title": "EditCustomerRecords.cs",
               "DocumentMoniker": "C:\\Users\\LabUser\\source\\repos\\WGU.C969.SoftwareII\\Forms\\EditCustomerRecords.cs",
               "RelativeDocumentMoniker": "Forms\\EditCustomerRecords.cs",
               "ToolTip": "C:\\Users\\LabUser\\source\\repos\\WGU.C969.SoftwareII\\Forms\\EditCustomerRecords.cs",
               "RelativeToolTip": "Forms\\EditCustomerRecords.cs",
-              "ViewState": "AQIAAE0AAAAAAAAAAAAuwCcAAAAQAAAA",
+              "ViewState": "AQIAADAAAAAAAAAAAAAEwD0AAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T20:44:40.099Z",
+              "WhenOpened": "2025-05-10T21:47:36.482Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CalendarView.cs",
+              "DocumentMoniker": "C:\\Users\\LabUser\\source\\repos\\WGU.C969.SoftwareII\\Forms\\CalendarView.cs",
+              "RelativeDocumentMoniker": "Forms\\CalendarView.cs",
+              "ToolTip": "C:\\Users\\LabUser\\source\\repos\\WGU.C969.SoftwareII\\Forms\\CalendarView.cs",
+              "RelativeToolTip": "Forms\\CalendarView.cs",
+              "ViewState": "AQIAACoAAAAAAAAAAAAMwCoAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T21:41:55.877Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SelectCustomer.cs",
+              "DocumentMoniker": "C:\\Users\\LabUser\\source\\repos\\WGU.C969.SoftwareII\\Forms\\SelectCustomer.cs",
+              "RelativeDocumentMoniker": "Forms\\SelectCustomer.cs",
+              "ToolTip": "C:\\Users\\LabUser\\source\\repos\\WGU.C969.SoftwareII\\Forms\\SelectCustomer.cs",
+              "RelativeToolTip": "Forms\\SelectCustomer.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAewBQAAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T21:41:23.814Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SelectCustomer.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\LabUser\\source\\repos\\WGU.C969.SoftwareII\\Forms\\SelectCustomer.cs",
+              "RelativeDocumentMoniker": "Forms\\SelectCustomer.cs",
+              "ToolTip": "C:\\Users\\LabUser\\source\\repos\\WGU.C969.SoftwareII\\Forms\\SelectCustomer.cs [Design]",
+              "RelativeToolTip": "Forms\\SelectCustomer.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T21:36:09.69Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

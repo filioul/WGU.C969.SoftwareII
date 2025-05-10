@@ -33,7 +33,7 @@ namespace WGU.C969.SoftwareII.Forms
                 MySqlDataAdapter adpt = new MySqlDataAdapter(query, DBConnection.conn);
                 adpt.Fill(dset);
                 appDataGridView.DataSource = dset.Tables[0];
-                if (currentDate==currentUTC)
+                if (currentDate == currentUTC)
                 {
                     appDataGridView.ReadOnly = false;
 

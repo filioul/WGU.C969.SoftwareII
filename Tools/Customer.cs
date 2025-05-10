@@ -3,6 +3,7 @@ using Microsoft.VisualBasic.ApplicationServices;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -563,6 +564,22 @@ namespace WGU.C969.SoftwareII.Tools
                 MessageBox.Show("Exception thrown getting country name: " + ex);
             }
             return countryName;
+        }
+
+        public static DataSet FillCustomerTable()
+        {
+            DataSet dset = new DataSet();
+            try
+            {
+                string query = "SELECT * FROM customer";
+                MySqlDataAdapter adpt = new MySqlDataAdapter(query, DBConnection.conn);
+                adpt.Fill(dset);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Exception thrown while filling table:" + ex);
+            }
+            return dset;
         }
     }
 }
