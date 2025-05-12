@@ -19,8 +19,5 @@
     <Compile Update="Forms\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Forms\SelectCustomer.cs">
-      <SubType>Form</SubType>
-    </Compile>
   </ItemGroup>
 </Project>

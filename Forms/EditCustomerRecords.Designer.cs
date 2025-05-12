@@ -32,9 +32,6 @@
             saveButton = new Button();
             actionComboBox = new ComboBox();
             selectionLabel = new Label();
-            customerIDLabel = new Label();
-            IDTextBox = new TextBox();
-            searchButton = new Button();
             nameTextBox = new TextBox();
             nameLabel = new Label();
             requiredLabel = new Label();
@@ -50,9 +47,8 @@
             countryLabel = new Label();
             numberTextBox = new TextBox();
             numberLabel = new Label();
-            labelAreYouSure = new Label();
-            buttonImSure = new Button();
-            buttonCancel = new Button();
+            customerGridView = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)customerGridView).BeginInit();
             SuspendLayout();
             // 
             // backButton
@@ -99,56 +95,24 @@
             selectionLabel.TabIndex = 11;
             selectionLabel.Text = "Select an action:";
             // 
-            // customerIDLabel
-            // 
-            customerIDLabel.AutoSize = true;
-            customerIDLabel.Font = new Font("Segoe UI", 10F);
-            customerIDLabel.Location = new Point(249, 88);
-            customerIDLabel.Name = "customerIDLabel";
-            customerIDLabel.Size = new Size(90, 19);
-            customerIDLabel.TabIndex = 12;
-            customerIDLabel.Text = "Customer ID:";
-            customerIDLabel.Visible = false;
-            // 
-            // IDTextBox
-            // 
-            IDTextBox.Font = new Font("Segoe UI", 10F);
-            IDTextBox.Location = new Point(345, 85);
-            IDTextBox.Name = "IDTextBox";
-            IDTextBox.Size = new Size(176, 25);
-            IDTextBox.TabIndex = 13;
-            IDTextBox.Visible = false;
-            // 
-            // searchButton
-            // 
-            searchButton.Location = new Point(527, 86);
-            searchButton.Name = "searchButton";
-            searchButton.Size = new Size(75, 23);
-            searchButton.TabIndex = 14;
-            searchButton.Text = "Search";
-            searchButton.UseVisualStyleBackColor = true;
-            searchButton.Visible = false;
-            searchButton.Click += searchButton_Click;
-            // 
             // nameTextBox
             // 
+            nameTextBox.Enabled = false;
             nameTextBox.Font = new Font("Segoe UI", 10F);
-            nameTextBox.Location = new Point(345, 142);
+            nameTextBox.Location = new Point(163, 104);
             nameTextBox.Name = "nameTextBox";
             nameTextBox.Size = new Size(176, 25);
             nameTextBox.TabIndex = 15;
-            nameTextBox.Visible = false;
             // 
             // nameLabel
             // 
             nameLabel.AutoSize = true;
             nameLabel.Font = new Font("Segoe UI", 10F);
-            nameLabel.Location = new Point(221, 145);
+            nameLabel.Location = new Point(39, 107);
             nameLabel.Name = "nameLabel";
             nameLabel.Size = new Size(118, 19);
             nameLabel.TabIndex = 16;
             nameLabel.Text = "*Customer Name:";
-            nameLabel.Visible = false;
             // 
             // requiredLabel
             // 
@@ -163,165 +127,132 @@
             // 
             // addressTextBox1
             // 
+            addressTextBox1.Enabled = false;
             addressTextBox1.Font = new Font("Segoe UI", 10F);
-            addressTextBox1.Location = new Point(345, 187);
+            addressTextBox1.Location = new Point(163, 149);
             addressTextBox1.Name = "addressTextBox1";
             addressTextBox1.Size = new Size(176, 25);
             addressTextBox1.TabIndex = 18;
-            addressTextBox1.Visible = false;
             // 
             // addressTextBox2
             // 
+            addressTextBox2.Enabled = false;
             addressTextBox2.Font = new Font("Segoe UI", 10F);
-            addressTextBox2.Location = new Point(345, 218);
+            addressTextBox2.Location = new Point(163, 180);
             addressTextBox2.Name = "addressTextBox2";
             addressTextBox2.Size = new Size(176, 25);
             addressTextBox2.TabIndex = 19;
-            addressTextBox2.Visible = false;
             // 
             // cityTextBox
             // 
+            cityTextBox.Enabled = false;
             cityTextBox.Font = new Font("Segoe UI", 10F);
-            cityTextBox.Location = new Point(345, 249);
+            cityTextBox.Location = new Point(163, 211);
             cityTextBox.Name = "cityTextBox";
             cityTextBox.Size = new Size(126, 25);
             cityTextBox.TabIndex = 20;
-            cityTextBox.Visible = false;
             // 
             // countryTextBox
             // 
+            countryTextBox.Enabled = false;
             countryTextBox.Font = new Font("Segoe UI", 10F);
-            countryTextBox.Location = new Point(345, 280);
+            countryTextBox.Location = new Point(163, 242);
             countryTextBox.Name = "countryTextBox";
             countryTextBox.Size = new Size(126, 25);
             countryTextBox.TabIndex = 21;
-            countryTextBox.Visible = false;
             // 
             // codeTextBox
             // 
+            codeTextBox.Enabled = false;
             codeTextBox.Font = new Font("Segoe UI", 10F);
-            codeTextBox.Location = new Point(345, 311);
+            codeTextBox.Location = new Point(163, 273);
             codeTextBox.Name = "codeTextBox";
             codeTextBox.Size = new Size(77, 25);
             codeTextBox.TabIndex = 22;
-            codeTextBox.Visible = false;
             // 
             // addressLabel1
             // 
             addressLabel1.AutoSize = true;
             addressLabel1.Font = new Font("Segoe UI", 10F);
-            addressLabel1.Location = new Point(231, 190);
+            addressLabel1.Location = new Point(49, 152);
             addressLabel1.Name = "addressLabel1";
             addressLabel1.Size = new Size(108, 19);
             addressLabel1.TabIndex = 23;
             addressLabel1.Text = "*Address Line 1:";
-            addressLabel1.Visible = false;
             // 
             // addressLabel2
             // 
             addressLabel2.AutoSize = true;
             addressLabel2.Font = new Font("Segoe UI", 10F);
-            addressLabel2.Location = new Point(237, 224);
+            addressLabel2.Location = new Point(55, 186);
             addressLabel2.Name = "addressLabel2";
             addressLabel2.Size = new Size(102, 19);
             addressLabel2.TabIndex = 24;
             addressLabel2.Text = "Address Line 2:";
-            addressLabel2.Visible = false;
             // 
             // cityLabel
             // 
             cityLabel.AutoSize = true;
             cityLabel.Font = new Font("Segoe UI", 10F);
-            cityLabel.Location = new Point(297, 252);
+            cityLabel.Location = new Point(115, 214);
             cityLabel.Name = "cityLabel";
             cityLabel.Size = new Size(42, 19);
             cityLabel.TabIndex = 25;
             cityLabel.Text = "*City:";
-            cityLabel.Visible = false;
             // 
             // codeLabel
             // 
             codeLabel.AutoSize = true;
             codeLabel.Font = new Font("Segoe UI", 10F);
-            codeLabel.Location = new Point(249, 314);
+            codeLabel.Location = new Point(67, 276);
             codeLabel.Name = "codeLabel";
             codeLabel.Size = new Size(90, 19);
             codeLabel.TabIndex = 26;
             codeLabel.Text = "*Postal Code:";
-            codeLabel.Visible = false;
             // 
             // countryLabel
             // 
             countryLabel.AutoSize = true;
             countryLabel.Font = new Font("Segoe UI", 10F);
-            countryLabel.Location = new Point(271, 283);
+            countryLabel.Location = new Point(89, 245);
             countryLabel.Name = "countryLabel";
             countryLabel.Size = new Size(68, 19);
             countryLabel.TabIndex = 27;
             countryLabel.Text = "*Country:";
-            countryLabel.Visible = false;
             // 
             // numberTextBox
             // 
+            numberTextBox.Enabled = false;
             numberTextBox.Font = new Font("Segoe UI", 10F);
-            numberTextBox.Location = new Point(345, 358);
+            numberTextBox.Location = new Point(163, 320);
             numberTextBox.Name = "numberTextBox";
             numberTextBox.Size = new Size(176, 25);
             numberTextBox.TabIndex = 28;
-            numberTextBox.Visible = false;
             // 
             // numberLabel
             // 
             numberLabel.AutoSize = true;
             numberLabel.Font = new Font("Segoe UI", 10F);
-            numberLabel.Location = new Point(231, 361);
+            numberLabel.Location = new Point(49, 323);
             numberLabel.Name = "numberLabel";
             numberLabel.Size = new Size(108, 19);
             numberLabel.TabIndex = 29;
             numberLabel.Text = "*Phone Number";
-            numberLabel.Visible = false;
             // 
-            // labelAreYouSure
+            // customerGridView
             // 
-            labelAreYouSure.AutoSize = true;
-            labelAreYouSure.Font = new Font("Segoe UI", 10F);
-            labelAreYouSure.ForeColor = Color.Firebrick;
-            labelAreYouSure.Location = new Point(195, 113);
-            labelAreYouSure.Name = "labelAreYouSure";
-            labelAreYouSure.Size = new Size(478, 19);
-            labelAreYouSure.TabIndex = 30;
-            labelAreYouSure.Text = "Are you sure you want to delete this customer? This change is not reversible.";
-            labelAreYouSure.Visible = false;
-            // 
-            // buttonImSure
-            // 
-            buttonImSure.Location = new Point(345, 135);
-            buttonImSure.Name = "buttonImSure";
-            buttonImSure.Size = new Size(75, 23);
-            buttonImSure.TabIndex = 31;
-            buttonImSure.Text = "Delete user";
-            buttonImSure.UseVisualStyleBackColor = true;
-            buttonImSure.Visible = false;
-            buttonImSure.Click += buttonImSure_Click;
-            // 
-            // buttonCancel
-            // 
-            buttonCancel.Location = new Point(426, 135);
-            buttonCancel.Name = "buttonCancel";
-            buttonCancel.Size = new Size(75, 23);
-            buttonCancel.TabIndex = 32;
-            buttonCancel.Text = "Cancel";
-            buttonCancel.UseVisualStyleBackColor = true;
-            buttonCancel.Visible = false;
+            customerGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            customerGridView.Location = new Point(365, 91);
+            customerGridView.Name = "customerGridView";
+            customerGridView.Size = new Size(415, 281);
+            customerGridView.TabIndex = 30;
             // 
             // EditCustomerRecords
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(buttonCancel);
-            Controls.Add(buttonImSure);
-            Controls.Add(labelAreYouSure);
+            Controls.Add(customerGridView);
             Controls.Add(numberLabel);
             Controls.Add(numberTextBox);
             Controls.Add(countryLabel);
@@ -337,15 +268,13 @@
             Controls.Add(requiredLabel);
             Controls.Add(nameLabel);
             Controls.Add(nameTextBox);
-            Controls.Add(searchButton);
-            Controls.Add(IDTextBox);
-            Controls.Add(customerIDLabel);
             Controls.Add(selectionLabel);
             Controls.Add(actionComboBox);
             Controls.Add(saveButton);
             Controls.Add(backButton);
             Name = "EditCustomerRecords";
             Text = "Editing customer records";
+            ((System.ComponentModel.ISupportInitialize)customerGridView).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -356,9 +285,6 @@
         private Button saveButton;
         private ComboBox actionComboBox;
         private Label selectionLabel;
-        private Label customerIDLabel;
-        private TextBox IDTextBox;
-        private Button searchButton;
         private TextBox nameTextBox;
         private Label nameLabel;
         private Label requiredLabel;
@@ -374,8 +300,6 @@
         private Label countryLabel;
         private TextBox numberTextBox;
         private Label numberLabel;
-        private Label labelAreYouSure;
-        private Button buttonImSure;
-        private Button buttonCancel;
+        private DataGridView customerGridView;
     }
 }

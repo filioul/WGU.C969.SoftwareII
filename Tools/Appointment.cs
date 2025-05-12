@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -89,6 +90,22 @@ namespace WGU.C969.SoftwareII.Tools
                 MessageBox.Show("Error getting userId: " + ex);
             }
             return userID;
+        }
+
+        public static DataSet FillAppointmentTable()
+        {
+            DataSet dset = new DataSet();
+            try
+            {
+                string query = "SELECT * FROM appointment";
+                MySqlDataAdapter adpt = new MySqlDataAdapter(query, DBConnection.conn);
+                adpt.Fill(dset);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Exception thrown while filling table:" + ex);
+            }
+            return dset;
         }
     }
 }

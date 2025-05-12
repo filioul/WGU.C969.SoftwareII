@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Org.BouncyCastle.Asn1;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +17,9 @@ namespace WGU.C969.SoftwareII.Forms
         public EditAppointments()
         {
             InitializeComponent();
+            DataSet dset = new DataSet();
+            dset = Appointment.FillAppointmentTable();
+            appointmentGridView.DataSource = dset.Tables[0];
         }
 
         private void backButton_Click(object sender, EventArgs e)
@@ -73,20 +77,17 @@ namespace WGU.C969.SoftwareII.Forms
 
         private void AddAppointment()
         {
-            HideSearchFields();
             ShowPropertyFields();
         }
 
         private void DeleteAppointment()
         {
             HidePropertyFields();
-            ShowSearchFields();
         }
 
         private void UpdateAppointment()
         {
             HidePropertyFields();
-            ShowSearchFields();
         }
 
         private void ShowPropertyFields()
@@ -115,12 +116,6 @@ namespace WGU.C969.SoftwareII.Forms
             saveButton.Enabled = true;
         }
 
-        private void ShowSearchFields()
-        {
-            appointmentIDLabel.Visible = true;
-            IDTextBox.Visible = true;
-            searchButton.Visible = true;
-        }
 
         private void HidePropertyFields()
         {
@@ -148,11 +143,5 @@ namespace WGU.C969.SoftwareII.Forms
             saveButton.Enabled = false;
         }
 
-        private void HideSearchFields()
-        {
-            appointmentIDLabel.Visible = false;
-            IDTextBox.Visible = false;
-            searchButton.Visible = false;
-        }
     }
 }
