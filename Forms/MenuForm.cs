@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WGU.C969.SoftwareII.Tools;
 
 namespace WGU.C969.SoftwareII.Forms
 {
@@ -17,6 +18,10 @@ namespace WGU.C969.SoftwareII.Forms
         {
             user = _user;
             InitializeComponent();
+            if(Alert.CheckIfAppointmentWithin15(user))
+            {
+                MessageBox.Show("ALERT: You have an appointment within 15 minutes.");
+            }
         }
 
         private void editCustomersButton_Click(object sender, EventArgs e)

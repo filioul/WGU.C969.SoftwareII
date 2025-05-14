@@ -155,7 +155,7 @@ namespace WGU.C969.SoftwareII.Tools
             return value;
         }
 
-        private static string FormatDateTimeForSQL(DateTime dateTime)
+        public static string FormatDateTimeForSQL(DateTime dateTime)
         {
             string formattedDateTime;
             formattedDateTime = dateTime.Year.ToString();
@@ -170,6 +170,22 @@ namespace WGU.C969.SoftwareII.Tools
             formattedDateTime = formattedDateTime + ":";
             formattedDateTime = formattedDateTime + dateTime.Second.ToString();
             return formattedDateTime;
+        }
+
+        public static void DeleteAppointment(string appointmentID)
+        {
+            try
+            {
+                int numericalID = Int32.Parse(appointmentID);
+                string sql = $"DELETE FROM appointment WHERE appointmentId = {numericalID}";
+                MySqlCommand cmd = new MySqlCommand(sql, DBConnection.conn);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("The appointment has been deleted.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error thrown deleting appointment:" + ex);
+            }
         }
     }
 }

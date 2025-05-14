@@ -39,11 +39,6 @@ namespace WGU.C969.SoftwareII
                 var password = passwordTextBox.Text;
                 if (DataValidation.UsernameAndPasswordCheck(username, password))
                 {
-                    if (Alert.CheckIfAppointmentWithin15(username, password))
-                    {
-                        MessageBox.Show(Localization.AppointmentAlertMessage());
-                    }
-
                     var loginTime = DateTime.UtcNow;
                     Logging.RecordSignIn(username, loginTime);
 

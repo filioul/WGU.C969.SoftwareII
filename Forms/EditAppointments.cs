@@ -68,6 +68,27 @@ namespace WGU.C969.SoftwareII.Forms
             {
                 
             }
+            else if (actionComboBox.SelectedIndex == 2)
+            {
+                if (appointmentGridView.Rows.GetRowCount(DataGridViewElementStates.Selected) == 1)
+                {
+                    try
+                    {
+                        DataGridViewRow selectedRow = appointmentGridView.SelectedRows[0];
+                        string appointmentID = selectedRow.Cells["appointmentId"].Value.ToString();
+                        Appointment.DeleteAppointment(appointmentID);
+                        Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error deleting appointment: " + ex);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Please select one appointment to delete.");
+                }
+            }
         }
 
         private void actionComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -94,6 +115,7 @@ namespace WGU.C969.SoftwareII.Forms
         private void DeleteAppointment()
         {
             HidePropertyFields();
+            saveButton.Enabled = true;
         }
 
         private void UpdateAppointment()
@@ -115,7 +137,7 @@ namespace WGU.C969.SoftwareII.Forms
             descriptionTextBox.Enabled = true;
             textBoxURL.Enabled = true;
             saveButton.Enabled = true;
-            saveButton.Enabled = true;
+            
         }
 
 
@@ -132,8 +154,6 @@ namespace WGU.C969.SoftwareII.Forms
             titleTextBox.Enabled = false;
             descriptionTextBox.Enabled = false;
             textBoxURL.Enabled = false;
-            saveButton.Enabled = false;
-            saveButton.Enabled = false;
         }
 
     }
