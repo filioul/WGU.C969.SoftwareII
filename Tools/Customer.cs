@@ -218,7 +218,8 @@ namespace WGU.C969.SoftwareII.Tools
             {
                 MessageBox.Show("Invalid ID. Please try again.");
                 return false;
-            } else
+            }
+            else
             {
                 try
                 {
@@ -328,7 +329,8 @@ namespace WGU.C969.SoftwareII.Tools
                     UpdateAddressLastUpdated(numericalID, user);
                     changes++;
                 }
-            } catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show("Error thrown updating customer:" + ex);
             }
@@ -350,7 +352,8 @@ namespace WGU.C969.SoftwareII.Tools
                 string sql2 = $"UPDATE address SET address = '{address1}' WHERE addressId = {addressID}";
                 MySqlCommand cmd2 = new MySqlCommand(sql2, DBConnection.conn);
                 cmd2.ExecuteNonQuery();
-            } catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show("Exception: " + ex);
             }
@@ -364,7 +367,8 @@ namespace WGU.C969.SoftwareII.Tools
                 string sql2 = $"UPDATE address SET address2 = '{address2}' WHERE addressId = {addressID}";
                 MySqlCommand cmd2 = new MySqlCommand(sql2, DBConnection.conn);
                 cmd2.ExecuteNonQuery();
-            } catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show("Exception: " + ex);
             }
@@ -419,7 +423,8 @@ namespace WGU.C969.SoftwareII.Tools
                 string sql2 = $"UPDATE address SET postalCode = '{postalCode}' WHERE addressId = {addressID}";
                 MySqlCommand cmd2 = new MySqlCommand(sql2, DBConnection.conn);
                 cmd2.ExecuteNonQuery();
-            } catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show("Exception when updating postal code: " + ex);
             }
@@ -448,13 +453,14 @@ namespace WGU.C969.SoftwareII.Tools
                 string sql2 = $"UPDATE address SET lastUpdate = NOW(), lastUpdateBy = '{user}' WHERE addressId = {addressID}";
                 MySqlCommand cmd2 = new MySqlCommand(sql2, DBConnection.conn);
                 cmd2.ExecuteNonQuery();
-            } catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show("Exception when updating 'last updated' address fields: " + ex);
             }
         }
 
-        private static void UpdateCustomerLastUpdated(int customerID, string user) 
+        private static void UpdateCustomerLastUpdated(int customerID, string user)
         {
             try
             {
@@ -511,8 +517,9 @@ namespace WGU.C969.SoftwareII.Tools
                 {
                     addressID = Convert.ToInt32(cmd.ExecuteScalar());
                 }
-                
-            } catch (Exception ex)
+
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show("Exception thrown getting address id: " + ex);
             }
@@ -530,7 +537,8 @@ namespace WGU.C969.SoftwareII.Tools
                 {
                     cityID = Convert.ToInt32(cmd.ExecuteScalar());
                 }
-            } catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show("Exception thrown getting city id: " + ex);
             }
@@ -580,6 +588,25 @@ namespace WGU.C969.SoftwareII.Tools
                 MessageBox.Show("Exception thrown while filling table:" + ex);
             }
             return dset;
+        }
+
+        public static int GetCustomerID(string customerName)
+        {
+            int customerID = 0;
+            try
+            {
+                string sql = $"SELECT customerId FROM customer WHERE customerName = '{customerName}'";
+                MySqlCommand cmd = new MySqlCommand(sql, DBConnection.conn);
+                using (cmd)
+                {
+                    customerID = Convert.ToInt32(cmd.ExecuteScalar());
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Exception thrown getting customerID:" + ex);
+            }
+            return customerID;
         }
     }
 }

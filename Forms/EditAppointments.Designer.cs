@@ -55,6 +55,9 @@
             titleLabel = new Label();
             descriptionLabel = new Label();
             appointmentGridView = new DataGridView();
+            labelTime = new Label();
+            textBoxURL = new TextBox();
+            labelURL = new Label();
             ((System.ComponentModel.ISupportInitialize)appointmentGridView).BeginInit();
             SuspendLayout();
             // 
@@ -113,7 +116,6 @@
             // endLabel
             // 
             endLabel.AutoSize = true;
-            endLabel.Enabled = false;
             endLabel.Font = new Font("Segoe UI", 10F);
             endLabel.Location = new Point(181, 99);
             endLabel.Name = "endLabel";
@@ -144,7 +146,7 @@
             // 
             // startTimePicker
             // 
-            startTimePicker.CustomFormat = "HH:MM";
+            startTimePicker.CustomFormat = "HH:mm";
             startTimePicker.Enabled = false;
             startTimePicker.Font = new Font("Segoe UI", 10F);
             startTimePicker.Format = DateTimePickerFormat.Custom;
@@ -157,7 +159,7 @@
             // 
             // endTimePicker
             // 
-            endTimePicker.CustomFormat = "HH:MM";
+            endTimePicker.CustomFormat = "HH:mm";
             endTimePicker.Enabled = false;
             endTimePicker.Font = new Font("Segoe UI", 10F);
             endTimePicker.Format = DateTimePickerFormat.Custom;
@@ -226,7 +228,7 @@
             // 
             descriptionTextBox.Enabled = false;
             descriptionTextBox.Font = new Font("Segoe UI", 10F);
-            descriptionTextBox.Location = new Point(108, 320);
+            descriptionTextBox.Location = new Point(108, 351);
             descriptionTextBox.Multiline = true;
             descriptionTextBox.Name = "descriptionTextBox";
             descriptionTextBox.Size = new Size(249, 88);
@@ -259,11 +261,11 @@
             // 
             userLabel.AutoSize = true;
             userLabel.Font = new Font("Segoe UI", 10F);
-            userLabel.Location = new Point(23, 137);
+            userLabel.Location = new Point(17, 137);
             userLabel.Name = "userLabel";
-            userLabel.Size = new Size(79, 19);
+            userLabel.Size = new Size(85, 19);
             userLabel.TabIndex = 36;
-            userLabel.Text = "Consultant:";
+            userLabel.Text = "*Consultant:";
             // 
             // customerLabel
             // 
@@ -319,7 +321,7 @@
             // 
             descriptionLabel.AutoSize = true;
             descriptionLabel.Font = new Font("Segoe UI", 10F);
-            descriptionLabel.Location = new Point(21, 323);
+            descriptionLabel.Location = new Point(24, 351);
             descriptionLabel.Name = "descriptionLabel";
             descriptionLabel.Size = new Size(81, 19);
             descriptionLabel.TabIndex = 42;
@@ -333,11 +335,44 @@
             appointmentGridView.Size = new Size(415, 315);
             appointmentGridView.TabIndex = 43;
             // 
+            // labelTime
+            // 
+            labelTime.AutoSize = true;
+            labelTime.Font = new Font("Segoe UI", 10F);
+            labelTime.ForeColor = Color.IndianRed;
+            labelTime.Location = new Point(594, 50);
+            labelTime.Name = "labelTime";
+            labelTime.Size = new Size(194, 19);
+            labelTime.TabIndex = 44;
+            labelTime.Text = "Times on the board are in EST.";
+            // 
+            // textBoxURL
+            // 
+            textBoxURL.Enabled = false;
+            textBoxURL.Font = new Font("Segoe UI", 10F);
+            textBoxURL.Location = new Point(108, 320);
+            textBoxURL.Name = "textBoxURL";
+            textBoxURL.Size = new Size(176, 25);
+            textBoxURL.TabIndex = 45;
+            // 
+            // labelURL
+            // 
+            labelURL.AutoSize = true;
+            labelURL.Font = new Font("Segoe UI", 10F);
+            labelURL.Location = new Point(62, 323);
+            labelURL.Name = "labelURL";
+            labelURL.Size = new Size(37, 19);
+            labelURL.TabIndex = 46;
+            labelURL.Text = "URL:";
+            // 
             // EditAppointments
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(labelURL);
+            Controls.Add(textBoxURL);
+            Controls.Add(labelTime);
             Controls.Add(appointmentGridView);
             Controls.Add(descriptionLabel);
             Controls.Add(titleLabel);
@@ -401,5 +436,8 @@
         private Label titleLabel;
         private Label descriptionLabel;
         private DataGridView appointmentGridView;
+        private Label labelTime;
+        private TextBox textBoxURL;
+        private Label labelURL;
     }
 }

@@ -27,7 +27,7 @@ namespace WGU.C969.SoftwareII.Forms
 
         private void editAppointmentsButton_Click(object sender, EventArgs e)
         {
-            EditAppointments editAForm = new EditAppointments();
+            EditAppointments editAForm = new EditAppointments(user);
             editAForm.Show();
         }
 

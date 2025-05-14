@@ -14,8 +14,10 @@ namespace WGU.C969.SoftwareII.Forms
 {
     public partial class EditAppointments : Form
     {
-        public EditAppointments()
+        private string user;
+        public EditAppointments(string _user)
         {
+            user = _user;
             InitializeComponent();
             DataSet dset = new DataSet();
             dset = Appointment.FillAppointmentTable();
@@ -31,27 +33,36 @@ namespace WGU.C969.SoftwareII.Forms
         {
             DateTime start = datePicker.Value.Date + startTimePicker.Value.TimeOfDay;
             DateTime end = datePicker.Value.Date + endTimePicker.Value.TimeOfDay;
-            string user = userTextBox.Text.Trim();
+            string givenUser = userTextBox.Text.Trim();
             string customerName = customerTextBox.Text.Trim();
             string location = locationTextBox.Text.Trim();
             string contact = contactTextBox.Text.Trim();
             string type = typeTextBox.Text.Trim();
             string title = titleTextBox.Text.Trim();
             string description = descriptionTextBox.Text.Trim();
+            string url = textBoxURL.Text.Trim();
 
             if (actionComboBox.SelectedIndex == 0)
             {
                 if (Customer.CheckIfCustomerExistsFromName(customerName))
                 {
-                    if (Appointment.CheckAvailability(start, end, user) && Appointment.CheckBusinessHours(start, end))
+                    if (DataValidation.UsernameCheck(givenUser)) 
                     {
-                        Appointment.AddAppointment(start, end, user, customerName, location, contact, type, title, description);
-                    }
-                    else 
+                        if (Appointment.CheckAvailability(start, end, givenUser) && Appointment.CheckBusinessHours(start, end))
+                        {
+
+                            Appointment.AddAppointment(start, end, givenUser, customerName, location, contact, type, title, url, description, user);
+                        }
+                        else
+                        {
+                            MessageBox.Show("That time slot is not available, please try again.");
+                        }
+                    } else 
                     {
-                        MessageBox.Show("That time slot is not available, please try again.");
+                        MessageBox.Show("Please select a valid consultant.");
                     }
-                }
+                    
+                } 
             }
             else if (actionComboBox.SelectedIndex == 1)
             {
@@ -87,59 +98,41 @@ namespace WGU.C969.SoftwareII.Forms
 
         private void UpdateAppointment()
         {
-            HidePropertyFields();
+            ShowPropertyFields();
         }
 
         private void ShowPropertyFields()
         {
-            datePicker.Visible = true;
-            dateLabel.Visible = true;
-            startTimePicker.Visible = true;
-            startLabel.Visible = true;
-            endTimePicker.Visible = true;
-            endLabel.Visible = true;
-            userLabel.Visible = true;
-            userTextBox.Visible = true;
-            customerLabel.Visible = true;
-            customerTextBox.Visible = true;
-            locationLabel.Visible = true;
-            locationTextBox.Visible = true;
-            contactLabel.Visible = true;
-            contactTextBox.Visible = true;
-            typeLabel.Visible = true;
-            typeTextBox.Visible = true;
-            titleLabel.Visible = true;
-            titleTextBox.Visible = true;
-            descriptionLabel.Visible = true;
-            descriptionTextBox.Visible = true;
-            saveButton.Visible = true;
+            datePicker.Enabled = true;
+            startTimePicker.Enabled = true;
+            endTimePicker.Enabled = true;
+            userTextBox.Enabled = true;
+            customerTextBox.Enabled = true;
+            locationTextBox.Enabled = true;
+            contactTextBox.Enabled = true;
+            typeTextBox.Enabled = true;
+            titleTextBox.Enabled = true;
+            descriptionTextBox.Enabled = true;
+            textBoxURL.Enabled = true;
+            saveButton.Enabled = true;
             saveButton.Enabled = true;
         }
 
 
         private void HidePropertyFields()
         {
-            datePicker.Visible = false;
-            dateLabel.Visible = false;
-            startTimePicker.Visible = false;
-            startLabel.Visible = false;
-            endTimePicker.Visible = false;
-            endLabel.Visible = false;
-            userLabel.Visible = false;
-            userTextBox.Visible = false;
-            customerLabel.Visible = false;
-            customerTextBox.Visible = false;
-            locationLabel.Visible = false;
-            locationTextBox.Visible = false;
-            contactLabel.Visible = false;
-            contactTextBox.Visible = false;
-            typeLabel.Visible = false;
-            typeTextBox.Visible = false;
-            titleLabel.Visible = false;
-            titleTextBox.Visible = false;
-            descriptionLabel.Visible = false;
-            descriptionTextBox.Visible = false;
-            saveButton.Visible = false;
+            datePicker.Enabled = false;
+            startTimePicker.Enabled = false;
+            endTimePicker.Enabled = false;
+            userTextBox.Enabled = false;
+            customerTextBox.Enabled = false;
+            locationTextBox.Enabled = false;
+            contactTextBox.Enabled = false;
+            typeTextBox.Enabled = false;
+            titleTextBox.Enabled = false;
+            descriptionTextBox.Enabled = false;
+            textBoxURL.Enabled = false;
+            saveButton.Enabled = false;
             saveButton.Enabled = false;
         }
 
