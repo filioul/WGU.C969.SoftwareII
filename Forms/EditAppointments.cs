@@ -66,7 +66,60 @@ namespace WGU.C969.SoftwareII.Forms
             }
             else if (actionComboBox.SelectedIndex == 1)
             {
-                
+                if (appointmentGridView.Rows.GetRowCount(DataGridViewElementStates.Selected) == 1)
+                {
+                    try
+                    {
+                        DataGridViewRow selectedRow = appointmentGridView.SelectedRows[0];
+                        string appointmentID = selectedRow.Cells["appointmentId"].Value.ToString();
+                        int originalUserID = Convert.ToInt32(selectedRow.Cells["userId"].Value);
+                        string originalUsername = Appointment.GetUsername(originalUserID);
+                        int originalCustomerID = Convert.ToInt32(selectedRow.Cells["customerId"].Value);
+                        string originalCustomerName = Customer.GetCustomerName(originalCustomerID);
+
+                        bool wasAUsernameGiven = DataValidation.ValidateText(givenUser);
+                        bool wasACustomerGiven = DataValidation.ValidateText(customerName);
+                        if (!wasAUsernameGiven)
+                        {
+                            givenUser = originalUsername;
+                        }
+                        if (!wasACustomerGiven)
+                        {
+                            customerName = originalCustomerName;
+                        }
+
+                        if (Customer.CheckIfCustomerExistsFromName(customerName))
+                        {
+                            if (DataValidation.UsernameCheck(givenUser))
+                            {
+                                if (Appointment.CheckAvailability(start, end, givenUser) && Appointment.CheckBusinessHours(start, end))
+                                {
+
+                                    Appointment.UpdateAppointment(start, end, givenUser, customerName, location, contact, type, title, url, description, user);
+                                }
+                                else
+                                {
+                                    MessageBox.Show("That time slot is not available, please try again.");
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("Please select a valid consultant.");
+                            }
+
+                        }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error updating appointment: " + ex);
+                    }
+
+                    
+                }
+
+                else
+                {
+                    MessageBox.Show("Please select one appointment to update.");
+                }
             }
             else if (actionComboBox.SelectedIndex == 2)
             {

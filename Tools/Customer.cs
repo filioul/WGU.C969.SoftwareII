@@ -608,5 +608,24 @@ namespace WGU.C969.SoftwareII.Tools
             }
             return customerID;
         }
+
+        public static string GetCustomerName(int customerID)
+        {
+            string customerName = "";
+            try
+            {
+                string sql = $"SELECT customerName FROM customer WHERE customerId = '{customerID}'";
+                MySqlCommand cmd = new MySqlCommand(sql, DBConnection.conn);
+                using (cmd)
+                {
+                    customerName = cmd.ExecuteScalar().ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Exception thrown getting customer namr:" + ex);
+            }
+            return customerName;
+        }
     }
 }

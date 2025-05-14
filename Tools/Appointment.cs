@@ -44,6 +44,14 @@ namespace WGU.C969.SoftwareII.Tools
             
         }
 
+        public static void UpdateAppointment(DateTime start, DateTime end, string givenUser, string customerName, string location, string contact, string type, string url, string title, string desc, string user)
+        {
+            DateTime startEST = ConvertToEST(start);
+            DateTime endEST = ConvertToEST(end);
+            int customerID = Customer.GetCustomerID(customerName);
+            int userID = GetUserID(givenUser);
+        }
+
         internal static bool CheckAvailability(DateTime start, DateTime end, string user)
         {
             bool result = true;
@@ -128,6 +136,25 @@ namespace WGU.C969.SoftwareII.Tools
                 MessageBox.Show("Error getting userId: " + ex);
             }
             return userID;
+        }
+
+        public static string GetUsername(int userID)
+        {
+            string username = "";
+            try
+            {
+                string sql = $"SELECT userName FROM user WHERE userId = '{userID}'";
+                MySqlCommand cmd = new MySqlCommand(sql, DBConnection.conn);
+                using (cmd)
+                {
+                    username = cmd.ExecuteScalar().ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error getting userId: " + ex);
+            }
+            return username;
         }
 
         public static DataSet FillAppointmentTable()
