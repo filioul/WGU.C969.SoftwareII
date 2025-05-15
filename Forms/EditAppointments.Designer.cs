@@ -338,13 +338,14 @@
             // labelTime
             // 
             labelTime.AutoSize = true;
-            labelTime.Font = new Font("Segoe UI", 10F);
-            labelTime.ForeColor = Color.IndianRed;
-            labelTime.Location = new Point(594, 50);
+            labelTime.Font = new Font("Segoe UI", 9.75F, FontStyle.Underline, GraphicsUnit.Point, 0);
+            labelTime.ForeColor = Color.SteelBlue;
+            labelTime.Location = new Point(572, 9);
             labelTime.Name = "labelTime";
-            labelTime.Size = new Size(194, 19);
+            labelTime.Size = new Size(216, 17);
             labelTime.TabIndex = 44;
-            labelTime.Text = "Times on the board are in EST.";
+            labelTime.Text = "Click here for timezone information.";
+            labelTime.Click += labelTime_Click;
             // 
             // textBoxURL
             // 

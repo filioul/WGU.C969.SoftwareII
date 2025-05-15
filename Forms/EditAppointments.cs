@@ -46,7 +46,7 @@ namespace WGU.C969.SoftwareII.Forms
             {
                 if (Customer.CheckIfCustomerExistsFromName(customerName))
                 {
-                    if (DataValidation.UsernameCheck(givenUser)) 
+                    if (DataValidation.UsernameCheck(givenUser))
                     {
                         if (Appointment.CheckAvailability(start, end, givenUser) && Appointment.CheckBusinessHours(start, end))
                         {
@@ -57,12 +57,13 @@ namespace WGU.C969.SoftwareII.Forms
                         {
                             MessageBox.Show("That time slot is not available, please try again.");
                         }
-                    } else 
+                    }
+                    else
                     {
                         MessageBox.Show("Please select a valid consultant.");
                     }
-                    
-                } 
+
+                }
             }
             else if (actionComboBox.SelectedIndex == 1)
             {
@@ -72,48 +73,49 @@ namespace WGU.C969.SoftwareII.Forms
                     {
                         DataGridViewRow selectedRow = appointmentGridView.SelectedRows[0];
                         string appointmentID = selectedRow.Cells["appointmentId"].Value.ToString();
-                        int originalUserID = Convert.ToInt32(selectedRow.Cells["userId"].Value);
-                        string originalUsername = Appointment.GetUsername(originalUserID);
-                        int originalCustomerID = Convert.ToInt32(selectedRow.Cells["customerId"].Value);
-                        string originalCustomerName = Customer.GetCustomerName(originalCustomerID);
+                        int userID = Convert.ToInt32(selectedRow.Cells["userId"].Value);
+                        string originalUsername = Appointment.GetUsername(userID);
+                        int customerID = Convert.ToInt32(selectedRow.Cells["customerId"].Value);
+                        string originalCustomerName = Customer.GetCustomerName(customerID);
 
                         bool wasAUsernameGiven = DataValidation.ValidateText(givenUser);
                         bool wasACustomerGiven = DataValidation.ValidateText(customerName);
+
                         if (!wasAUsernameGiven)
                         {
-                            givenUser = originalUsername;
+                            givenUser = "";
                         }
+
                         if (!wasACustomerGiven)
                         {
-                            customerName = originalCustomerName;
+                            customerName = "";
                         }
 
-                        if (Customer.CheckIfCustomerExistsFromName(customerName))
+                        if (DataValidation.UsernameCheck(givenUser) || !wasAUsernameGiven)
                         {
-                            if (DataValidation.UsernameCheck(givenUser))
+                            if (!wasACustomerGiven || Customer.CheckIfCustomerExistsFromName(customerName))
                             {
-                                if (Appointment.CheckAvailability(start, end, givenUser) && Appointment.CheckBusinessHours(start, end))
+                                if (Appointment.CheckBusinessHours(start, end))
                                 {
-
-                                    Appointment.UpdateAppointment(start, end, givenUser, customerName, location, contact, type, title, url, description, user);
-                                }
-                                else
+                                    Appointment.UpdateAppointment(start, end, givenUser, customerName, location, contact, type, title, url, description, user, appointmentID, originalUsername);
+                                } else
                                 {
                                     MessageBox.Show("That time slot is not available, please try again.");
                                 }
                             }
-                            else
-                            {
-                                MessageBox.Show("Please select a valid consultant.");
-                            }
-
                         }
+                        else
+                        {
+                            MessageBox.Show("Please select a valid consultant.");
+                        }
+
+                    }
                     catch (Exception ex)
                     {
                         MessageBox.Show("Error updating appointment: " + ex);
                     }
 
-                    
+
                 }
 
                 else
@@ -190,7 +192,7 @@ namespace WGU.C969.SoftwareII.Forms
             descriptionTextBox.Enabled = true;
             textBoxURL.Enabled = true;
             saveButton.Enabled = true;
-            
+
         }
 
 
@@ -209,5 +211,9 @@ namespace WGU.C969.SoftwareII.Forms
             textBoxURL.Enabled = false;
         }
 
+        private void labelTime_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Appointment times are displayed in EST.\nIf you are updating or creating an appointment, please fill in the start and end of your appointment in your own local timezone. The times you give will be converted to EST.");
+        }
     }
 }
