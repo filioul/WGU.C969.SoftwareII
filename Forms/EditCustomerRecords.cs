@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Org.BouncyCastle.Asn1;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -122,7 +123,6 @@ namespace WGU.C969.SoftwareII.Forms
                 {
                     Customer.AddCustomer(customerName, address, address2, cityName, countryName, postalCode, number, user, 1);
                     MessageBox.Show("Customer added successfully.");
-                    this.Close();
                 }
             }
             else if (actionComboBox.SelectedIndex == 1)
@@ -138,7 +138,6 @@ namespace WGU.C969.SoftwareII.Forms
                         if (changes > 0)
                         {
                             MessageBox.Show("Customer updated successfully.");
-                            this.Close();
                         }
                         else if (changes == 0)
                         {
@@ -165,7 +164,6 @@ namespace WGU.C969.SoftwareII.Forms
                         DataGridViewRow selectedRow = customerGridView.SelectedRows[0];
                         string customerID = selectedRow.Cells["customerId"].Value.ToString();
                         Customer.DeleteCustomer(customerID);
-                        Close();
                     }
                     catch (Exception ex)
                     {
@@ -177,6 +175,9 @@ namespace WGU.C969.SoftwareII.Forms
                     MessageBox.Show("Please select one customer to delete.");
                 }
             }
+            DataSet dset2 = new DataSet();
+            dset2 = Customer.FillCustomerTable();
+            customerGridView.DataSource = dset2.Tables[0];
 
         }
     }

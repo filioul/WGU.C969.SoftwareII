@@ -84,7 +84,11 @@ namespace WGU.C969.SoftwareII.Tools
                 UpdateAppointmentCustomer(customerName, numericalID);
                 UpdateAppointmentLastUpdated(user, numericalID);
             }
-
+            if(DataValidation.ValidateText(location))
+            {
+                UpdateAppointmentLocation(location, numericalID);
+                UpdateAppointmentLastUpdated(user, numericalID);
+            }
 
         }
 
@@ -345,6 +349,20 @@ namespace WGU.C969.SoftwareII.Tools
             catch (Exception ex)
             {
                 MessageBox.Show("Exception when updating customer field: " + ex);
+            }
+        }
+
+        private static void UpdateAppointmentLocation(string location, int appointmentID)
+        {
+            try
+            {
+                string sql2 = $"UPDATE appointment SET location = '{location}' WHERE appointmentId = {appointmentID}";
+                MySqlCommand cmd2 = new MySqlCommand(sql2, DBConnection.conn);
+                cmd2.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Exception when updating location field: " + ex);
             }
         }
     }

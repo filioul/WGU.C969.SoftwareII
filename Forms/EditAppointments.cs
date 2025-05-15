@@ -144,7 +144,10 @@ namespace WGU.C969.SoftwareII.Forms
                     MessageBox.Show("Please select one appointment to delete.");
                 }
             }
-        }
+            DataSet dset2 = new DataSet();
+            dset2 = Appointment.FillAppointmentTable();
+            appointmentGridView.DataSource = dset2.Tables[0];
+        } 
 
         private void actionComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
