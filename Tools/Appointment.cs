@@ -79,6 +79,11 @@ namespace WGU.C969.SoftwareII.Tools
                 UpdateAppointmentConsultant(givenUser, numericalID);
                 UpdateAppointmentLastUpdated(user, numericalID);
             }
+            if(DataValidation.ValidateText(customerName))
+            {
+                UpdateAppointmentCustomer(customerName, numericalID);
+                UpdateAppointmentLastUpdated(user, numericalID);
+            }
 
 
         }
@@ -325,6 +330,21 @@ namespace WGU.C969.SoftwareII.Tools
             catch (Exception ex)
             {
                 MessageBox.Show("Exception when updating user field: " + ex);
+            }
+        }
+
+        private static void UpdateAppointmentCustomer(string customerName, int appointmentID)
+        {
+            try
+            {
+                int customerID = Customer.GetCustomerID(customerName);
+                string sql2 = $"UPDATE appointment SET customerId = {customerID} WHERE appointmentId = {appointmentID}";
+                MySqlCommand cmd2 = new MySqlCommand(sql2, DBConnection.conn);
+                cmd2.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Exception when updating customer field: " + ex);
             }
         }
     }
