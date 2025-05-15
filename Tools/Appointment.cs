@@ -67,12 +67,17 @@ namespace WGU.C969.SoftwareII.Tools
             {
                 UpdateAppointmentStartEnd(startEST, endEST, user, numericalID);
                 UpdateAppointmentLastUpdated(user, numericalID);
-
             }
             else
             {
                 MessageBox.Show("That time slot is not available, please try again.");
                 return;
+            }
+
+            if(DataValidation.ValidateText(givenUser))
+            {
+                UpdateAppointmentConsultant(givenUser, numericalID);
+                UpdateAppointmentLastUpdated(user, numericalID);
             }
 
 
@@ -305,6 +310,21 @@ namespace WGU.C969.SoftwareII.Tools
             catch (Exception ex)
             {
                 MessageBox.Show("Exception when updating start & end fields: " + ex);
+            }
+        }
+
+        internal static void UpdateAppointmentConsultant(string user, int appointmentID)
+        {
+            try
+            {
+                int userID = GetUserID(user);
+                string sql2 = $"UPDATE appointment SET userId = {userID} WHERE appointmentId = {appointmentID}";
+                MySqlCommand cmd2 = new MySqlCommand(sql2, DBConnection.conn);
+                cmd2.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Exception when updating user field: " + ex);
             }
         }
     }
