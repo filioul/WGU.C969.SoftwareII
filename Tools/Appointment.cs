@@ -100,7 +100,21 @@ namespace WGU.C969.SoftwareII.Tools
                 UpdateAppointmentDescription(desc, numericalID);
                 UpdateAppointmentLastUpdated(user, numericalID);
             }
-
+            if (DataValidation.ValidateText(title))
+            {
+                UpdateAppointmentTitle(title, numericalID);
+                UpdateAppointmentLastUpdated(user, numericalID);
+            }
+            if (DataValidation.ValidateText(contact))
+            {
+                UpdateAppointmentContact(contact, numericalID);
+                UpdateAppointmentLastUpdated(user, numericalID);
+            }
+            if (DataValidation.ValidateText(url))
+            {
+                UpdateAppointmentURL(url, numericalID);
+                UpdateAppointmentLastUpdated(user, numericalID);
+            }
         }
 
         internal static bool CheckAvailability(DateTime start, DateTime end, string user)
@@ -259,7 +273,6 @@ namespace WGU.C969.SoftwareII.Tools
                 string sql = $"DELETE FROM appointment WHERE appointmentId = {numericalID}";
                 MySqlCommand cmd = new MySqlCommand(sql, DBConnection.conn);
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("The appointment has been deleted.");
             }
             catch (Exception ex)
             {
@@ -402,6 +415,48 @@ namespace WGU.C969.SoftwareII.Tools
             catch (Exception ex)
             {
                 MessageBox.Show("Exception when updating description field: " + ex);
+            }
+        }
+
+        private static void UpdateAppointmentTitle(string title, int appointmentID)
+        {
+            try
+            {
+                string sql2 = $"UPDATE appointment SET title = '{title}' WHERE appointmentId = {appointmentID}";
+                MySqlCommand cmd2 = new MySqlCommand(sql2, DBConnection.conn);
+                cmd2.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Exception when updating title field: " + ex);
+            }
+        }
+
+        private static void UpdateAppointmentContact(string contact, int appointmentID)
+        {
+            try
+            {
+                string sql2 = $"UPDATE appointment SET contact = '{contact}' WHERE appointmentId = {appointmentID}";
+                MySqlCommand cmd2 = new MySqlCommand(sql2, DBConnection.conn);
+                cmd2.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Exception when updating title field: " + ex);
+            }
+        }
+
+        private static void UpdateAppointmentURL(string url, int appointmentID)
+        {
+            try
+            {
+                string sql2 = $"UPDATE appointment SET url = '{url}' WHERE appointmentId = {appointmentID}";
+                MySqlCommand cmd2 = new MySqlCommand(sql2, DBConnection.conn);
+                cmd2.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Exception when updating title field: " + ex);
             }
         }
     }

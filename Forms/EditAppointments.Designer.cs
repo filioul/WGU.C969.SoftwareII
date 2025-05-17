@@ -55,7 +55,6 @@
             titleLabel = new Label();
             descriptionLabel = new Label();
             appointmentGridView = new DataGridView();
-            labelTime = new Label();
             textBoxURL = new TextBox();
             labelURL = new Label();
             ((System.ComponentModel.ISupportInitialize)appointmentGridView).BeginInit();
@@ -335,18 +334,6 @@
             appointmentGridView.Size = new Size(415, 315);
             appointmentGridView.TabIndex = 43;
             // 
-            // labelTime
-            // 
-            labelTime.AutoSize = true;
-            labelTime.Font = new Font("Segoe UI", 9.75F, FontStyle.Underline, GraphicsUnit.Point, 0);
-            labelTime.ForeColor = Color.SteelBlue;
-            labelTime.Location = new Point(572, 9);
-            labelTime.Name = "labelTime";
-            labelTime.Size = new Size(216, 17);
-            labelTime.TabIndex = 44;
-            labelTime.Text = "Click here for timezone information.";
-            labelTime.Click += labelTime_Click;
-            // 
             // textBoxURL
             // 
             textBoxURL.Enabled = false;
@@ -373,7 +360,6 @@
             ClientSize = new Size(800, 450);
             Controls.Add(labelURL);
             Controls.Add(textBoxURL);
-            Controls.Add(labelTime);
             Controls.Add(appointmentGridView);
             Controls.Add(descriptionLabel);
             Controls.Add(titleLabel);
@@ -437,7 +423,6 @@
         private Label titleLabel;
         private Label descriptionLabel;
         private DataGridView appointmentGridView;
-        private Label labelTime;
         private TextBox textBoxURL;
         private Label labelURL;
     }

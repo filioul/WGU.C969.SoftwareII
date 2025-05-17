@@ -52,6 +52,7 @@ namespace WGU.C969.SoftwareII.Forms
                         {
 
                             Appointment.AddAppointment(start, end, givenUser, customerName, location, contact, type, title, url, description, user);
+                            MessageBox.Show("The appointment was created successfully.");
                         }
                         else
                         {
@@ -97,7 +98,8 @@ namespace WGU.C969.SoftwareII.Forms
                             {
                                 if (Appointment.CheckBusinessHours(start, end))
                                 {
-                                    Appointment.UpdateAppointment(start, end, givenUser, customerName, location, contact, type, title, url, description, user, appointmentID, originalUsername);
+                                    Appointment.UpdateAppointment(start, end, givenUser, customerName, location, contact, type, url, title, description, user, appointmentID, originalUsername);
+                                    MessageBox.Show("The appointment was updated successfully.");
                                 } else
                                 {
                                     MessageBox.Show("That time slot is not available, please try again.");
@@ -132,7 +134,7 @@ namespace WGU.C969.SoftwareII.Forms
                         DataGridViewRow selectedRow = appointmentGridView.SelectedRows[0];
                         string appointmentID = selectedRow.Cells["appointmentId"].Value.ToString();
                         Appointment.DeleteAppointment(appointmentID);
-                        Close();
+                        MessageBox.Show("The appointment was deleted successfully.");
                     }
                     catch (Exception ex)
                     {
@@ -147,7 +149,7 @@ namespace WGU.C969.SoftwareII.Forms
             DataSet dset2 = new DataSet();
             dset2 = Appointment.FillAppointmentTable();
             appointmentGridView.DataSource = dset2.Tables[0];
-        } 
+        }
 
         private void actionComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -213,10 +215,6 @@ namespace WGU.C969.SoftwareII.Forms
             descriptionTextBox.Enabled = false;
             textBoxURL.Enabled = false;
         }
-
-        private void labelTime_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Appointment times are displayed in EST.\nIf you are updating or creating an appointment, please fill in the start and end of your appointment in your own local timezone. The times you give will be converted to EST.");
-        }
+    
     }
 }
