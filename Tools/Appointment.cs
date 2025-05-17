@@ -95,6 +95,11 @@ namespace WGU.C969.SoftwareII.Tools
                 UpdateAppointmentType(type, numericalID);
                 UpdateAppointmentLastUpdated(user, numericalID);
             }
+            if (DataValidation.ValidateText(desc))
+            {
+                UpdateAppointmentDescription(desc, numericalID);
+                UpdateAppointmentLastUpdated(user, numericalID);
+            }
 
         }
 
@@ -383,6 +388,20 @@ namespace WGU.C969.SoftwareII.Tools
             catch (Exception ex)
             {
                 MessageBox.Show("Exception when updating type field: " + ex);
+            }
+        }
+
+        private static void UpdateAppointmentDescription(string desc, int appointmentID)
+        {
+            try
+            {
+                string sql2 = $"UPDATE appointment SET description = '{desc}' WHERE appointmentId = {appointmentID}";
+                MySqlCommand cmd2 = new MySqlCommand(sql2, DBConnection.conn);
+                cmd2.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Exception when updating description field: " + ex);
             }
         }
     }
