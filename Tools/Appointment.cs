@@ -6,6 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static Google.Protobuf.Reflection.SourceCodeInfo.Types;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace WGU.C969.SoftwareII.Tools
@@ -87,6 +88,11 @@ namespace WGU.C969.SoftwareII.Tools
             if(DataValidation.ValidateText(location))
             {
                 UpdateAppointmentLocation(location, numericalID);
+                UpdateAppointmentLastUpdated(user, numericalID);
+            }
+            if (DataValidation.ValidateText(type))
+            {
+                UpdateAppointmentType(type, numericalID);
                 UpdateAppointmentLastUpdated(user, numericalID);
             }
 
@@ -363,6 +369,20 @@ namespace WGU.C969.SoftwareII.Tools
             catch (Exception ex)
             {
                 MessageBox.Show("Exception when updating location field: " + ex);
+            }
+        }
+
+        private static void UpdateAppointmentType(string type, int appointmentID)
+        {
+            try
+            {
+                string sql2 = $"UPDATE appointment SET type = '{type}' WHERE appointmentId = {appointmentID}";
+                MySqlCommand cmd2 = new MySqlCommand(sql2, DBConnection.conn);
+                cmd2.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Exception when updating type field: " + ex);
             }
         }
     }
