@@ -20,29 +20,8 @@ namespace WGU.C969.SoftwareII.Forms
             InitializeComponent();
             datePicker.CustomFormat = "dd/MM/yyyy";
 
-            TimeZone localTimeZone = TimeZone.CurrentTimeZone;
-            DateTime currentDate = DateTime.Now;
-
-            DateTime currentUTC = localTimeZone.ToUniversalTime(currentDate);
-            TimeSpan currentOffset = currentDate - currentUTC;
-
-            DataSet dset = new DataSet();
-            try
-            {
-                string query = "SELECT * FROM appointment";
-                MySqlDataAdapter adpt = new MySqlDataAdapter(query, DBConnection.conn);
-                adpt.Fill(dset);
-                appDataGridView.DataSource = dset.Tables[0];
-                if (currentDate == currentUTC)
-                {
-                    appDataGridView.ReadOnly = false;
-
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Exception thrown while filling table:" + ex);
-            }
+            DataSet dset = Appointment.FillAppointmentTable();
+            appDataGridView.DataSource = dset.Tables[0];
             Localization.ChangeTimesToLocal(appDataGridView);
         }
 
@@ -54,10 +33,11 @@ namespace WGU.C969.SoftwareII.Forms
 
         private void showDateButton_Click(object sender, EventArgs e)
         {
-            DateTime selectedDate = datePicker.Value;
-            DataSet dset = CalendarTable.ShowWeeksAppointments(selectedDate);
+            DataSet dset = Appointment.FillAppointmentTable();
             appDataGridView.DataSource = dset.Tables[0];
             Localization.ChangeTimesToLocal(appDataGridView);
+            DateTime selectedDay = datePicker.Value;
+            CalendarTable.ShowDayAppointments(selectedDay, appDataGridView);
         }
     }
 }

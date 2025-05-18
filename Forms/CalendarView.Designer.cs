@@ -60,6 +60,7 @@
             // 
             // appDataGridView
             // 
+            appDataGridView.AllowUserToAddRows = false;
             appDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             appDataGridView.Location = new Point(68, 58);
             appDataGridView.Name = "appDataGridView";
@@ -72,7 +73,7 @@
             showDateButton.Name = "showDateButton";
             showDateButton.Size = new Size(190, 23);
             showDateButton.TabIndex = 27;
-            showDateButton.Text = "Show appointments for week";
+            showDateButton.Text = "Show appointments for date";
             showDateButton.UseVisualStyleBackColor = true;
             showDateButton.Click += showDateButton_Click;
             // 

@@ -3,20 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\LabUser\\source\\repos\\WGU.C969.SoftwareII\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|c:\\users\\labuser\\source\\repos\\wgu.c969.softwareii\\forms\\generatereports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|solutionrelative:forms\\generatereports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|c:\\users\\labuser\\source\\repos\\wgu.c969.softwareii\\forms\\generatereports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|solutionrelative:forms\\generatereports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|c:\\users\\labuser\\source\\repos\\wgu.c969.softwareii\\forms\\calendarview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|solutionrelative:forms\\calendarview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|c:\\users\\labuser\\source\\repos\\wgu.c969.softwareii\\forms\\calendarview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|solutionrelative:forms\\calendarview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|c:\\users\\labuser\\source\\repos\\wgu.c969.softwareii\\tools\\calendartable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|solutionrelative:tools\\calendartable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{22C8A6DC-A545-4F27-800E-885DB7C104CF}|WGU.C969.SoftwareII.csproj|c:\\users\\labuser\\source\\repos\\wgu.c969.softwareii\\forms\\editcustomerrecords.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -34,49 +30,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "GenerateReports.cs",
-              "DocumentMoniker": "C:\\Users\\LabUser\\source\\repos\\WGU.C969.SoftwareII\\Forms\\GenerateReports.cs",
-              "RelativeDocumentMoniker": "Forms\\GenerateReports.cs",
-              "ToolTip": "C:\\Users\\LabUser\\source\\repos\\WGU.C969.SoftwareII\\Forms\\GenerateReports.cs",
-              "RelativeToolTip": "Forms\\GenerateReports.cs",
-              "ViewState": "AQIAADUAAAAAAAAAAAAcwEIAAABGAAAA",
+              "DocumentIndex": 2,
+              "Title": "CalendarTable.cs",
+              "DocumentMoniker": "C:\\Users\\LabUser\\source\\repos\\WGU.C969.SoftwareII\\Tools\\CalendarTable.cs",
+              "RelativeDocumentMoniker": "Tools\\CalendarTable.cs",
+              "ToolTip": "C:\\Users\\LabUser\\source\\repos\\WGU.C969.SoftwareII\\Tools\\CalendarTable.cs",
+              "RelativeToolTip": "Tools\\CalendarTable.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAYwBsAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-18T15:56:15.744Z",
+              "WhenOpened": "2025-05-18T16:04:17.934Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "GenerateReports.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\LabUser\\source\\repos\\WGU.C969.SoftwareII\\Forms\\GenerateReports.cs",
-              "RelativeDocumentMoniker": "Forms\\GenerateReports.cs",
-              "ToolTip": "C:\\Users\\LabUser\\source\\repos\\WGU.C969.SoftwareII\\Forms\\GenerateReports.cs [Design]",
-              "RelativeToolTip": "Forms\\GenerateReports.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-18T15:56:13.599Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "CalendarView.cs",
               "DocumentMoniker": "C:\\Users\\LabUser\\source\\repos\\WGU.C969.SoftwareII\\Forms\\CalendarView.cs",
               "RelativeDocumentMoniker": "Forms\\CalendarView.cs",
               "ToolTip": "C:\\Users\\LabUser\\source\\repos\\WGU.C969.SoftwareII\\Forms\\CalendarView.cs",
               "RelativeToolTip": "Forms\\CalendarView.cs",
-              "ViewState": "AQIAADIAAAAAAAAAAAAqwDsAAAA9AAAA",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAywBsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-18T15:55:29.428Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "CalendarView.cs [Design]",
               "DocumentMoniker": "C:\\Users\\LabUser\\source\\repos\\WGU.C969.SoftwareII\\Forms\\CalendarView.cs",
               "RelativeDocumentMoniker": "Forms\\CalendarView.cs",
@@ -88,7 +72,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "EditCustomerRecords.cs",
               "DocumentMoniker": "C:\\Users\\LabUser\\source\\repos\\WGU.C969.SoftwareII\\Forms\\EditCustomerRecords.cs",
               "RelativeDocumentMoniker": "Forms\\EditCustomerRecords.cs",
@@ -101,7 +85,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "EditCustomerRecords.cs [Design]",
               "DocumentMoniker": "C:\\Users\\LabUser\\source\\repos\\WGU.C969.SoftwareII\\Forms\\EditCustomerRecords.cs",
               "RelativeDocumentMoniker": "Forms\\EditCustomerRecords.cs",

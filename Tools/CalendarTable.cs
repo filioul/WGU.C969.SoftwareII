@@ -13,26 +13,23 @@ namespace WGU.C969.SoftwareII.Tools
 {
     internal class CalendarTable
     {
-        public static DataSet ShowWeeksAppointments(DateTime selectedDate)
+        public static  void ShowDayAppointments(DateTime selectedDate, DataGridView calendarGridView)
         {
-            DataSet dataSet = new DataSet();
-            Calendar calendar = CultureInfo.CurrentCulture.Calendar;
-            var selectedWeek = calendar.GetWeekOfYear(selectedDate, CalendarWeekRule.FirstFullWeek, DayOfWeek.Sunday);
-            if (selectedDate.Month == 1 && selectedWeek > 1)
+            DateTime rowDate = new DateTime();
+            int rowIndex;
+            foreach (DataGridViewRow row in calendarGridView.Rows)
             {
-                selectedWeek = 0;
+                rowDate = (Convert.ToDateTime(row.Cells["start"].Value)).Date;
+                rowIndex = row.Index;
+                if (rowDate != selectedDate.Date)
+                {
+                    CurrencyManager MyCurrencyManager = (CurrencyManager) calendarGridView.BindingContext[calendarGridView.DataSource];
+                    MyCurrencyManager.SuspendBinding();
+                    calendarGridView.Rows[rowIndex].Visible = false;
+                    MyCurrencyManager.ResumeBinding();
+                }
+
             }
-            try
-            {
-                string query2 = $"SELECT * FROM appointment WHERE WEEK(start) = {selectedWeek}";
-                MySqlDataAdapter adpt = new MySqlDataAdapter(query2, DBConnection.conn);
-                adpt.Fill(dataSet);
-            }
-            catch (Exception ex) 
-            {
-                MessageBox.Show("Error filling table with week's data:" + ex);
-            }
-            return dataSet;
         }
 
     }
