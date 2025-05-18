@@ -22,6 +22,7 @@ namespace WGU.C969.SoftwareII.Forms
             DataSet dset = new DataSet();
             dset = Customer.FillCustomerTable();
             customerGridView.DataSource = dset.Tables[0];
+            Localization.ChangeTimesToLocal(customerGridView);
         }
 
         private void backButton_Click(object sender, EventArgs e)
@@ -178,7 +179,7 @@ namespace WGU.C969.SoftwareII.Forms
             DataSet dset2 = new DataSet();
             dset2 = Customer.FillCustomerTable();
             customerGridView.DataSource = dset2.Tables[0];
-
+            Localization.ChangeTimesToLocal(customerGridView);
         }
     }
 } 

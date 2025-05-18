@@ -11,7 +11,7 @@ namespace WGU.C969.SoftwareII.Tools
     {
         public static bool CheckIfAppointmentWithin15(string username)
         {
-            DateTime timeNow = Appointment.ConvertToEST(DateTime.Now);
+            DateTime timeNow = Appointment.ConvertToUTC(DateTime.Now);
             DateTime timeIn15 = timeNow.AddMinutes(15);
             string timeNowSQL = Appointment.FormatDateTimeForSQL(timeNow);
             string timeIn15SQL = Appointment.FormatDateTimeForSQL(timeIn15);

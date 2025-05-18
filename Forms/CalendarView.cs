@@ -43,6 +43,7 @@ namespace WGU.C969.SoftwareII.Forms
             {
                 MessageBox.Show("Exception thrown while filling table:" + ex);
             }
+            Localization.ChangeTimesToLocal(appDataGridView);
         }
 
 
@@ -56,6 +57,7 @@ namespace WGU.C969.SoftwareII.Forms
             DateTime selectedDate = datePicker.Value;
             DataSet dset = CalendarTable.ShowWeeksAppointments(selectedDate);
             appDataGridView.DataSource = dset.Tables[0];
+            Localization.ChangeTimesToLocal(appDataGridView);
         }
     }
 }

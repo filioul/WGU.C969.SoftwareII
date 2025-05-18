@@ -15,8 +15,8 @@ namespace WGU.C969.SoftwareII.Tools
     {
         public static void AddAppointment(DateTime start, DateTime end, string givenUser, string customerName, string location, string contact, string type, string url, string title, string desc, string user)
         {
-            DateTime startEST = ConvertToEST(start);
-            DateTime endEST = ConvertToEST(end);
+            DateTime startUTC = ConvertToUTC(start);
+            DateTime endUTC = ConvertToUTC(end);
             int customerID = Customer.GetCustomerID(customerName);
             int userID = GetUserID(givenUser);
             title = ChangeValueIfEmpty(title);
@@ -36,8 +36,8 @@ namespace WGU.C969.SoftwareII.Tools
                 cmd.Parameters.AddWithValue("@contact", contact);
                 cmd.Parameters.AddWithValue("@url", url);
                 cmd.Parameters.AddWithValue("@type", type);
-                cmd.Parameters.AddWithValue("@start", startEST);
-                cmd.Parameters.AddWithValue("@end", endEST);
+                cmd.Parameters.AddWithValue("@start", startUTC);
+                cmd.Parameters.AddWithValue("@end", endUTC);
                 cmd.Parameters.AddWithValue("@user", user);
                 cmd.ExecuteNonQuery();
 
@@ -53,20 +53,20 @@ namespace WGU.C969.SoftwareII.Tools
         {
 
             int numericalID = int.Parse(appointmentID);
-            DateTime startEST = ConvertToEST(start);
-            DateTime endEST = ConvertToEST(end);
+            DateTime startUTC = ConvertToUTC(start);
+            DateTime endUTC = ConvertToUTC(end);
             int availability;
             if (!DataValidation.ValidateText(givenUser))
             {
-                availability = CheckAvailabilityReturnCount(startEST, endEST, originalUser, numericalID);
+                availability = CheckAvailabilityReturnCount(startUTC, endUTC, originalUser, numericalID);
             } else
             {
-                availability = CheckAvailabilityReturnCount(startEST, endEST, givenUser, numericalID);
+                availability = CheckAvailabilityReturnCount(startUTC, endUTC, givenUser, numericalID);
             }
 
             if (availability == 0)
             {
-                UpdateAppointmentStartEnd(startEST, endEST, user, numericalID);
+                UpdateAppointmentStartEnd(startUTC, endUTC, user, numericalID);
                 UpdateAppointmentLastUpdated(user, numericalID);
             }
             else
@@ -120,10 +120,10 @@ namespace WGU.C969.SoftwareII.Tools
         internal static bool CheckAvailability(DateTime start, DateTime end, string user)
         {
             bool result = true;
-            DateTime startEST = ConvertToEST(start);
-            DateTime endEST = ConvertToEST(end);
-            string startSQL = FormatDateTimeForSQL(startEST);
-            string endSQL = FormatDateTimeForSQL(endEST);
+            DateTime startUTC = ConvertToUTC(start);
+            DateTime endUTC = ConvertToUTC(end);
+            string startSQL = FormatDateTimeForSQL(startUTC);
+            string endSQL = FormatDateTimeForSQL(endUTC);
             int userID = GetUserID(user);
             try
             {
@@ -152,16 +152,16 @@ namespace WGU.C969.SoftwareII.Tools
             bool result = false;
             try
             {
-                DateTime startEST = ConvertToEST(start);
-                DateTime endEST = ConvertToEST(end);
-                if (startEST.TimeOfDay < endEST.TimeOfDay)
+                DateTime startUTC = ConvertToUTC(start);
+                DateTime endUTC = ConvertToUTC(end);
+                if (startUTC.TimeOfDay < endUTC.TimeOfDay)
                 {
-                    if (startEST.DayOfWeek == endEST.DayOfWeek
-                        && (startEST.DayOfWeek != DayOfWeek.Sunday || startEST.DayOfWeek != DayOfWeek.Saturday))
+                    if (startUTC.DayOfWeek == endUTC.DayOfWeek
+                        && (startUTC.DayOfWeek != DayOfWeek.Sunday || startUTC.DayOfWeek != DayOfWeek.Saturday))
                     {
                         DateTime workdayStart = new DateTime(2000, 01, 01, 9, 0, 0);
                         DateTime workdayEnd = new DateTime(2000, 01, 01, 17, 0, 0, 0);
-                        if ((startEST.TimeOfDay >= workdayStart.TimeOfDay && startEST.TimeOfDay <= workdayEnd.TimeOfDay) && (endEST.TimeOfDay >= workdayStart.TimeOfDay && endEST.TimeOfDay <= workdayEnd.TimeOfDay))
+                        if ((startUTC.TimeOfDay >= workdayStart.TimeOfDay && startUTC.TimeOfDay <= workdayEnd.TimeOfDay) && (endUTC.TimeOfDay >= workdayStart.TimeOfDay && endUTC.TimeOfDay <= workdayEnd.TimeOfDay))
                         {
                             result = true;
                         }
@@ -176,14 +176,15 @@ namespace WGU.C969.SoftwareII.Tools
 
         }
 
-        internal static DateTime ConvertToEST(DateTime dateTimeInput)
+        internal static DateTime ConvertToUTC(DateTime dateTimeInput)
         {
             TimeZoneInfo local = TimeZoneInfo.Local;
-            TimeZoneInfo est = TimeZoneInfo.FindSystemTimeZoneById("Eastern Standard Time");
+            TimeZoneInfo utc = TimeZoneInfo.FindSystemTimeZoneById("UTC");
             dateTimeInput = DateTime.SpecifyKind(dateTimeInput, DateTimeKind.Local);
-            DateTime dateTimeEST = TimeZoneInfo.ConvertTime(dateTimeInput, local, est);
-            return dateTimeEST;
+            DateTime dateTimeUST = TimeZoneInfo.ConvertTime(dateTimeInput, local, utc);
+            return dateTimeUST;
         }
+
 
         internal static int GetUserID(string username)
         {

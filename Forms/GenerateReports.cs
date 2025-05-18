@@ -64,6 +64,7 @@ namespace WGU.C969.SoftwareII.Forms
                 {
                     DataSet dset = ReportGenerator.UserSchedule(textBoxUsername.Text);
                     dataGVUserSchedule.DataSource = dset.Tables[0];
+                    Localization.ChangeTimesToLocal(dataGVUserSchedule);
                 }
                 catch (Exception ex)
                 {

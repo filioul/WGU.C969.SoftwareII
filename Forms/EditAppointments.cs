@@ -22,6 +22,7 @@ namespace WGU.C969.SoftwareII.Forms
             DataSet dset = new DataSet();
             dset = Appointment.FillAppointmentTable();
             appointmentGridView.DataSource = dset.Tables[0];
+            Localization.ChangeTimesToLocal(appointmentGridView);
         }
 
         private void backButton_Click(object sender, EventArgs e)
@@ -149,6 +150,7 @@ namespace WGU.C969.SoftwareII.Forms
             DataSet dset2 = new DataSet();
             dset2 = Appointment.FillAppointmentTable();
             appointmentGridView.DataSource = dset2.Tables[0];
+            Localization.ChangeTimesToLocal(appointmentGridView);
         }
 
         private void actionComboBox_SelectedIndexChanged(object sender, EventArgs e)
