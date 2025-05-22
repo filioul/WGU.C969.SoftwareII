@@ -157,11 +157,16 @@ namespace WGU.C969.SoftwareII.Tools
                 if (startUTC.TimeOfDay < endUTC.TimeOfDay)
                 {
                     if (startUTC.DayOfWeek == endUTC.DayOfWeek
-                        && (startUTC.DayOfWeek != DayOfWeek.Sunday || startUTC.DayOfWeek != DayOfWeek.Saturday))
+                        && (startUTC.DayOfWeek != DayOfWeek.Sunday && startUTC.DayOfWeek != DayOfWeek.Saturday))
                     {
-                        DateTime workdayStart = new DateTime(2000, 01, 01, 9, 0, 0);
-                        DateTime workdayEnd = new DateTime(2000, 01, 01, 17, 0, 0, 0);
-                        if ((startUTC.TimeOfDay >= workdayStart.TimeOfDay && startUTC.TimeOfDay <= workdayEnd.TimeOfDay) && (endUTC.TimeOfDay >= workdayStart.TimeOfDay && endUTC.TimeOfDay <= workdayEnd.TimeOfDay))
+                        int startHour = startUTC.Hour;
+                        int startMinute = startUTC.Minute;
+
+                        int endHour = endUTC.Hour;
+                        int endMinute = endUTC.Minute;
+
+                        bool checkTimes = (startHour >= 9 && startHour < 17) && ((endHour >= 9 && endHour < 17) || endHour == 17 && endMinute == 0) ;
+                        if (checkTimes)
                         {
                             result = true;
                         }

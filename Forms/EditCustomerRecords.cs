@@ -1,4 +1,5 @@
-﻿using Org.BouncyCastle.Asn1;
+﻿using MySql.Data.MySqlClient;
+using Org.BouncyCastle.Asn1;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -181,6 +182,8 @@ namespace WGU.C969.SoftwareII.Forms
             customerGridView.DataSource = dset2.Tables[0];
             Localization.ChangeTimesToLocal(customerGridView);
         }
+
+        
     }
 } 
 

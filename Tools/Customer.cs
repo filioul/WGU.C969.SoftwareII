@@ -506,7 +506,7 @@ namespace WGU.C969.SoftwareII.Tools
             }
         }
 
-        private static int GetAddressID(int customerID)
+        public static int GetAddressID(int customerID)
         {
             int addressID = 0;
             try
