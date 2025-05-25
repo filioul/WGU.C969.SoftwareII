@@ -156,19 +156,22 @@ namespace WGU.C969.SoftwareII.Tools
                 DateTime endUTC = ConvertToUTC(end);
                 if (startUTC.TimeOfDay < endUTC.TimeOfDay)
                 {
-                    if (startUTC.DayOfWeek == endUTC.DayOfWeek
-                        && (startUTC.DayOfWeek != DayOfWeek.Sunday && startUTC.DayOfWeek != DayOfWeek.Saturday))
+                    if (startUTC.DayOfWeek == endUTC.DayOfWeek) 
                     {
-                        int startHour = startUTC.Hour;
-                        int startMinute = startUTC.Minute;
-
-                        int endHour = endUTC.Hour;
-                        int endMinute = endUTC.Minute;
-
-                        bool checkTimes = (startHour >= 9 && startHour < 17) && ((endHour >= 9 && endHour < 17) || endHour == 17 && endMinute == 0) ;
-                        if (checkTimes)
+                        var appointmentDay = startUTC.DayOfWeek;
+                        if (!(appointmentDay == DayOfWeek.Sunday || appointmentDay == DayOfWeek.Saturday))
                         {
-                            result = true;
+                            int startHour = startUTC.Hour;
+                            int startMinute = startUTC.Minute;
+
+                            int endHour = endUTC.Hour;
+                            int endMinute = endUTC.Minute;
+
+                            bool checkTimes = (startHour >= 9 && startHour < 17) && ((endHour >= 9 && endHour < 17) || endHour == 17 && endMinute == 0);
+                            if (checkTimes)
+                            {
+                                result = true;
+                            }
                         }
                     }
                 }
