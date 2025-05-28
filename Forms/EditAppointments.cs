@@ -97,7 +97,7 @@ namespace WGU.C969.SoftwareII.Forms
                         {
                             if (!wasACustomerGiven || Customer.CheckIfCustomerExistsFromName(customerName))
                             {
-                                if (Appointment.CheckBusinessHours(start, end))
+                                if (Appointment.CheckBusinessHours(start, end) && Appointment.CheckAvailability(start, end, user))
                                 {
                                     Appointment.UpdateAppointment(start, end, givenUser, customerName, location, contact, type, url, title, description, user, appointmentID, originalUsername);
                                     MessageBox.Show("The appointment was updated successfully.");
